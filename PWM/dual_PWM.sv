@@ -1,3 +1,16 @@
+/**************************************************************************************************
+	MODULE: dual_PWM
+	PURPOSE: Given two duty cycles (VIH & VIL) create two PWM signals with the approiate duty cycles
+	
+	INPUTS:
+			clk - Clock
+			rst_n - Reset, active low
+			VIH [7:0] - Duty cycle of output VIH_PWM. 
+	
+	OUPUTS:
+	
+	INTERNAL:
+**************************************************************************************************/
 module dual_PWM (clk, rst_n, VIH, VIL, VIH_PWM, VIL_PWM);
 
 input clk;
