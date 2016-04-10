@@ -1,0 +1,16 @@
+Git Hub Basics
+
+To ADD to the respository
+	git add ./						//Do this in the upper level i.e. ECE_551
+	git commit -a -m "Comment"		//Change Comment to be a meaninful comment on what you did
+	git push
+		username:
+		password:
+To get the most up-to-date version
+	git pull						//Do this int eh upper level i.e. ECE_551
+		username:
+		password:
+		
+You may have to do a MERGE if someone modified a files that you modified and uploaded it before you
+	For a MERGE you will have to PULL then fix the conflicts, they will show up when you try to push
+	Then push again with the merged files

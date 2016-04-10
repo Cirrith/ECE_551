@@ -44,3 +44,20 @@ set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:44:54  APRIL 07, 2016
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
+set_global_assignment -name BDF_FILE UART.bdf
+set_global_assignment -name BDF_FILE RAMqueue.bdf
+set_global_assignment -name BDF_FILE dual_PWM.bdf
+set_global_assignment -name BDF_FILE rst_synch.bdf
+set_global_assignment -name BDF_FILE CH_SMP_ff.bdf
+set_global_assignment -name BDF_FILE CH_SMP_Upper.bdf
+set_global_assignment -name BDF_FILE Capture_Logic.bdf
+set_global_assignment -name BDF_FILE Digital_Core.bdf
+set_global_assignment -name BDF_FILE main.bdf
+set_global_assignment -name BDF_FILE Trigger_Logic.bdf
+set_global_assignment -name BDF_FILE Capture.bdf
+set_global_assignment -name BDF_FILE Command_Config.bdf
+set_global_assignment -name BDF_FILE Sample_Logic.bdf
+set_global_assignment -name BDF_FILE Divide_4.bdf
+set_global_assignment -name BDF_FILE Counter_2.bdf
+set_global_assignment -name BDF_FILE Divider.bdf
+set_global_assignment -name BDF_FILE Write_Sample_Logic.bdf
