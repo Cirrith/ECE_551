@@ -18,25 +18,25 @@
 			
 	OUPUTS:
 			resp [7:0] - Response to send via UART
-			send_resp - Send Response
-			clr_cmd_rdy - 
-			strt_rd - 
-			trig_pos - 
-			TrigCfg [5:0] - 
-			CH1TrigCfg [4:0] - 
-			CH2TrigCfg [4:0] - 
-			CH3TrigCfg [4:0] - 
-			CH4TrigCfg [4:0] - 
-			CH5TrigCfg [4:0] - 
-			decimator [3:0] - 
-			VIH [7:0] - 
-			VIL [7:0] - 
-			matchH [7:0] - 
-			matchL [7:0] - 
-			maskH [7:0] - 
-			maskL [7:0] - 
-			baud_cntH [7:0] - 
-			baud_cntL [7:0] - 
+			send_resp - Send Response, to UART
+			clr_cmd_rdy - Sets the Command done at the UART
+			strt_rd - Command to external to start reading from RAMqueue at waddr
+			trig_pos - How many samples after trigger to capture
+			TrigCfg [5:0] - Configuration of triggering and capture
+			CH1TrigCfg [4:0] - Specific triggering of channel 1
+			CH2TrigCfg [4:0] - Specific triggering of channel 2
+			CH3TrigCfg [4:0] - Specific triggering of channel 3
+			CH4TrigCfg [4:0] - Specific triggering of channel 4
+			CH5TrigCfg [4:0] - Specific triggering of channel 5
+			decimator [3:0] - Setting the sample rate
+			VIH [7:0] - Level set for PWM, HIGH
+			VIL [7:0] - Level set for PWM, LOW
+			matchH [7:0] - Data to match for protocol triggering
+			matchL [7:0] - Data to match for protocol triggering
+			maskH [7:0] - Mask for protocol triggering
+			maskL [7:0] - Mask for protocol triggering
+			baud_cntH [7:0] - Data for UART triggering
+			baud_cntL [7:0] - Data for UART triggering
 			trig_posH [7:0] - 
 			trig_posL [7:0] - 			
 	
@@ -66,10 +66,10 @@
 
 module cmd_cfg ();
 
-	typedef logic [1:0] {ReadReg, WriteReg, Dump, Reserved} Command;
+	typedef logic [1:0] {ReadReg, WriteReg, Dump} Command;
 	typedef logic [2:0] {CH1, CH2, CH3, Ch4, Ch5} Channel;
 	typedef logic [5:0] {TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, decimator, VIH, VIL, matchH, matchL, maskH, maskL, baud_cntH, baud_cntL, trig_posH, trig_posL} Register;
-	typedef logic ????? {IDLE, SEND, DUMP} State
+	typedef logic [1:0] {IDLE, DUMP1, DUMP2, RESP} State;
 	
 	input clk;
 	input rst_n;
@@ -117,47 +117,30 @@ module cmd_cfg ();
 	State state;
 	State nxtstate;
 	
-	logic TrigCfg [5:0];
-	logic CH1TrigCfg [4:0];
-	logic CH2TrigCfg [4:0];
-	logic CH3TrigCfg [4:0];
-	logic CH4TrigCfg [4:0];
-	logic CH5TrigCfg [4:0];
-	logic decimator [3:0];
-	logic VIH [7:0];
-	logic VIL [7:0];
-	logic matchH [7:0];
-	logic matchL [7:0];
-	logic maskH [7:0];
-	logic maskL [7:0];
-	logic baud_cntH [7:0];
-	logic baud_cntL [7:0];
-	logic trig_posH [7:0];
-	logic trig_posL [7:0];
-	
 	logic wrt_reg;
-	logic TrigCfg_nxt;
-	logic CH1TrigCfg_nxt;
-	logic CH2TrigCfg_nxt;
-	logic CH3TrigCfg_nxt;
-	logic CH4TrigCfg_nxt;
-	logic CH5TrigCfg_nxt;
-	logic decimator_nxt;
-	logic VIH_nxt;
-	logic VIL_nxt;
-	logic matchH_nxt;
-	logic matchL_nxt;
-	logic maskH_nxt;
-	logic maskL_nxt;
-	logic baud_cntH_nxt;
-	logic baud_cntL_nxt;
-	logic trig_posH_nxt;
-	logic trig_posL_nxt;
+	
+	logic [5:0] TrigCfg_nxt;
+	logic [4:0] CH1TrigCfg_nxt;
+	logic [4:0] CH2TrigCfg_nxt;
+	logic [4:0] CH3TrigCfg_nxt;
+	logic [4:0] CH4TrigCfg_nxt;
+	logic [4:0] CH5TrigCfg_nxt;
+	logic [3:0] decimator_nxt;
+	logic [7:0] VIH_nxt;
+	logic [7:0] VIL_nxt;
+	logic [7:0] matchH_nxt;
+	logic [7:0] matchL_nxt;
+	logic [7:0] maskH_nxt;
+	logic [7:0] maskL_nxt;
+	logic [7:0] baud_cntH_nxt;
+	logic [7:0] baud_cntL_nxt;
+	logic [7:0] trig_posH_nxt;
+	logic [7:0] trig_posL_nxt;
 	
 	assign command = cmd[15:14];
-	assign register = cmd[13:8];
+	assign register = cmd[12:8];
 	assign data = cmd[7:0];
-	assign ccc = cmd[2:0];
+	assign ccc = cmd[10:8];
 	
 	always @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
@@ -217,189 +200,171 @@ module cmd_cfg ();
 	end
 	
 	always @ (*) begin	
+		wrt_reg = 1'h0;
+		send_resp = 1'h0;
+		clr_cmd_rdy = 1'h0;
+		resp = 8'h00;
+		strt_rd = 1'h0;
+		nxtstate = IDLE:
 	
-	case(state)
-	
-		IDLE: begin
-		
-	
-		case(command)
-			ReadReg : begin
+		case(state)
+			IDLE: begin
+				if(cmd_rdy) begin
+					case(command)
+						ReadReg : begin
+							send_resp = 1'h1;
+							clr_cmd_rdy = 1'h1;
+							nxtstate = IDLE;
+							case(register) begin
+								TrigCfg : resp = {2'h0, TrigCfg};
+								
+								CH1TrigCfg : resp = {3'h0, CH1TrigCfg};
+								
+								CH2TrigCfg : resp = {3'h0, CH2TrigCfg};
+								
+								CH3TrigCfg : resp = {3'h0, CH3TrigCfg};
+								
+								CH4TrigCfg : resp = {3'h0, CH4TrigCfg};
+								
+								CH5TrigCfg : resp = {3'h0, CH5TrigCfg};
+								
+								decimator : resp = {4'h0, decimator};
+								
+								VIH : resp = VIH;
+								
+								VIL : resp = VIL;
+								
+								matchH : resp = matchH;
+								
+								matchL : resp = matchL;
+								
+								maskH : resp = maskH;
+								
+								maskL : resp = maskL;
+								
+								baud_cntH : resp = baud_cntH;
+								
+								baud_cntL : resp = baud_cntL;
+								
+								trig_posH : resp = trig_posH;
+								
+								trig_posL : resp = trig_posL;
+								
+								default : begin //Sent bad register
+									send_resp = 1'h1;
+									clr_cmd_rdy = 1'h1;
+									resp = 8'hEE;
+									nxtstate = IDLE;
+									$display("Sent a Bad Register");
+								end
+							endcase
+						end
+						
+						WriteReg : begin
+							wrt_reg = 1'h1;
+							send_resp = 1'h1;
+							resp = 8'hA5;
+							clr_cmd_rdy = 1'h1;
+							nxtstate = IDLE;
+							
+							case(register) begin
+								TrigCfg : TrigCfg_nxt = data[5:0];
+								
+								CH1TrigCfg : CH1TrigCfg_nxt = data[4:0];
+								
+								CH2TrigCfg : CH2TrigCfg_nxt = data[4:0];
+								
+								CH3TrigCfg : CH3TrigCfg_nxt = data[4:0];
+								
+								CH4TrigCfg : CH4TrigCfg_nxt = data[4:0];
+								
+								CH5TrigCfg : CH5TrigCfg_nxt = data[4:0];
+								
+								decimator : decimator_nxt = data[3:0];
+								
+								VIH : VIH_nxt = data;
+								
+								VIL : VIL_nxt = data;
+								
+								matchH : matchH_nxt = data;
+								
+								matchL : matchL_nxt = data;
+								
+								maskH : maskH_nxt = data;
+								
+								maskL : maskL_nxt = data;
+								
+								baud_cntH : baud_cntH_nxt = data;
+								
+								baud_cntL : baud_cntL_nxt = data;
+								
+								trig_posH : trig_posH_nxt = data;
+								
+								trig_posL : trig_posL_nxt = data;
+								
+								default : begin //Sent bad register
+									send_resp = 1'h1;
+									clr_cmd_rdy = 1'h1;
+									resp = 8'hEE;
+									nxtstate = IDLE;
+									$display("Sent a Bad Register");
+								end
+							endcase
+						end
+						
+						Dump : begin
+							strt_rd = 1'h1;
+							nxtstate = DUMP1;
+
+						end
+						
+						default : begin //Sent bad command
+							send_resp = 1'h1;
+							clr_cmd_rdy = 1'h1;
+							resp = 8'hEE;
+							nxtstate = IDLE;
+							$display("Sent a Bad Command");
+						end
+					endcase
+				end
+			end
+			
+			DUMP1 : begin
+				case (ccc) begin
+					CH1 : resp = rdataCH1;
+					CH2 : resp = rdataCH2;
+					CH3 : resp = rdataCH3;
+					Ch4 : resp = rdataCH4;
+					Ch5 : resp = rdataCH5;
+					default : begin //Sent bad channel
+						send_resp = 1'h1;
+						clr_cmd_rdy = 1'h1;
+						resp = 8'hEE;
+						nxtstate = IDLE;
+						%display("Sent a Bad Channel");
+					end
+				endcase
+				
+				if(rd_done)
+					clr_cmd_rdy = 1'h1;
+					nxtstate = IDLE;
+			end
+			
+			DUMP2 : begin
+				if(resp_sent)
+					nxtstate = DUMP1;
+				else
+					nxtstate = DUMP2;
+			end
+			
+			default : begin
 				send_resp = 1'h1;
-				
-				case(register) begin
-					TrigCfg : begin
-						resp = TrigCfg;
-					end
-					
-					CH1TrigCfg : begin
-						resp = CH1TrigCfg;
-					end
-					
-					CH2TrigCfg : begin
-						resp = CH2TrigCfg;
-					end
-					
-					CH3TrigCfg : begin
-						resp = CH3TrigCfg;
-					end
-					
-					CH4TrigCfg : begin
-						resp = CH4TrigCfg;
-					end
-					
-					CH5TrigCfg : begin
-						resp = CH5TrigCfg;
-					end
-					
-					decimator : begin
-						resp = decimator;
-					end
-					
-					VIH : begin
-						resp = VIH;
-					end
-					
-					VIL : begin
-						resp = VIL;
-					end
-					
-					matchH : begin
-						resp = matchH;
-					end
-					
-					matchL : begin
-						resp = matchL;
-					end
-					
-					maskH : begin
-						resp = maskH;
-					end
-					
-					maskL : begin
-						resp = maskL;
-					end
-					
-					baud_cntH : begin
-						resp = baud_cntH;
-					end
-					
-					baud_cntL : begin
-						resp = baud_cntL;
-					end
-					
-					trig_posH : begin
-						resp = trig_posH;
-					end
-					
-					trig_posL : begin
-						resp = trig_posL;
-					end
-				endcase
+				clr_cmd_rdy = 1'h1;
+				resp = 8'hEE;
+				nxtstate = IDLE;
+				$display("Entered a Bad State");
 			end
 			
-			WriteReg : begin
-				wrt_reg = 1'h1;
-				
-				case(register) begin
-					TrigCfg : begin
-						TrigCfg_nxt = data;
-					end
-					
-					CH1TrigCfg : begin
-						CH1TrigCfg_nxt = data;
-					end
-					
-					CH2TrigCfg : begin
-						CH2TrigCfg_nxt = data;
-					end
-					
-					CH3TrigCfg : begin
-						CH3TrigCfg_nxt = data;
-					end
-					
-					CH4TrigCfg : begin
-						CH4TrigCfg_nxt = data;
-					end
-					
-					CH5TrigCfg : begin
-						CH5TrigCfg_nxt = data;
-					end
-					
-					decimator : begin
-						decimator_nxt = data;
-					end
-					
-					VIH : begin
-						VIH_nxt = data;
-					end
-					
-					VIL : begin
-						VIL_nxt = data;
-					end
-					
-					matchH : begin
-						matchH_nxt = data;
-					end
-					
-					matchL : begin
-						matchL_nxt = data;
-					end
-					
-					maskH : begin
-						maskH_nxt = data;
-					end
-					
-					maskL : begin
-						maskL_nxt = data;
-					end
-					
-					baud_cntH : begin
-						baud_cntH_nxt = data;
-					end
-					
-					baud_cntL : begin
-						baud_cntL_nxt = data;
-					end
-					
-					trig_posH : begin
-						trig_posH_nxt = data;
-					end
-					
-					trig_posL : begin
-						trig_posL_nxt = data;
-					end
-				endcase
-			end
-			
-			Dump : begin
-				case(channel) begin					
-					CH1 : begin
-						resp = 
-					end
-					
-					CH2 : begin
-						resp = 
-					end
-					
-					CH3 : begin
-						resp = 
-					end
-					
-					CH4 : begin
-						resp = 
-					end
-					
-					CH5 : begin
-						resp = 
-					end
-				endcase
-			end
-			
-			Reserved : begin
-			
-			end
 		endcase
 	end
-	
 endmodule
