@@ -1,71 +1,72 @@
 /**************************************************************************************************
-	MODULE: cmd_cfg
-	PURPOSE: Take in the transmitted command and perform it.
-	
-	INPUTS:
-			clk - Clock
-			rst_n - Reset
-			cmd [15:0] - Command to execute
-			cmd_rdy - Recieved a command
-			resp_sent - Respone was sent via UART
-			rd_done - Last bye of smaple data has been read
-			set_capture_done - Capture is complete
-			rdataCH1 [7:0] - Data read from channel 1
-			rdataCH2 [7:0] - Data read from channel 2
-			rdataCH3 [7:0] - Data read from channel 3
-			rdataCH4 [7:0] - Data read from channel 4
-			rdataCH5 [7:0] - Data read from channel 5
-			
-	OUPUTS:
-			resp [7:0] - Response to send via UART
-			send_resp - Send Response, to UART
-			clr_cmd_rdy - Sets the Command done at the UART
-			strt_rd - Command to external to start reading from RAMqueue at waddr
-			trig_pos - How many samples after trigger to capture
-			TrigCfg [5:0] - Configuration of triggering and capture
-			CH1TrigCfg [4:0] - Specific triggering of channel 1
-			CH2TrigCfg [4:0] - Specific triggering of channel 2
-			CH3TrigCfg [4:0] - Specific triggering of channel 3
-			CH4TrigCfg [4:0] - Specific triggering of channel 4
-			CH5TrigCfg [4:0] - Specific triggering of channel 5
-			decimator [3:0] - Setting the sample rate
-			VIH [7:0] - Level set for PWM, HIGH
-			VIL [7:0] - Level set for PWM, LOW
-			matchH [7:0] - Data to match for protocol triggering
-			matchL [7:0] - Data to match for protocol triggering
-			maskH [7:0] - Mask for protocol triggering
-			maskL [7:0] - Mask for protocol triggering
-			baud_cntH [7:0] - Data for UART triggering
-			baud_cntL [7:0] - Data for UART triggering
-			trig_posH [7:0] - 
-			trig_posL [7:0] - 			
-	
-	INTERNAL:
-			command - What kind of command should executed
-			register - Which register should the command be done on
-			ccc - Which channel should be read
-			wrt_reg - Whether to write the register or not
-			TrigCfg_nxt - 
-			CH1TrigCfg_nxt - 
-			CH2TrigCfg_nxt - 
-			CH3TrigCfg_nxt - 
-			CH4TrigCfg_nxt - 
-			CH5TrigCfg_nxt - 
-			decimator_nxt - 
-			VIH_nxt - 
-			VIL_nxt - 
-			matchH_nxt - 
-			matchL_nxt - 
-			maskH_nxt - 
-			maskL_nxt - 
-			baud_cntH_nxt - 
-			baud_cntL_nxt - 
-			trig_posH_nxt - 
-			trig_posL_nxt - 
+/	MODULE: cmd_cfg
+/	PURPOSE: Take in the transmitted command and perform it.
+/	
+/	INPUTS:
+/			clk - Clock
+/			rst_n - Reset
+/			cmd [15:0] - Command to execute
+/			cmd_rdy - Recieved a command
+/			resp_sent - Respone was sent via UART
+/			rd_done - Last bye of smaple data has been read
+/			set_capture_done - Capture is complete
+/			rdataCH1 [7:0] - Data read from channel 1
+/			rdataCH2 [7:0] - Data read from channel 2
+/			rdataCH3 [7:0] - Data read from channel 3
+/			rdataCH4 [7:0] - Data read from channel 4
+/			rdataCH5 [7:0] - Data read from channel 5
+/			
+/	OUPUTS:
+/			resp [7:0] - Response to send via UART
+/			send_resp - Send Response, to UART
+/			clr_cmd_rdy - Sets the Command done at the UART
+/			strt_rd - Command to external to start reading from RAMqueue at waddr
+/			trig_pos - How many samples after trigger to capture
+/			TrigCfg [5:0] - Configuration of triggering and capture
+/			CH1TrigCfg [4:0] - Specific triggering of channel 1
+/			CH2TrigCfg [4:0] - Specific triggering of channel 2
+/			CH3TrigCfg [4:0] - Specific triggering of channel 3
+/			CH4TrigCfg [4:0] - Specific triggering of channel 4
+/			CH5TrigCfg [4:0] - Specific triggering of channel 5
+/			decimator [3:0] - Setting the sample rate
+/			VIH [7:0] - Level set for PWM, HIGH
+/			VIL [7:0] - Level set for PWM, LOW
+/			matchH [7:0] - Data to match for protocol triggering
+/			matchL [7:0] - Data to match for protocol triggering
+/			maskH [7:0] - Mask for protocol triggering
+/			maskL [7:0] - Mask for protocol triggering
+/			baud_cntH [7:0] - Data for UART triggering
+/			baud_cntL [7:0] - Data for UART triggering
+/			trig_posH [7:0] - 
+/			trig_posL [7:0] - 			
+/	
+/	INTERNAL:
+/			command - What kind of command should executed
+/			register - Which register should the command be done on
+/			ccc - Which channel should be read
+/			wrt_reg - Whether to write the register or not
+/			TrigCfg_nxt - Data to be written to TrigCfg register on next posedge clk
+/			CH1TrigCfg_nxt - Data to be written to CH1TrigCfg register on next posedge clk
+/			CH2TrigCfg_nxt - Data to be written to CH2TrigCfg register on next posedge clk
+/			CH3TrigCfg_nxt - Data to be written to CH3TrigCfg register on next posedge clk
+/			CH4TrigCfg_nxt - Data to be written to CH4TrigCfg register on next posedge clk
+/			CH5TrigCfg_nxt - Data to be written to CH5TrigCfg register on next posedge clk
+/			decimator_nxt - Data to be written to decimator register on next posedge clk
+/			VIH_nxt - Data to be written to VIH regsiter on next posedge clk
+/			VIL_nxt - Data to be written to VIL register on next posedge clk
+/			matchH_nxt - Data to be written to matchH register on next posedge clk
+/			matchL_nxt - Data to be written to matchL register on next posedge clk
+/			maskH_nxt - Data to be written to maskH register on next posedge clk
+/			maskL_nxt - Data to be written to maskL register on next posedge clk
+/			baud_cntH_nxt - Data to be written to baud_cntH register on next posedge clk
+/			baud_cntL_nxt - Data to be written to baud_cntL register on next posedge clk
+/			trig_posH_nxt - Data to be written to trig_posH register on next posedge clk
+/			trig_posL_nxt - Data to be written to trig_posL register on next posedge clk
 **************************************************************************************************/
-
-module cmd_cfg ();
-
+module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, rdataCH1, rdataCH2, rdataCH3, rdataCH4, rdataCH5, resp, send_resp, clr_cmd_rdy, strt_rd, trig_pos, decimator, maskL, maskH, matchL, matchH, baud_cntL, baud_cntH, TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, trig_posH, trig_posL, VIH, VIL);
+	
+	parameter LOG2 = 9; //Default Size for Data
+	
 	typedef logic [1:0] {ReadReg, WriteReg, Dump} Command;
 	typedef logic [2:0] {CH1, CH2, CH3, Ch4, Ch5} Channel;
 	typedef logic [5:0] {TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, decimator, VIH, VIL, matchH, matchL, maskH, maskL, baud_cntH, baud_cntL, trig_posH, trig_posL} Register;
@@ -149,7 +150,7 @@ module cmd_cfg ();
 			state <= nxtstate;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always @ (posedge clk, negedge rst_n) begin 
 		if(!rst_n) begin
 			TrigCfg <= 6'h03;
 		end
@@ -211,7 +212,8 @@ module cmd_cfg ();
 			IDLE: begin
 				if(cmd_rdy) begin
 					case(command)
-						ReadReg : begin
+					
+						ReadReg : begin						//Command is to send back what is contained in the specified register. Set response equal to register, with padding, and send it
 							send_resp = 1'h1;
 							clr_cmd_rdy = 1'h1;
 							nxtstate = IDLE;
@@ -260,7 +262,7 @@ module cmd_cfg ();
 							endcase
 						end
 						
-						WriteReg : begin
+						WriteReg : begin //Command is a send command, set the ***_nxt line of the correct register to configure, if correct will send ack response and will update register on next clock cycle 
 							wrt_reg = 1'h1;
 							send_resp = 1'h1;
 							resp = 8'hA5;
@@ -329,7 +331,7 @@ module cmd_cfg ();
 				end
 			end
 			
-			DUMP1 : begin
+			DUMP1 : begin				//Direct selected channel into Response and send it if reading is not done
 				case (ccc) begin
 					CH1 : resp = rdataCH1;
 					CH2 : resp = rdataCH2;
@@ -345,19 +347,24 @@ module cmd_cfg ();
 					end
 				endcase
 				
-				if(rd_done)
+				if(rd_done) begin		//If reading is done then clr the command and move back to the waiting state
 					clr_cmd_rdy = 1'h1;
 					nxtstate = IDLE;
+				end
+				else begin				//Else send the response and move into waiting state
+					send_resp = 1'h1;
+					nxtstate = DUMP2;
+				end
 			end
 			
-			DUMP2 : begin
+			DUMP2 : begin				//Wait for Response to send
 				if(resp_sent)
 					nxtstate = DUMP1;
 				else
 					nxtstate = DUMP2;
 			end
 			
-			default : begin
+			default : begin				//This should be impossible to get into, b/c two bits for state and four defined states
 				send_resp = 1'h1;
 				clr_cmd_rdy = 1'h1;
 				resp = 8'hEE;
