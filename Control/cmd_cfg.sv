@@ -45,6 +45,7 @@
 /			register - Which register should the command be done on
 /			ccc - Which channel should be read
 /			wrt_reg - Whether to write the register or not
+/			raddr - Address that we will be reading from
 /			TrigCfg_nxt - Data to be written to TrigCfg register on next posedge clk
 /			CH1TrigCfg_nxt - Data to be written to CH1TrigCfg register on next posedge clk
 /			CH2TrigCfg_nxt - Data to be written to CH2TrigCfg register on next posedge clk
@@ -66,11 +67,12 @@
 module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, rdataCH1, rdataCH2, rdataCH3, rdataCH4, rdataCH5, resp, send_resp, clr_cmd_rdy, strt_rd, trig_pos, decimator, maskL, maskH, matchL, matchH, baud_cntL, baud_cntH, TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, trig_posH, trig_posL, VIH, VIL);
 	
 	parameter LOG2 = 9; //Default Size for Data
+	parameter ENTRIES = 384;
 	
 	typedef logic [1:0] {ReadReg, WriteReg, Dump} Command;
 	typedef logic [2:0] {CH1, CH2, CH3, Ch4, Ch5} Channel;
 	typedef logic [5:0] {TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, decimator, VIH, VIL, matchH, matchL, maskH, maskL, baud_cntH, baud_cntL, trig_posH, trig_posL} Register;
-	typedef logic [1:0] {IDLE, DUMP1, DUMP2, RESP} State;
+	typedef logic [1:0] {IDLE, DUMP, RESP} State;
 	
 	input clk;
 	input rst_n;
@@ -78,7 +80,6 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, 
 	input [15:0] cmd;
 	input cmd_rdy;
 	input resp_sent;
-	input rd_done;
 	input set_capture_done;
 
 	input [7:0] rdataCH1;
@@ -90,7 +91,6 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, 
 	output [7:0] resp;
 	output send_resp;
 	output clr_cmd_rdy;
-	output strt_rd;
 	output [LOG2-1:0] trig_pos;
 
 	output logic [3:0] decimator;
@@ -119,6 +119,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, 
 	State nxtstate;
 	
 	logic wrt_reg;
+	logic [LOG2-1:0] raddr; 
 	
 	logic [5:0] TrigCfg_nxt;
 	logic [4:0] CH1TrigCfg_nxt;
@@ -137,6 +138,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, 
 	logic [7:0] baud_cntL_nxt;
 	logic [7:0] trig_posH_nxt;
 	logic [7:0] trig_posL_nxt;
+	
 	
 	assign command = cmd[15:14];
 	assign register = cmd[12:8];
@@ -315,9 +317,17 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, 
 						end
 						
 						Dump : begin
-							strt_rd = 1'h1;
-							nxtstate = DUMP1;
-
+							raddr = waddr;
+							case(ccc) 
+								CH1 : resp = rdataCH1;
+								CH2 : resp = rdataCH2;
+								CH3 : resp = rdataCH3;
+								Ch4 : resp = rdataCH4;
+								Ch5 : resp = rdataCH5;
+							endcase
+							send_resp = 1'h1;
+							nxtstate = RESP;
+							
 						end
 						
 						default : begin //Sent bad command
@@ -331,7 +341,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, 
 				end
 			end
 			
-			DUMP1 : begin				//Direct selected channel into Response and send it if reading is not done
+			DUMP : begin				//Direct selected channel into Response and send it if reading is not done
 				case (ccc) begin
 					CH1 : resp = rdataCH1;
 					CH2 : resp = rdataCH2;
@@ -357,12 +367,10 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, 
 				end
 			end
 			
-			DUMP2 : begin				//Wait for Response to send
-				if(resp_sent)
-					nxtstate = DUMP1;
-				else
-					nxtstate = DUMP2;
-			end
+			RESP : begin
+				if(resp_sent)begin
+					if(raddr == ENTRIES)
+						raddr = 0;
 			
 			default : begin				//This should be impossible to get into, b/c two bits for state and four defined states
 				send_resp = 1'h1;
@@ -375,3 +383,24 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, rd_done, set_capture_done, 
 		endcase
 	end
 endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

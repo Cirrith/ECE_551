@@ -1,0 +1,22 @@
+Person:
+
+	Ryan Bambrough - 
+		Upper Level Design
+	Tanner Hu -
+		Protocol Trigger Unit
+	Joey Miller -
+		Capture Unit
+	Zachary Watchel -
+		Synthesis Script
+	
+	TODO as a group - 
+		Top Level Test Bench
+		Test Cases
+	
+Things to Do:
+	G Top level Test Bench
+	X Protocol Trigger Unit
+	X Capture Unit
+	X Synthesis Script
+	X Upper Level Design
+	G Test Cases
