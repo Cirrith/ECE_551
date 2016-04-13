@@ -98,7 +98,7 @@ module cmd_cfg_tb();
 			.CH3TrigCfg(CH3TrigCfg),
 			.CH4TrigCfg(CH4TrigCfg),
 			.CH5TrigCfg(CH5TrigCfg),
-			.VIH(VIL),
+			.VIH(VIH),
 			.VIL(VIL));
 	
 	RAMqueue ram [4:0] (.clk(clk), .we(1'h0), .waddr(9'h000), .wdata(8'h00), .raddr(raddr), .rdata(Read_Data)); //Default Size (ENTRIES = 384, Data Width = 8, LOG2 = 9)
@@ -171,63 +171,73 @@ module cmd_cfg_tb();
 			
 			@(negedge clk);
 			
-			set_cmd_rdy = 1'h1;
-			@(negedge clk);
-			set_cmd_rdy = 1'h0;
-			
-			fork: Forky
-				if(Cmd == ReadReg) begin
-					@(posedge send_resp);
-					if(resp != reg_retur) begin
-						$display("A read messed up. Trying to read Register %s", Reg);
-						$stop;
-					end
-					$display("Read Successful");
-					disable Forky;
-				end
-				
-				if (Cmd == WriteReg) begin
-					@(posedge send_resp);
-					if((resp != ACK) | (reg_retur != Comp)) begin
-						$display("A write messed up. Trying to write Regsiter %s", Reg);
-						$stop;
-					end
-					$display("Write Successful");
-					disable Forky;
-				end
-				
-				if (Cmd == Dump) begin
-					i = waddr;
-					repeat(ENTRIES) begin
-						@(posedge send_resp);
-						if(resp != Mem[i]) begin
-							$display("A Dump messed up. Tring to access address %d", i);
-							$stop;
-						end
-						if(i == ENTRIES-1)
-							i = 0;
-						else
-							i = i + 1;
-							
-						repeat (20) @(negedge clk); //Wait 20 clock cycles for 'transmitting'
-						resp_sent = 1'h1;
-						@(negedge clk);
-						resp_sent = 1'h0;
-					end
-					$display("Dump Successful");
-					disable Forky;
+			fork : Forky
+				begin : timeout
+					repeat (50000) @(negedge clk);
+					$display("50000 ns, that is quite a many, check Cmd else their moduel");
+					$stop;
 				end
 				
 				begin
-					repeat (5000) begin
-						@(posedge clk);
-					end
-					$display("5000 cycles, that is quite a many, check Cmd else their moduel");
-					disable Forky;
-					$stop;
+					set_cmd_rdy = 1'h1;
+					@(negedge clk);
+					set_cmd_rdy = 1'h0;
 				end
-			join
+				
+				begin
+					if(Cmd == ReadReg) begin
+						$display("Got into ReadReg");
+						@(posedge send_resp);
+						if(resp != reg_retur) begin
+							$display("A read messed up. Trying to read Register %s", Reg);
+							$stop;
+						end
+						$display("Read Successful");
+						disable Forky;
+					end
+				end
+				
+				begin
+					if (Cmd == WriteReg) begin
+						$display("Got into WriteReg @ time %t", $time);
+						@(posedge send_resp);
+						$display("Trigger resp");
+						if((resp != ACK) | (reg_retur != Comp)) begin
+							$display("A write messed up. Trying to write Regsiter %s", Reg);
+							$stop;
+						end
+						$display("Write Successful");
+						disable Forky;
+					end
+				end
+				
+				begin
+					if (Cmd == Dump) begin
+						i = waddr;
+						repeat(ENTRIES) begin
+							$display("Got into Dump");
+							@(posedge send_resp);
+							if(resp != Mem[i]) begin
+								$display("A Dump messed up. Tring to access address %d", i);
+								$stop;
+							end
+							if(i == ENTRIES-1)
+								i = 0;
+							else
+								i = i + 1;
+								
+							repeat (20) @(negedge clk); //Wait 20 clock cycles for 'transmitting'
+							resp_sent = 1'h1;
+							@(negedge clk);
+							resp_sent = 1'h0;
+						end
+						$display("Dump Successful");
+						disable Forky;
+					end
+				end
+			join			
 		end
+		$stop;
 	end
 		
 endmodule

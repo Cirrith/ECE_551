@@ -12,297 +12,16 @@
 # //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
 # //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
 # //
-# Loading project SPI
-# reading /cae/apps/data/mentor-2015/modeltech/linux_x86_64/../modelsim.ini
 # Loading project HW5_2
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# Compile of CommMaster.sv was successful.
-# Compile of RAMqueue.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of UART_rx.sv was successful.
-# Compile of UART_rx_baud.sv was successful.
-# Compile of UART_rx_control.sv was successful.
-# Compile of UART_rx_count.sv was successful.
-# Compile of UART_rx_stor.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of UART_tx_baud.sv was successful.
-# Compile of UART_tx_control.sv was successful.
-# Compile of UART_tx_count.sv was successful.
-# Compile of UART_tx_stor.sv was successful.
-# Compile of UART_wrapper.sv was successful.
-# 16 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# Compile of RAMqueue.sv was successful.
-# 3 compiles, 15 failed with 2 errors.
-# Error opening /userspace/r/rbambrough/College/ECE_551/Control/UART_tx.sv
-# Path name '/userspace/r/rbambrough/College/ECE_551/Control/UART_tx.sv' doesn't exist.
-# Error opening /userspace/r/rbambrough/College/ECE_551/Control/UART_rx_baud.sv
-# Path name '/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_baud.sv' doesn't exist.
-# Error opening /userspace/r/rbambrough/College/ECE_551/Control/UART_tx_baud.sv
-# Path name '/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_baud.sv' doesn't exist.
-# Error opening /userspace/r/rbambrough/College/ECE_551/Control/UART_rx_stor.sv
-# Path name '/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_stor.sv' doesn't exist.
-# Error opening /userspace/r/rbambrough/College/ECE_551/Control/UART_rx_control.sv
-# Path name '/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_control.sv' doesn't exist.
-# Error opening /userspace/r/rbambrough/College/ECE_551/Control/UART_rx_count.sv
-# Path name '/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_count.sv' doesn't exist.
-# Error opening /userspace/r/rbambrough/College/ECE_551/Control/UART_tx_stor.sv
-# Path name '/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_stor.sv' doesn't exist.
-# Error opening /userspace/r/rbambrough/College/ECE_551/Control/UART_tx_count.sv
-# Path name '/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_count.sv' doesn't exist.
-# Error opening /userspace/r/rbambrough/College/ECE_551/Control/UART_tx_control.sv
-# Path name '/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_control.sv' doesn't exist.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# Compile of RAMqueue.sv was successful.
-# 3 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 8 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 9 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 19 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 20 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 2 failed with 2 errors.
-# Compile of cmd_cfg.sv was successful.
-# Compile of cmd_cfg_tb.sv failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
-# Compile of cmd_cfg_tb.sv failed with 0 errors.
-# Compile of cmd_cfg_tb.sv failed with 0 errors.
-# Compile of cmd_cfg_tb.sv was successful.
-# Compile of cmd_cfg_tb.sv was successful.
 vsim -novopt work.cmd_cfg_tb
 # vsim 
-# Start time: 01:06:10 on Apr 13,2016
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
-# Loading work.cmd_cfg
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.RAMqueue
-# Loading work.RAMqueue
-# ** Error (suppressible): (vsim-8386) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(164): Illegal assignment to type 'enum reg[1:0] cmd_cfg_tb.Command' from type 'reg[31:0]': An enum variable may only be assigned the same enum typed variable or one of its values.
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv
-# ** Error (suppressible): (vsim-8386) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(165): Illegal assignment to type 'enum reg[5:0] cmd_cfg_tb.Register' from type 'reg[31:0]': An enum variable may only be assigned the same enum typed variable or one of its values.
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv
-# ** Error (suppressible): (vsim-8386) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(167): Illegal assignment to type 'enum reg[2:0] cmd_cfg_tb.Channel' from type 'reg[31:0]': An enum variable may only be assigned the same enum typed variable or one of its values.
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv
-# ** Warning: (vsim-3015) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76): [PCDPC] - Port size (9) does not match connection size (1) for port 'raddr'. The port definition is at: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv(67).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-# ** Error (suppressible): (vsim-3054) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(110): Port connection object port 'raddr' must be 9 or 45-bit wide. The actual provided is 1-bit. The port definition is at: /userspace/r/rbambrough/College/ECE_551/Control/RAMqueue.sv(20).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/ram[0] File: /userspace/r/rbambrough/College/ECE_551/Control/RAMqueue.sv
-# Error loading design
-# Compile of cmd_cfg_tb.sv was successful.
-vsim -novopt work.cmd_cfg_tb
-# vsim 
-# Start time: 01:07:53 on Apr 13,2016
+# Start time: 03:53:52 on Apr 13,2016
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
 # Loading sv_std.std
 # Loading work.cmd_cfg_tb
 # Loading work.cmd_cfg
 # Loading work.RAMqueue
-# ** Warning: (vsim-3015) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76): [PCDPC] - Port size (9) does not match connection size (1) for port 'raddr'. The port definition is at: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv(67).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-# ** Error (suppressible): (vsim-3054) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(110): Port connection object port 'raddr' must be 9 or 45-bit wide. The actual provided is 1-bit. The port definition is at: /userspace/r/rbambrough/College/ECE_551/Control/RAMqueue.sv(20).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/ram[0] File: /userspace/r/rbambrough/College/ECE_551/Control/RAMqueue.sv
-# Error loading design
-# Compile of cmd_cfg_tb.sv was successful.
-vsim -novopt work.cmd_cfg_tb
-# vsim 
-# Start time: 01:09:00 on Apr 13,2016
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Entered a Bad State
-# Entered a Bad State
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(195)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 195
-add wave -position insertpoint  \
-sim:/cmd_cfg_tb/LOG2 \
-sim:/cmd_cfg_tb/ENTRIES \
-sim:/cmd_cfg_tb/clk \
-sim:/cmd_cfg_tb/rst_n \
-sim:/cmd_cfg_tb/cmd \
-sim:/cmd_cfg_tb/cmd_rdy \
-sim:/cmd_cfg_tb/resp_sent \
-sim:/cmd_cfg_tb/set_capture_done \
-sim:/cmd_cfg_tb/waddr \
-sim:/cmd_cfg_tb/rdataCH1 \
-sim:/cmd_cfg_tb/rdataCH2 \
-sim:/cmd_cfg_tb/rdataCH3 \
-sim:/cmd_cfg_tb/rdataCH4 \
-sim:/cmd_cfg_tb/rdataCH5 \
-sim:/cmd_cfg_tb/resp \
-sim:/cmd_cfg_tb/send_resp \
-sim:/cmd_cfg_tb/clr_cmd_rdy \
-sim:/cmd_cfg_tb/trig_pos \
-sim:/cmd_cfg_tb/decimator \
-sim:/cmd_cfg_tb/maskL \
-sim:/cmd_cfg_tb/maskH \
-sim:/cmd_cfg_tb/matchL \
-sim:/cmd_cfg_tb/matchH \
-sim:/cmd_cfg_tb/baud_cntL \
-sim:/cmd_cfg_tb/baud_cntH \
-sim:/cmd_cfg_tb/TrigCfg \
-sim:/cmd_cfg_tb/CH1TrigCfg \
-sim:/cmd_cfg_tb/CH2TrigCfg \
-sim:/cmd_cfg_tb/CH3TrigCfg \
-sim:/cmd_cfg_tb/CH4TrigCfg \
-sim:/cmd_cfg_tb/CH5TrigCfg \
-sim:/cmd_cfg_tb/VIH \
-sim:/cmd_cfg_tb/VIL \
-sim:/cmd_cfg_tb/Mem \
-sim:/cmd_cfg_tb/Read_Data \
-sim:/cmd_cfg_tb/raddr \
-sim:/cmd_cfg_tb/Data \
-sim:/cmd_cfg_tb/Comp \
-sim:/cmd_cfg_tb/ACK \
-sim:/cmd_cfg_tb/NAK \
-sim:/cmd_cfg_tb/i \
-sim:/cmd_cfg_tb/set_cmd_rdy \
-sim:/cmd_cfg_tb/reg_retur \
-sim:/cmd_cfg_tb/Cmd \
-sim:/cmd_cfg_tb/Reg \
-sim:/cmd_cfg_tb/CCC
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Entered a Bad State
-# Entered a Bad State
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(195)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 195
-# Compile of cmd_cfg.sv was successful.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(76).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-add wave -position insertpoint  \
-sim:/cmd_cfg_tb/LOG2 \
-sim:/cmd_cfg_tb/ENTRIES \
-sim:/cmd_cfg_tb/clk \
-sim:/cmd_cfg_tb/rst_n \
-sim:/cmd_cfg_tb/cmd \
-sim:/cmd_cfg_tb/cmd_rdy \
-sim:/cmd_cfg_tb/resp_sent \
-sim:/cmd_cfg_tb/set_capture_done \
-sim:/cmd_cfg_tb/waddr \
-sim:/cmd_cfg_tb/rdataCH1 \
-sim:/cmd_cfg_tb/rdataCH2 \
-sim:/cmd_cfg_tb/rdataCH3 \
-sim:/cmd_cfg_tb/rdataCH4 \
-sim:/cmd_cfg_tb/rdataCH5 \
-sim:/cmd_cfg_tb/resp \
-sim:/cmd_cfg_tb/send_resp \
-sim:/cmd_cfg_tb/clr_cmd_rdy \
-sim:/cmd_cfg_tb/trig_pos \
-sim:/cmd_cfg_tb/decimator \
-sim:/cmd_cfg_tb/maskL \
-sim:/cmd_cfg_tb/maskH \
-sim:/cmd_cfg_tb/matchL \
-sim:/cmd_cfg_tb/matchH \
-sim:/cmd_cfg_tb/baud_cntL \
-sim:/cmd_cfg_tb/baud_cntH \
-sim:/cmd_cfg_tb/TrigCfg \
-sim:/cmd_cfg_tb/CH1TrigCfg \
-sim:/cmd_cfg_tb/CH2TrigCfg \
-sim:/cmd_cfg_tb/CH3TrigCfg \
-sim:/cmd_cfg_tb/CH4TrigCfg \
-sim:/cmd_cfg_tb/CH5TrigCfg \
-sim:/cmd_cfg_tb/VIH \
-sim:/cmd_cfg_tb/VIL \
-sim:/cmd_cfg_tb/Mem \
-sim:/cmd_cfg_tb/Read_Data \
-sim:/cmd_cfg_tb/raddr \
-sim:/cmd_cfg_tb/Data \
-sim:/cmd_cfg_tb/Comp \
-sim:/cmd_cfg_tb/ACK \
-sim:/cmd_cfg_tb/NAK \
-sim:/cmd_cfg_tb/i \
-sim:/cmd_cfg_tb/set_cmd_rdy \
-sim:/cmd_cfg_tb/reg_retur \
-sim:/cmd_cfg_tb/Cmd \
-sim:/cmd_cfg_tb/Reg \
-sim:/cmd_cfg_tb/CCC
-run -all
-# Entered a Bad State
-# Entered a Bad State
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(195)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 195
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv was successful.
-# 2 compiles, 1 failed with 1 error.
-# Compile of cmd_cfg.sv was successful.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-# Warning in wave window restart: (vish-4014) No objects found matching '/cmd_cfg_tb/rdataCH1'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/cmd_cfg_tb/rdataCH2'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/cmd_cfg_tb/rdataCH3'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/cmd_cfg_tb/rdataCH4'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/cmd_cfg_tb/rdataCH5'. 
 add wave -position insertpoint  \
 sim:/cmd_cfg_tb/LOG2 \
 sim:/cmd_cfg_tb/ENTRIES \
@@ -346,155 +65,10 @@ sim:/cmd_cfg_tb/Cmd \
 sim:/cmd_cfg_tb/Reg \
 sim:/cmd_cfg_tb/CCC
 run -all
-# Entered a Bad State
-# Entered a Bad State
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(190)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 190
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Entered a Bad State
-# Entered a Bad State
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(190)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 190
-add wave -position insertpoint sim:/cmd_cfg_tb/DUT/*
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Entered a Bad State
-# Entered a Bad State
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(190)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 190
-# Compile of cmd_cfg.sv was successful.
-# Compile of cmd_cfg_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Break in Module cmd_cfg_tb at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 127
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Entered a Bad State, 
-# Entered a Bad State, 
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(191)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 191
-run -all
-# Write Successful
-# 50000 Cycles, that is quite a few, check Cmd else their moduel
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(222)
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(182)
 #    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 222
-run -all
-run -all
-run -all
-# Compile of cmd_cfg_tb.sv was successful.
-# Compile of cmd_cfg.sv was successful.
-# Compile of cmd_cfg_tb.sv was successful.
-# Compile of RAMqueue.sv was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
-# Loading work.cmd_cfg
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.RAMqueue
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Entered a Bad State, 
-# Entered a Bad State, 
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(191)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 191
-# Compile of cmd_cfg.sv was successful.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Entered a Bad State, x
-# Entered a Bad State, x
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(191)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 191
-# Compile of cmd_cfg.sv was successful.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Entered a Bad State, x
-# Entered a Bad State, x
-# Entered a Bad State, x
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(191)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 191
-# Compile of cmd_cfg.sv was successful.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# A write messed up. Trying to write Regsiter VIL_Reg
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(191)
-#    Time: 25 ns  Iteration: 4  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 191
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 182
 # Compile of cmd_cfg_tb.sv was successful.
 restart
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
@@ -503,41 +77,56 @@ restart
 # Loading work.cmd_cfg_tb
 # Loading work.cmd_cfg
 # Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
 run -all
+# Got into WriteReg
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(182)
+#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 182
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Got into WriteReg
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(182)
+#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 182
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Got into WriteReg @ time                   35
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(182)
+#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 182
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Got into WriteReg @ time                   25
+# Trigger resp
 # Write Successful
-# 25000 ns, that is quite a many, check Cmd else their moduel
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(222)
-#    Time: 25035 ns  Iteration: 0  Instance: /cmd_cfg_tb
-# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 222
-# Compile of cmd_cfg_tb.sv was successful.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-# ** Warning: (vsim-3839) /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70): Variable '/cmd_cfg_tb/VIL', driven via a port connection, is multiply driven. See /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(70).
-#    Time: 0 ns  Iteration: 0  Instance: /cmd_cfg_tb/DUT File: /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg.sv
-run -all
-# Write Successful
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# 5000 cycles, that is quite a many, check Cmd else their moduel
-# Compile of cmd_cfg.sv failed with 1 errors.
-# Compile of cmd_cfg_tb.sv was successful.
-# 2 compiles, 1 failed with 1 error.
+# Got into Dump
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(178)
+#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 178
+# End time: 04:07:19 on Apr 13,2016, Elapsed time: 0:13:27
+# Errors: 0, Warnings: 5
