@@ -104,6 +104,7 @@ module cmd_cfg_tb();
 	RAMqueue ram [4:0] (.clk(clk), .we(1'h0), .waddr(9'h000), .wdata(8'h00), .raddr(raddr), .rdata(Read_Data)); //Default Size (ENTRIES = 384, Data Width = 8, LOG2 = 9)
 	
 	initial begin		//Reset and initial clk setup
+		rst_n = 1'h0;
 		$readmemh("RAMData.txt", Mem);
 		ram[0].mem = Mem;
 		ram[1].mem = Mem;
@@ -113,7 +114,6 @@ module cmd_cfg_tb();
 		waddr = 9'h000;
 		
 		clk = 1;
-		rst_n = 0;
 		resp_sent = 1'h0;
 		set_capture_done = 1'h0;
 		repeat(2) @(negedge clk);
@@ -125,31 +125,24 @@ module cmd_cfg_tb();
 	
 	always_comb begin
 		case(Reg)		//What what is expected from read
-			TrigCfg_Reg 	: begin reg_retur = {2'h0, TrigCfg}; 	Comp = {2'h0, Data[5:0]}; end
-			CH1TrigCfg_Reg 	: begin reg_retur = {3'h0, CH1TrigCfg}; Comp = {3'h0, Data[4:0]}; end
-			CH2TrigCfg_Reg 	: begin reg_retur = {3'h0, CH2TrigCfg}; Comp = {3'h0, Data[4:0]}; end
-			CH3TrigCfg_Reg 	: begin reg_retur = {3'h0, CH3TrigCfg}; Comp = {3'h0, Data[4:0]}; end
-			CH4TrigCfg_Reg 	: begin reg_retur = {3'h0, CH4TrigCfg}; Comp = {3'h0, Data[4:0]}; end
-			CH5TrigCfg_Reg 	: begin reg_retur = {3'h0, CH5TrigCfg}; Comp = {3'h0, Data[4:0]}; end
-			decimator_Reg 	: begin reg_retur = {4'h0, decimator}; 	Comp = {4'h0, Data[3:0]}; end
-			VIH_Reg 		: reg_retur = VIH;
-			VIL_Reg 		: reg_retur = VIL;
-			matchH_Reg 		: reg_retur = matchH;
-			matchL_Reg 		: reg_retur = matchL;
-			maskH_Reg 		: reg_retur = maskH;
-			maskL_Reg 		: reg_retur = maskL;
-			baud_cntH_Reg 	: reg_retur = baud_cntH;
-			baud_cntL_Reg 	: reg_retur = baud_cntL;
-			trig_posH_Reg 	: reg_retur = trig_pos[15:8];
-			trig_posL_Reg 	: reg_retur = trig_pos[7:0];
+			TrigCfg_Reg 			: begin reg_retur = {2'h0, TrigCfg}; 		Comp = {2'h0, Data[5:0]}; end
+			CH1TrigCfg_Reg 	: begin reg_retur = {3'h0, CH1TrigCfg}; 	Comp = {3'h0, Data[4:0]}; end
+			CH2TrigCfg_Reg 	: begin reg_retur = {3'h0, CH2TrigCfg}; 	Comp = {3'h0, Data[4:0]}; end
+			CH3TrigCfg_Reg 	: begin reg_retur = {3'h0, CH3TrigCfg}; 	Comp = {3'h0, Data[4:0]}; end
+			CH4TrigCfg_Reg 	: begin reg_retur = {3'h0, CH4TrigCfg}; 	Comp = {3'h0, Data[4:0]}; end
+			CH5TrigCfg_Reg 	: begin reg_retur = {3'h0, CH5TrigCfg}; 	Comp = {3'h0, Data[4:0]}; end
+			decimator_Reg 		: begin reg_retur = {4'h0, decimator}; 	Comp = {4'h0, Data[3:0]}; end
+			VIH_Reg 				: begin reg_retur = VIH; 						Comp = Data; end
+			VIL_Reg 				: begin reg_retur = VIL; 						Comp = Data; end
+			matchH_Reg 			: begin reg_retur = matchH; 					Comp = Data; end
+			matchL_Reg 			: begin reg_retur = matchL; 					Comp = Data; end
+			maskH_Reg 			: begin reg_retur = maskH; 					Comp = Data; end
+			maskL_Reg 			: begin reg_retur = maskL; 					Comp = Data; end
+			baud_cntH_Reg 		: begin reg_retur = baud_cntH; 				Comp = Data; end
+			baud_cntL_Reg 		: begin reg_retur = baud_cntL; 				Comp = Data; end
+			trig_posH_Reg 		: begin reg_retur = trig_pos[15:8]; 			Comp = Data; end
+			trig_posL_Reg 		: begin reg_retur = trig_pos[7:0]; 			Comp = Data; end
 		endcase	
-	end
-	
-	always_comb begin
-		if(set_cmd_rdy)
-			cmd_rdy = 1'h1;
-		else if(clr_cmd_rdy)
-			cmd_rdy = 1'h0;
 	end
 	
 	initial begin		//Main Testbench Logic
@@ -171,6 +164,8 @@ module cmd_cfg_tb();
 			
 			@(negedge clk);
 			
+			$display("Entered Fork %t", $time);
+			
 			fork : Forky
 				begin : timeout
 					repeat (50000) @(negedge clk);
@@ -179,15 +174,19 @@ module cmd_cfg_tb();
 				end
 				
 				begin
-					set_cmd_rdy = 1'h1;
-					@(negedge clk);
-					set_cmd_rdy = 1'h0;
+					cmd_rdy = 1'h1;
+					//$display("Cmd Rdy at %t", $time);
+					#10;
+					//$display("Cmd Low at %t", $time);
+					cmd_rdy = 1'h0;
 				end
 				
 				begin
 					if(Cmd == ReadReg) begin
 						$display("Got into ReadReg");
 						@(posedge send_resp);
+						@(posedge clk);
+						@(negedge clk);
 						if(resp != reg_retur) begin
 							$display("A read messed up. Trying to read Register %s", Reg);
 							$stop;
@@ -201,12 +200,14 @@ module cmd_cfg_tb();
 					if (Cmd == WriteReg) begin
 						$display("Got into WriteReg @ time %t", $time);
 						@(posedge send_resp);
+						@(posedge clk);
+						@(negedge clk);
 						$display("Trigger resp");
 						if((resp != ACK) | (reg_retur != Comp)) begin
 							$display("A write messed up. Trying to write Regsiter %s", Reg);
 							$stop;
 						end
-						$display("Write Successful");
+						$display("Write Successful, @ %t", $time);
 						disable Forky;
 					end
 				end
@@ -215,7 +216,7 @@ module cmd_cfg_tb();
 					if (Cmd == Dump) begin
 						i = waddr;
 						repeat(ENTRIES) begin
-							$display("Got into Dump");
+							$display("Got into Dump @ %t", $time);
 							@(posedge send_resp);
 							if(resp != Mem[i]) begin
 								$display("A Dump messed up. Tring to access address %d", i);
@@ -235,7 +236,11 @@ module cmd_cfg_tb();
 						disable Forky;
 					end
 				end
-			join			
+			join
+			@(negedge clk);
+			cmd_rdy = 1'h0;
+			$display("Exit Fork at %t", $time);
+			repeat (2) @ (negedge clk);
 		end
 		$stop;
 	end

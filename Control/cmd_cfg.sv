@@ -74,7 +74,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 	typedef enum logic [1:0] {ReadReg, WriteReg, Dump} Command;
 	typedef enum logic [2:0] {CH1, CH2, CH3, Ch4, Ch5} Channel;
 	typedef enum logic [5:0] {TrigCfg_Reg, CH1TrigCfg_Reg, CH2TrigCfg_Reg, CH3TrigCfg_Reg, CH4TrigCfg_Reg, CH5TrigCfg_Reg, decimator_Reg, VIH_Reg, VIL_Reg, matchH_Reg, matchL_Reg, maskH_Reg, maskL_Reg, baud_cntH_Reg, baud_cntL_Reg, trig_posH_Reg, trig_posL_Reg} Register;
-	typedef enum logic [1:0] {IDLE, DUMP, RESP} State;
+	typedef enum logic [2:0] {IDLE, DUMP, RESP, ERROR} State;
 	
 	input clk;
 	input rst_n;
@@ -137,138 +137,138 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 	assign data = cmd[7:0];
 	assign ccc = '{cmd[10:8]};
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			state <= IDLE;
 		else
 			state <= nxtstate;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin 
+	always_ff @ (posedge clk, negedge rst_n) begin 
 		if(!rst_n)
 			TrigCfg <= 6'h03;
-		else if(wrt_reg)
+		else if(wrt_reg & (register == TrigCfg_Reg))
 			TrigCfg <= data[5:0];
 		else if(set_capture_done)
 			TrigCfg <= TrigCfg | 6'h20;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			CH1TrigCfg <= 5'h01;
 		else if (wrt_reg & (register == CH1TrigCfg_Reg))
 			CH1TrigCfg <= data[4:0];
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			CH2TrigCfg <= 5'h01;
 		else if (wrt_reg & (register == CH2TrigCfg_Reg))
 			CH2TrigCfg <= data[4:0];
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			CH3TrigCfg <= 5'h01;
 		else if (wrt_reg & (register == CH3TrigCfg_Reg))
 			CH3TrigCfg <= data[4:0];
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			CH4TrigCfg <= 5'h01;
 		else if (wrt_reg & (register == CH4TrigCfg_Reg))
 			CH4TrigCfg <= data[4:0];
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			CH5TrigCfg <= 5'h01;
 		else if (wrt_reg & (register == CH5TrigCfg_Reg))
 			CH5TrigCfg <= data[4:0];
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			decimator <= 4'h0;
 		else if (wrt_reg & (register == decimator_Reg))
 			decimator <= data[3:0];
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			VIH <= 8'hAA;
 		else if (wrt_reg & (register == VIH_Reg))
 			VIH <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			VIL <= 8'h55;
 		else if (wrt_reg & (register == VIL_Reg))
 			VIL <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			matchH <= 8'h00;
 		else if (wrt_reg & (register == matchH_Reg))
 			matchH <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			matchL <= 8'h00;
 		else if (wrt_reg & (register == matchL_Reg))
 			matchL <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			maskH <= 8'h00;
 		else if (wrt_reg & (register == maskH_Reg))
 			maskH <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			maskL <= 8'h00;
 		else if (wrt_reg & (register == maskL_Reg))
 			maskL <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			baud_cntH <= 8'h06;
 		else if (wrt_reg & (register == baud_cntH_Reg))
 			baud_cntH <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			baud_cntL <= 8'hC8;
 		else if (wrt_reg & (register == baud_cntL_Reg))
 			baud_cntL <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			trig_posH <= 8'h00;
 		else if (wrt_reg & (register == trig_posH_Reg))
 			trig_posH <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			trig_posL <= 8'h01;
 		else if (wrt_reg & (register == trig_posL_Reg))
 			trig_posL <= data;
 	end
 	
-	always @ (posedge clk, negedge rst_n) begin
+	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			raddr <= 0;
-		else
+		else 
 			raddr <= raddr_nxt;
 	end
 	
@@ -289,44 +289,25 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 							nxtstate = IDLE;
 							case(register)
 								TrigCfg_Reg : resp = {2'h0, TrigCfg};
-								
 								CH1TrigCfg_Reg : resp = {3'h0, CH1TrigCfg};
-								
 								CH2TrigCfg_Reg : resp = {3'h0, CH2TrigCfg};
-								
 								CH3TrigCfg_Reg : resp = {3'h0, CH3TrigCfg};
-								
 								CH4TrigCfg_Reg : resp = {3'h0, CH4TrigCfg};
-								
 								CH5TrigCfg_Reg : resp = {3'h0, CH5TrigCfg};
-								
 								decimator_Reg : resp = {4'h0, decimator};
-								
 								VIH_Reg : resp = VIH;
-								
 								VIL_Reg : resp = VIL;
-								
 								matchH_Reg : resp = matchH;
-								
 								matchL_Reg : resp = matchL;
-								
 								maskH_Reg : resp = maskH;
-								
 								maskL_Reg : resp = maskL;
-								
 								baud_cntH_Reg : resp = baud_cntH;
-								
 								baud_cntL_Reg : resp = baud_cntL;
-								
 								trig_posH_Reg : resp = trig_posH;
-								
 								trig_posL_Reg : resp = trig_posL;
 								
 								default : begin //Sent bad register
-									send_resp = 1'h1;
-									clr_cmd_rdy = 1'h1;
-									resp = 8'hEE;
-									nxtstate = IDLE;
+									nxtstate = ERROR;
 									$display("Sent a Bad Register");
 								end
 							endcase
@@ -361,10 +342,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 						end
 						
 						default : begin //Sent bad command
-							send_resp = 1'h1;
-							clr_cmd_rdy = 1'h1;
-							resp = 8'hEE;
-							nxtstate = IDLE;
+							nxtstate = ERROR;
 							$display("Sent a Bad Command");
 						end
 					endcase
@@ -384,10 +362,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 						Ch4 : resp = rdataCH4;
 						Ch5 : resp = rdataCH5;
 						default : begin //Sent bad channel
-							send_resp = 1'h1;
-							clr_cmd_rdy = 1'h1;
-							resp = 8'hEE;
-							nxtstate = IDLE;
+							nxtstate = ERROR;
 							$display("Sent a Bad Channel");
 						end
 					endcase
@@ -407,36 +382,19 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 				else
 					nxtstate = RESP;
 			end
-			/*
-			default : begin				//This should be impossible to get into, b/c two bits for state and four defined states
-				send_resp = 1'h1;
-				clr_cmd_rdy = 1'h1;
+
+			ERROR : begin
 				resp = 8'hEE;
+				clr_cmd_rdy = 1'h1;
+				send_resp = 1'h1;
 				nxtstate = IDLE;
+			end
+			
+			/*default : begin				//This should be impossible to get into, b/c two bits for state and four defined states
+				nxtstate = ERROR;
 				$display("Entered a Bad State, %d", state);
 			end
-			*/ //This is messing up the TestBench
+			*///This is messing up the TestBench
 		endcase
 	end
 endmodule
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

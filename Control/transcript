@@ -13,14 +13,31 @@
 # //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
 # //
 # Loading project HW5_2
+# Compile of cmd_cfg.sv failed with 1 errors.
+# Compile of cmd_cfg_tb.sv failed with 0 errors.
+# Compile of RAMqueue.sv was successful.
+# Compile of Tester.sv was successful.
+# 4 compiles, 2 failed with 1 error.
+# Compile of cmd_cfg.sv failed with 1 errors.
+# Compile of cmd_cfg_tb.sv was successful.
+# Compile of RAMqueue.sv was successful.
+# Compile of Tester.sv was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of cmd_cfg.sv was successful.
+# Compile of cmd_cfg_tb.sv was successful.
+# Compile of RAMqueue.sv was successful.
+# Compile of Tester.sv was successful.
+# 4 compiles, 0 failed with no errors.
 vsim -novopt work.cmd_cfg_tb
 # vsim 
-# Start time: 03:53:52 on Apr 13,2016
+# Start time: 10:56:11 on Apr 13,2016
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
 # Loading sv_std.std
 # Loading work.cmd_cfg_tb
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
 # Loading work.cmd_cfg
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.RAMqueue
 # Loading work.RAMqueue
 add wave -position insertpoint  \
 sim:/cmd_cfg_tb/LOG2 \
@@ -64,57 +81,92 @@ sim:/cmd_cfg_tb/reg_retur \
 sim:/cmd_cfg_tb/Cmd \
 sim:/cmd_cfg_tb/Reg \
 sim:/cmd_cfg_tb/CCC
-run -all
-# 50000 ns, that is quite a many, check Cmd else their moduel
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(182)
-#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
-# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 182
-# Compile of cmd_cfg_tb.sv was successful.
+run -continue
+# Entered a Bad State, x
+# Entered a Bad State, x
+# Compile of cmd_cfg.sv was successful.
 restart
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
 # Loading sv_std.std
 # Loading work.cmd_cfg_tb
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
 # Loading work.cmd_cfg
 # Loading work.RAMqueue
 run -all
-# Got into WriteReg
-# 50000 ns, that is quite a many, check Cmd else their moduel
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(182)
-#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
-# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 182
-# Compile of cmd_cfg_tb.sv was successful.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-run -all
-# Got into WriteReg
-# 50000 ns, that is quite a many, check Cmd else their moduel
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(182)
-#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
-# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 182
-# Compile of cmd_cfg_tb.sv was successful.
-restart
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
-# Loading sv_std.std
-# Loading work.cmd_cfg_tb
-# Loading work.cmd_cfg
-# Loading work.RAMqueue
-run -all
+# Entered a Bad State, x
+# Entered a Bad State, x
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful
 # Got into WriteReg @ time                   35
 # 50000 ns, that is quite a many, check Cmd else their moduel
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(182)
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(171)
 #    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
-# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 182
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 171
 # Compile of cmd_cfg_tb.sv was successful.
 restart
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered a Bad State, x
+# Entered a Bad State, x
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful
+# Got into WriteReg @ time                   35
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(171)
+#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 171
+# Compile of cmd_cfg.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered a Bad State, x
+# Entered a Bad State, x
+# Got into WriteReg @ time                   25
+# The state is IDLE
+# Trigger resp
+# Write Successful
+# The state is IDLE
+# The state is IDLE
+# Got into WriteReg @ time                   35
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(171)
+#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 171
+# Compile of cmd_cfg.sv was successful.
+# Compile of cmd_cfg_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful
+# Got into WriteReg @ time                   55
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(171)
+#    Time: 500055 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 171
+add wave -position insertpoint sim:/cmd_cfg_tb/DUT/*
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Loading sv_std.std
 # Loading work.cmd_cfg_tb
 # Loading work.cmd_cfg
@@ -123,10 +175,452 @@ run -all
 # Got into WriteReg @ time                   25
 # Trigger resp
 # Write Successful
+# Got into WriteReg @ time                   55
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(171)
+#    Time: 500055 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 171
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Cmd Rdy at                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful
+# Exit Fork at                   25
+# Cmd Rdy at                   55
+# Got into WriteReg @ time                   55
+# Cmd Low at                   65
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(171)
+#    Time: 500055 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 171
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Cmd Rdy at                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   25
+# Exit Fork at                   25
+# Cmd Rdy at                   55
+# Got into WriteReg @ time                   55
+# Cmd Low at                   65
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(171)
+#    Time: 500055 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 171
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Cmd Rdy at                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   25
+# Exit Fork at                   25
+# Cmd Rdy at                   55
+# Got into WriteReg @ time                   55
+# Cmd Low at                   65
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(171)
+#    Time: 500055 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 171
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Cmd Rdy at                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   25
+# Exit Fork at                   25
+# Entered Fork                   55
+# Cmd Rdy at                   55
+# Got into WriteReg @ time                   55
+# Cmd Low at                   65
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(173)
+#    Time: 500055 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 173
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Cmd Rdy at                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   25
+# Exit Fork at                   25
+# Entered Fork                   55
+# Cmd Rdy at                   55
+# Got into WriteReg @ time                   55
+# Trigger resp
+# Write Successful, @                   55
+# Exit Fork at                   55
+# Entered Fork                   85
+# Cmd Rdy at                   85
+# Got into WriteReg @ time                   85
+# Trigger resp
+# A write messed up. Trying to write Regsiter CH5TrigCfg_Reg
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(204)
+#    Time: 85 ns  Iteration: 3  Instance: /cmd_cfg_tb
+# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 204
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Cmd Rdy at                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   25
+# Exit Fork at                   35
+# Entered Fork                   65
+# Cmd Rdy at                   65
+# Got into WriteReg @ time                   65
+# Trigger resp
+# Write Successful, @                   65
+# Exit Fork at                   75
+# Entered Fork                  105
+# Cmd Rdy at                  105
+# Got into WriteReg @ time                  105
+# Trigger resp
+# A write messed up. Trying to write Regsiter CH5TrigCfg_Reg
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(204)
+#    Time: 105 ns  Iteration: 3  Instance: /cmd_cfg_tb
+# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 204
+# Compile of cmd_cfg.sv was successful.
+# Compile of cmd_cfg_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Cmd Rdy at                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   30
+# Exit Fork at                   35
+# Entered Fork                   65
+# Cmd Rdy at                   65
+# Got into WriteReg @ time                   65
+# Trigger resp
+# Write Successful, @                   70
+# Exit Fork at                   75
+# Entered Fork                  105
+# Cmd Rdy at                  105
+# Got into WriteReg @ time                  105
+# Trigger resp
+# A write messed up. Trying to write Regsiter CH5TrigCfg_Reg
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(206)
+#    Time: 110 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 206
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   35
+# Exit Fork at                   45
+# Entered Fork                   75
+# Got into WriteReg @ time                   75
+# Trigger resp
+# Write Successful, @                   85
+# Exit Fork at                   95
+# Entered Fork                  125
+# Got into WriteReg @ time                  125
+# Trigger resp
+# Write Successful, @                  135
+# Exit Fork at                  145
+# Entered Fork                  175
+# Got into WriteReg @ time                  175
+# Trigger resp
+# A write messed up. Trying to write Regsiter maskH_Reg
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(208)
+#    Time: 185 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedForkStat Forky at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 208
+# Causality operation skipped due to absence of debug database file
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   35
+# Exit Fork at                   45
+# Entered Fork                   75
+# Got into WriteReg @ time                   75
+# Trigger resp
+# Write Successful, @                   85
+# Exit Fork at                   95
+# Entered Fork                  125
+# Got into WriteReg @ time                  125
+# Trigger resp
+# Write Successful, @                  135
+# Exit Fork at                  145
+# Entered Fork                  175
+# Got into WriteReg @ time                  175
+# Trigger resp
+# Write Successful, @                  185
+# Exit Fork at                  195
+# Entered Fork                  225
+# Got into WriteReg @ time                  225
+# Trigger resp
+# Write Successful, @                  235
+# Exit Fork at                  245
+# Entered Fork                  275
+# Got into WriteReg @ time                  275
+# Trigger resp
+# Write Successful, @                  285
+# Exit Fork at                  295
+# Entered Fork                  325
+# Got into Dump
 # Got into Dump
 # 50000 ns, that is quite a many, check Cmd else their moduel
-# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(178)
-#    Time: 500035 ns  Iteration: 1  Instance: /cmd_cfg_tb
-# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 178
-# End time: 04:07:19 on Apr 13,2016, Elapsed time: 0:13:27
-# Errors: 0, Warnings: 5
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(173)
+#    Time: 500325 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 173
+# Compile of cmd_cfg.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   35
+# Exit Fork at                   45
+# Entered Fork                   75
+# Got into WriteReg @ time                   75
+# Trigger resp
+# Write Successful, @                   85
+# Exit Fork at                   95
+# Entered Fork                  125
+# Got into WriteReg @ time                  125
+# Trigger resp
+# Write Successful, @                  135
+# Exit Fork at                  145
+# Entered Fork                  175
+# Got into WriteReg @ time                  175
+# Trigger resp
+# Write Successful, @                  185
+# Exit Fork at                  195
+# Entered Fork                  225
+# Got into WriteReg @ time                  225
+# Trigger resp
+# Write Successful, @                  235
+# Exit Fork at                  245
+# Entered Fork                  275
+# Got into WriteReg @ time                  275
+# Trigger resp
+# Write Successful, @                  285
+# Exit Fork at                  295
+# Entered Fork                  325
+# Got into Dump
+# Got into Dump
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(173)
+#    Time: 500325 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 173
+# Compile of cmd_cfg.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   35
+# Exit Fork at                   45
+# Entered Fork                   75
+# Got into WriteReg @ time                   75
+# Trigger resp
+# Write Successful, @                   85
+# Exit Fork at                   95
+# Entered Fork                  125
+# Got into WriteReg @ time                  125
+# Trigger resp
+# Write Successful, @                  135
+# Exit Fork at                  145
+# Entered Fork                  175
+# Got into WriteReg @ time                  175
+# Trigger resp
+# Write Successful, @                  185
+# Exit Fork at                  195
+# Entered Fork                  225
+# Got into WriteReg @ time                  225
+# Trigger resp
+# Write Successful, @                  235
+# Exit Fork at                  245
+# Entered Fork                  275
+# Got into WriteReg @ time                  275
+# Trigger resp
+# Write Successful, @                  285
+# Exit Fork at                  295
+# Entered Fork                  325
+# Got into Dump
+# Got into Dump
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(173)
+#    Time: 500325 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 173
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   35
+# Exit Fork at                   45
+# Entered Fork                   75
+# Got into WriteReg @ time                   75
+# Trigger resp
+# Write Successful, @                   85
+# Exit Fork at                   95
+# Entered Fork                  125
+# Got into WriteReg @ time                  125
+# Trigger resp
+# Write Successful, @                  135
+# Exit Fork at                  145
+# Entered Fork                  175
+# Got into WriteReg @ time                  175
+# Trigger resp
+# Write Successful, @                  185
+# Exit Fork at                  195
+# Entered Fork                  225
+# Got into WriteReg @ time                  225
+# Trigger resp
+# Write Successful, @                  235
+# Exit Fork at                  245
+# Entered Fork                  275
+# Got into WriteReg @ time                  275
+# Trigger resp
+# Write Successful, @                  285
+# Exit Fork at                  295
+# Entered Fork                  325
+# Got into Dump
+# Got into Dump
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(173)
+#    Time: 500325 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 173
+# Compile of cmd_cfg.sv was successful.
+# Compile of cmd_cfg_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of cmd_cfg_tb.sv failed with 1 errors.
+# Compile of cmd_cfg_tb.sv failed with 1 errors.
+# Compile of cmd_cfg_tb.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg_tb
+# Loading sv_std.std
+# Loading work.cmd_cfg_tb
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Control/work.cmd_cfg
+# Loading work.cmd_cfg
+# Loading work.RAMqueue
+run -all
+# Entered Fork                   25
+# Got into WriteReg @ time                   25
+# Trigger resp
+# Write Successful, @                   35
+# Exit Fork at                   45
+# Entered Fork                   75
+# Got into WriteReg @ time                   75
+# Trigger resp
+# Write Successful, @                   85
+# Exit Fork at                   95
+# Entered Fork                  125
+# Got into WriteReg @ time                  125
+# Trigger resp
+# Write Successful, @                  135
+# Exit Fork at                  145
+# Entered Fork                  175
+# Got into WriteReg @ time                  175
+# Trigger resp
+# Write Successful, @                  185
+# Exit Fork at                  195
+# Entered Fork                  225
+# Got into WriteReg @ time                  225
+# Trigger resp
+# Write Successful, @                  235
+# Exit Fork at                  245
+# Entered Fork                  275
+# Got into WriteReg @ time                  275
+# Trigger resp
+# Write Successful, @                  285
+# Exit Fork at                  295
+# Entered Fork                  325
+# Got into Dump @                  325
+# Got into Dump @                  535
+# 50000 ns, that is quite a many, check Cmd else their moduel
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv(173)
+#    Time: 500325 ns  Iteration: 1  Instance: /cmd_cfg_tb
+# Break in NamedBeginStat timeout at /userspace/r/rbambrough/College/ECE_551/Control/cmd_cfg_tb.sv line 173
