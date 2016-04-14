@@ -1,37 +1,16 @@
-I:/Win/Desktop/prob2/pll8x.v {1 {vlog -work work -vopt -stats=none I:/Win/Desktop/prob2/pll8x.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module pll8x
-
-Top level modules:
-	pll8x
-
-} {} {}} I:/Win/Desktop/prob2/dual_PWM.sv {1 {vlog -work work -vopt -sv -stats=none I:/Win/Desktop/prob2/dual_PWM.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module dual_PWM
-
-Top level modules:
-	dual_PWM
-
-} {} {}} I:/Win/Desktop/prob2/clk_rst_smpl.sv {1 {vlog -work work -vopt -sv -stats=none I:/Win/Desktop/prob2/clk_rst_smpl.sv
+I:/Win/Desktop/prob2/clk_rst_smpl.sv {1 {vlog -work work -vopt -sv -stats=none I:/Win/Desktop/prob2/clk_rst_smpl.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module clk_rst_smpl
 
 Top level modules:
 	clk_rst_smpl
 
-} {} {}} I:/Win/Desktop/prob2/AFE.v {1 {vlog -work work -vopt -stats=none I:/Win/Desktop/prob2/AFE.v
+} {} {}} I:/Win/Desktop/prob2/pll8x.v {1 {vlog -work work -vopt -stats=none I:/Win/Desktop/prob2/pll8x.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module AFE
+-- Compiling module pll8x
 
 Top level modules:
-	AFE
-
-} {} {}} I:/Win/Desktop/prob2/channel_sample.sv {1 {vlog -work work -vopt -sv -stats=none I:/Win/Desktop/prob2/channel_sample.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module channel_sample
-
-Top level modules:
-	channel_sample
+	pll8x
 
 } {} {}} I:/Win/Desktop/prob2/counter.sv {1 {vlog -work work -vopt -sv -stats=none I:/Win/Desktop/prob2/counter.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -40,7 +19,77 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	counter
 
+} {} {}} I:/__Spring2016/ece551/ECE_551_back/prob2/dual_PWM.sv {1 {vlog -work work -vopt -sv -stats=none I:/__Spring2016/ece551/ECE_551_back/prob2/dual_PWM.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module dual_PWM
+
+Top level modules:
+	dual_PWM
+
+} {} {}} I:/Win/Desktop/prob2/AFE.v {1 {vlog -work work -vopt -stats=none I:/Win/Desktop/prob2/AFE.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module AFE
+
+Top level modules:
+	AFE
+
+} {} {}} I:/__Spring2016/ece551/ECE_551_back/prob2/channel_sample.sv {1 {vlog -work work -vopt -sv -stats=none I:/__Spring2016/ece551/ECE_551_back/prob2/channel_sample.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module channel_sample
+
+Top level modules:
+	channel_sample
+
 } {} {}} I:/Win/Desktop/prob2/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none I:/Win/Desktop/prob2/PWM8.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module PWM8
+
+Top level modules:
+	PWM8
+
+} {} {}} I:/__Spring2016/ece551/ECE_551_back/prob2/pll8x.v {1 {vlog -work work -vopt -stats=none I:/__Spring2016/ece551/ECE_551_back/prob2/pll8x.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module pll8x
+
+Top level modules:
+	pll8x
+
+} {} {}} I:/__Spring2016/ece551/ECE_551_back/prob2/clk_rst_smpl.sv {1 {vlog -work work -vopt -sv -stats=none I:/__Spring2016/ece551/ECE_551_back/prob2/clk_rst_smpl.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module clk_rst_smpl
+
+Top level modules:
+	clk_rst_smpl
+
+} {} {}} I:/__Spring2016/ece551/ECE_551_back/prob2/counter.sv {1 {vlog -work work -vopt -sv -stats=none I:/__Spring2016/ece551/ECE_551_back/prob2/counter.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} I:/__Spring2016/ece551/ECE_551_back/prob2/AFE.v {1 {vlog -work work -vopt -stats=none I:/__Spring2016/ece551/ECE_551_back/prob2/AFE.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module AFE
+
+Top level modules:
+	AFE
+
+} {} {}} I:/Win/Desktop/prob2/dual_PWM.sv {1 {vlog -work work -vopt -sv -stats=none I:/Win/Desktop/prob2/dual_PWM.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module dual_PWM
+
+Top level modules:
+	dual_PWM
+
+} {} {}} I:/Win/Desktop/prob2/channel_sample.sv {1 {vlog -work work -vopt -sv -stats=none I:/Win/Desktop/prob2/channel_sample.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module channel_sample
+
+Top level modules:
+	channel_sample
+
+} {} {}} I:/__Spring2016/ece551/ECE_551_back/prob2/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none I:/__Spring2016/ece551/ECE_551_back/prob2/PWM8.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module PWM8
 

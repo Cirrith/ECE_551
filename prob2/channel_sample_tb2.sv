@@ -51,62 +51,56 @@ channel_sample iDUT1(.smpl_clk(smpl_clk),
 					.CH_Lff5(CH1_Lff5), 
 					.smpl(smpl1));			
 
-logic [16:0] count;	
-logic [11:0] smpl1_expected;
+logic [4:0] count;	
+reg [7:0] CH1mem[65535:0];		// 2^16 entries of 8-bits analog for CH1
+logic [7:0] smpl1_expected;
 			
 initial
 begin
 	$display("START");	
+	
+	ptr = 16'h0000;
+	$readmemh("CH1mem.txt",CH1mem);
 	
 	clk_50 = 0;
 	Rst_n = 0;
 	VIL = 8'h55;
 	VIH = 8'hAA;
 	decimator = 4'h4;
-	smpl1_expected = 0;
 
-	@(negedge clk_50);
-	
 	Rst_n = 1;
-
-	@(posedge rst_n);
-
 	
-	// check all values that can be read from CH1mem.txt
-	for(count = 0; count < 65536; count = count + 1)
+	for(count = 0; count < 16; count = count + 1)
 	begin
-		// after each posedge of clk, smpl1 should be updated
+		repeat(5)@(posedge smpl_clk);
 		@(posedge clk);
-		@(posedge clk_400);
 		
-		// compare expected and actual 
-		if(smpl1 != smpl1_expected[7:0])
+		// compare expected and actual smpl
+		if(smpl1 != smpl1_expected)
 		begin
-			$display("NO --- actual: %h, expected: %h", smpl1, smpl1_expected[7:0]);	
+			$display("actual: %h, expected: %h", smpl1, smpl1_expected);	
 			$stop;
 		end
-		else
-			$display("YES --- actual: %h, expected: %h", smpl1, smpl1_expected[7:0]);
 	end
-	
-	// if this is reached, the modules worked correctly
-	$display("It worked!!");
+
+	$display("It worked!!");	
 	$stop;
 end
 
-// on each negedge of smpl_clk, new values of CH1H and CH1L should be
-// loaded into the channel_sample module
-always@(negedge smpl_clk)
+always
 begin
-	// contains the 6 most recent values of CH1H and CH1L.
-	// Only bits 7:0 will be checked against smpl1
-	if(rst_n)
-		smpl1_expected <= {CH1H, CH1L, smpl1_expected[9:2]};
+
+
+	for(count = 0; count < 16; count = count + 1)
+	begin
+		@(posedge smpl_clk);
+		smpl1_expected[count] = {}
+	end
 end
 
 // actually set to 50MHz
 always
-#10 clk_50 = ~clk_50;
+#5 clk_50 = ~clk_50;
 
 endmodule
 
