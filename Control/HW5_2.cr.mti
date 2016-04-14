@@ -1,18 +1,18 @@
-I:/ece551/modelsim/project/ECE_551/Control/Tester.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Control/Tester.sv
+I:/College/ECE_551/Control/cmd_cfg.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Control/cmd_cfg.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module test
+-- Compiling module cmd_cfg
 
 Top level modules:
-	test
+	cmd_cfg
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Control/cmd_cfg_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Control/cmd_cfg_tb.sv
+} {} {}} I:/College/ECE_551/Control/cmd_cfg_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Control/cmd_cfg_tb.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module cmd_cfg_tb
 
 Top level modules:
 	cmd_cfg_tb
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Control/RAMqueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Control/RAMqueue.sv
+} {} {}} I:/College/ECE_551/Control/RAMqueue.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Control/RAMqueue.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module RAMqueue
 

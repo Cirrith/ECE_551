@@ -1,0 +1,53 @@
+module channel_sample(smpl_clk, clk, rst_n, CH_H, CH_L, CH_Hff5, CH_Lff5, smpl);
+
+input logic smpl_clk, clk, rst_n, CH_H, CH_L;
+output logic CH_Hff5, CH_Lff5;
+output logic [7:0] smpl;
+
+logic CH_Hff1, CH_Hff2, CH_Hff3, CH_Hff4, CH_Lff1, CH_Lff2, CH_Lff3, CH_Lff4;
+ 
+// flop CH_H and CH_L five times
+// - twice for metastability, 3 more times for use in forming smpl
+always_ff@(negedge smpl_clk, negedge rst_n)
+begin
+	if(!rst_n)
+	begin
+		CH_Hff1 <= 0;
+		CH_Hff2 <= 0;
+		CH_Hff3 <= 0;
+		CH_Hff4 <= 0;
+		CH_Hff5 <= 0;
+		
+		CH_Lff1 <= 0;
+		CH_Lff2 <= 0;
+		CH_Lff3 <= 0;
+		CH_Lff4 <= 0;
+		CH_Lff5 <= 0;
+	end
+	else
+	begin
+		CH_Hff1 <= CH_H;
+		CH_Hff2 <= CH_Hff1;
+		CH_Hff3 <= CH_Hff2;
+		CH_Hff4 <= CH_Hff3;
+		CH_Hff5 <= CH_Hff4;
+		
+		CH_Lff1 <= CH_L;
+		CH_Lff2 <= CH_Lff1;
+		CH_Lff3 <= CH_Lff2;
+		CH_Lff4 <= CH_Lff3;
+		CH_Lff5 <= CH_Lff4;
+	end
+end
+
+// form 8 bit sample - a collection of 4 2-bit samples of CH_H and CH_L
+always_ff@(posedge clk, negedge rst_n)
+begin
+	if(!rst_n)
+		smpl <= 8'h00;
+	else
+		smpl <= {CH_Hff2, CH_Lff2, CH_Hff3, CH_Lff3, CH_Hff4, CH_Lff4, CH_Hff5, CH_Lff5};
+end
+
+
+endmodule
