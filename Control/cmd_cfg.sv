@@ -71,10 +71,13 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 	
 	//Not sure if need enum
 	
+	localparam ACK = 8'hA5;
+	localparam NAK = 8'hEE:
+	
 	typedef enum logic [1:0] {ReadReg, WriteReg, Dump} Command;
 	typedef enum logic [2:0] {CH1, CH2, CH3, Ch4, Ch5} Channel;
 	typedef enum logic [5:0] {TrigCfg_Reg, CH1TrigCfg_Reg, CH2TrigCfg_Reg, CH3TrigCfg_Reg, CH4TrigCfg_Reg, CH5TrigCfg_Reg, decimator_Reg, VIH_Reg, VIL_Reg, matchH_Reg, matchL_Reg, maskH_Reg, maskL_Reg, baud_cntH_Reg, baud_cntL_Reg, trig_posH_Reg, trig_posL_Reg} Register;
-	typedef enum logic [2:0] {IDLE, DUMP, RESP, ERROR} State;
+	typedef enum logic [2:0] {IDLE, WRITE, READ, DUMP, RESP, ERROR} State;
 	
 	input clk;
 	input rst_n;
@@ -92,7 +95,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 	input [7:0] rdataCH4;
 	input [7:0] rdataCH5;
 
-	output [LOG2-1:0] raddr;
+	output logic [LOG2-1:0] raddr;
 	output logic [7:0] resp;
 	output logic send_resp;
 	output logic clr_cmd_rdy;
@@ -124,8 +127,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 	logic [7:0] data;
 	
 	logic wrt_reg;
-	logic [LOG2-1:0] raddr;
-	logic [LOG2-1:0] raddr_nxt;
+	logic [LOG2-1:0] raddr_curr;
 	
 	logic [7:0] trig_posH;
 	logic [7:0] trig_posL;
@@ -267,9 +269,9 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 	
 	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
-			raddr <= 0;
-		else 
-			raddr <= raddr_nxt;
+			raddr_curr <= 0;
+		else if(resp_sent | ((state == IDLE) & (command == Dump)));
+			raddr_curr <= raddr;
 	end
 	
 	always_comb begin	
@@ -277,6 +279,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 		send_resp = 1'h0;
 		clr_cmd_rdy = 1'h0;
 		resp = 8'h00;
+		raddr = raddr_curr;
 		nxtstate = IDLE;
 	
 		case(state)
@@ -284,52 +287,15 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 				if(cmd_rdy) begin
 					case(command)
 						ReadReg : begin						//Command is to send back what is contained in the specified register. Set response equal to register, with padding, and send it
-							send_resp = 1'h1;
-							clr_cmd_rdy = 1'h1;
-							nxtstate = IDLE;
-							case(register)
-								TrigCfg_Reg : resp = {2'h0, TrigCfg};
-								CH1TrigCfg_Reg : resp = {3'h0, CH1TrigCfg};
-								CH2TrigCfg_Reg : resp = {3'h0, CH2TrigCfg};
-								CH3TrigCfg_Reg : resp = {3'h0, CH3TrigCfg};
-								CH4TrigCfg_Reg : resp = {3'h0, CH4TrigCfg};
-								CH5TrigCfg_Reg : resp = {3'h0, CH5TrigCfg};
-								decimator_Reg : resp = {4'h0, decimator};
-								VIH_Reg : resp = VIH;
-								VIL_Reg : resp = VIL;
-								matchH_Reg : resp = matchH;
-								matchL_Reg : resp = matchL;
-								maskH_Reg : resp = maskH;
-								maskL_Reg : resp = maskL;
-								baud_cntH_Reg : resp = baud_cntH;
-								baud_cntL_Reg : resp = baud_cntL;
-								trig_posH_Reg : resp = trig_posH;
-								trig_posL_Reg : resp = trig_posL;
-								
-								default : begin //Sent bad register
-									nxtstate = ERROR;
-									$display("Sent a Bad Register");
-								end
-							endcase
+							nxtstate = READ;
 						end
 						
-						WriteReg : begin //Command is a send command, set the ***_nxt line of the correct register to configure, if correct will send ack response and will update register on next clock cycle 
-							wrt_reg = 1'h1;
-							send_resp = 1'h1;
-							resp = 8'hA5;
-							clr_cmd_rdy = 1'h1;
-							nxtstate = IDLE;
-							
-							/*
-							if (register != Register) begin //Sent bad Register *REDUCE* This may be quite big
-								resp = 8'hEE;
-								$display("Sent a Bad Register");
-							end
-							*/
+						WriteReg : begin
+							nxtstate = WRITE;
 						end
 						
-						Dump : begin //Dump Cammand, need to handle initial send to make state machine work *REDUCE*
-							raddr_nxt = waddr;
+						Dump : begin
+							raddr = waddr;
 							case(ccc) 
 								CH1 : resp = rdataCH1;
 								CH2 : resp = rdataCH2;
@@ -341,7 +307,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 							nxtstate = RESP;
 						end
 						
-						default : begin //Sent bad command
+						default : begin
 							nxtstate = ERROR;
 							$display("Sent a Bad Command");
 						end
@@ -349,8 +315,54 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 				end
 			end
 			
-			DUMP : begin				//Direct selected channel into Response and send it if reading is not done
-				if(raddr == waddr) begin
+			READ : begin
+				case(register)
+					TrigCfg_Reg : 		resp = {2'h0, TrigCfg};
+					CH1TrigCfg_Reg : 	resp = {3'h0, CH1TrigCfg};
+					CH2TrigCfg_Reg : 	resp = {3'h0, CH2TrigCfg};
+					CH3TrigCfg_Reg : 	resp = {3'h0, CH3TrigCfg};
+					CH4TrigCfg_Reg : 	resp = {3'h0, CH4TrigCfg};
+					CH5TrigCfg_Reg : 	resp = {3'h0, CH5TrigCfg};
+					decimator_Reg : 	resp = {4'h0, decimator};
+					VIH_Reg : 			resp = VIH;
+					VIL_Reg : 			resp = VIL;
+					matchH_Reg : 		resp = matchH;
+					matchL_Reg : 		resp = matchL;
+					maskH_Reg : 		resp = maskH;
+					maskL_Reg : 		resp = maskL;
+					baud_cntH_Reg : 	resp = baud_cntH;
+					baud_cntL_Reg : 	resp = baud_cntL;
+					trig_posH_Reg : 	resp = trig_posH;
+					trig_posL_Reg : 	resp = trig_posL;
+					
+					default : begin //Sent bad register
+						nxtstate = ERROR;
+						$display("Sent a Bad Register");
+					end
+				endcase
+				
+				send_resp = 1'h1;
+				clr_cmd_rdy = 1'h1;
+				nxtstate = IDLE;
+			end
+			
+			WRITE : begin
+				wrt_reg = 1'h1;
+				send_resp = 1'h1;
+				resp = ACK;
+				clr_cmd_rdy = 1'h1;
+				nxtstate = IDLE;
+				
+				/*
+				if (register != Register) begin //Sent bad Register *REDUCE* This may be quite big
+					resp = NAK;
+					$display("Sent a Bad Register");
+				end
+				*/
+			end
+			
+			DUMP : begin
+				if(raddr_curr == waddr) begin
 					clr_cmd_rdy = 1'h1;
 					nxtstate = IDLE;
 				end
@@ -372,11 +384,11 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 			end
 			
 			RESP : begin				//State to wait for response to be sent
+				if(raddr_curr == ENTRIES-1)
+					raddr = 0;
+				else
+					raddr = raddr_curr + 1; 
 				if(resp_sent) begin
-					if(raddr == ENTRIES-1) //Wrap around condition, ENTRIES is not a nice number
-						raddr_nxt = 0;
-					else
-						raddr_nxt = raddr + 1;
 					nxtstate = DUMP;
 				end
 				else

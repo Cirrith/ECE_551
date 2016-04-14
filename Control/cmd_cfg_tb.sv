@@ -59,7 +59,6 @@ module cmd_cfg_tb();
 	logic [7:0] ACK = 8'hA5;
 	logic [7:0] NAK = 8'hEE;
 	logic [LOG2-1:0] i;
-	logic set_cmd_rdy;
 	
 	logic [7:0] reg_retur; //Expected value to be returned in a read
 	
@@ -164,8 +163,6 @@ module cmd_cfg_tb();
 			
 			@(negedge clk);
 			
-			$display("Entered Fork %t", $time);
-			
 			fork : Forky
 				begin : timeout
 					repeat (50000) @(negedge clk);
@@ -218,10 +215,13 @@ module cmd_cfg_tb();
 						repeat(ENTRIES) begin
 							$display("Got into Dump @ %t", $time);
 							@(posedge send_resp);
+							resp_sent = 1'h0;
+							@(negedge clk);
 							if(resp != Mem[i]) begin
 								$display("A Dump messed up. Tring to access address %d", i);
 								$stop;
 							end
+							$display("Got past the Compare: Dump, %t", $time);
 							if(i == ENTRIES-1)
 								i = 0;
 							else
@@ -229,8 +229,7 @@ module cmd_cfg_tb();
 								
 							repeat (20) @(negedge clk); //Wait 20 clock cycles for 'transmitting'
 							resp_sent = 1'h1;
-							@(negedge clk);
-							resp_sent = 1'h0;
+
 						end
 						$display("Dump Successful");
 						disable Forky;
@@ -239,7 +238,6 @@ module cmd_cfg_tb();
 			join
 			@(negedge clk);
 			cmd_rdy = 1'h0;
-			$display("Exit Fork at %t", $time);
 			repeat (2) @ (negedge clk);
 		end
 		$stop;
