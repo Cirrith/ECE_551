@@ -27,7 +27,7 @@ module Channel_Trigger_Unit(clk, rst_n, CHxTrigCfg, CHxHff5, CHxLff5, armed, CHx
 	
 	input clk;
 	input rst_n;
-	input [7:0] CHxTrigCfg;
+	input [4:0] CHxTrigCfg;
 	input CHxHff5;
 	input CHxLff5;
 	input armed;

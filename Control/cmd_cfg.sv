@@ -20,7 +20,7 @@
 /			resp [7:0] - Response to send via UART
 /			send_resp - Send Response, to UART
 /			clr_cmd_rdy - Sets the Command done at the UART
-/			trig_pos - How many samples after trigger to capture
+/			` - How many samples after trigger to capture
 /			TrigCfg [5:0] - Configuration of triggering and capture
 /			CH1TrigCfg [4:0] - Specific triggering of channel 1
 /			CH2TrigCfg [4:0] - Specific triggering of channel 2

@@ -43,74 +43,126 @@ module dig_core(clk,rst_n,smpl_clk,wrt_smpl, decimator, VIH, VIL, CH1L, CH1H,
   // delcare any needed internal signals as type wire //
   /////////////////////////////////////////////////////
   
+  logic [5:0] TrigCfg;
+  logic [4:0] CH1TrigCfg;
+  logic [4:0] CH2TrigCfg;
+  logic [4:0] CH3TrigCfg;
+  logic [4:0] CH4TrigCfg;
+  logic [4:0] CH5TrigCfg;
+  
+  logic CH1Hff5
+  logic CH1Lff5
+  
+  logic CH2Hff5;
+  logic CH2Lff5;
+  
+  logic CH3Hff5;
+  logic CH3Lff5;
+  
+  logic CH4Hff5;
+  logic CH4Lff5;
+  
+  logic CH5Hff5;
+  logic CH5Lff5;
+  
+  logic [7:0] maskH;
+  logic [7:0] maskL;
+  
+  logic [7:0] matchH;
+  logic [7:0] matchL;
+  
+  logic [7:0] baud_cntH;
+  logic [7:0] baud_cntL;
+  
+  logic armed;
+  logic capture_done;
+  logic triggered;
+  
+  logic [15:0] trig_pos;
+  
   ///////////////////////////////////////////////////////////////
   // Instantiate the sub units that make up your digital core //
   /////////////////////////////////////////////////////////////
 	
 	Trigger_Unit Trigger (
-				clk			(clk), 
-				rst_n		(rst_n), 
-				TrigCfg		(TrigCfg), 
-				CH1TrigCfg	(CH1TrigCfg), 
-				CH2TrigCfg	(CH2TrigCfg), 
-				CH3TrigCfg	(CH3TrigCfg), 
-				CH4TrigCfg	(CH4TrigCfg), 
-				CH5TrigCfg	(CH5TrigCfg), 
-				CH1Hff5		(CH1Hff5), 
-				CH2Hff5		(CH2Hff5), 
-				CH3Hff5		(CH3Hff5), 
-				CH4Hff5		(CH4Hff5), 
-				CH5Hff5		(CH5Hff5), 
-				CH1Lff5		(CH1Lff5), 
-				CH2Lff5		(CH2Lff5), 
-				CH3Lff5		(CH3Lff5), 
-				CH4Lff5		(CH4Lff5), 
-				CH5Lff5		(CH5Lff5), 
-				CH1L		(CH1L), 
-				CH2L		(CH2L), 
-				CH3L		(CH3L), 
-				maskH		(maskH), 
-				maskL		(maskL), 
-				matchH		(matchH), 
-				matchL		(matchL), 
-				armed		(armed), 
-				capture_done(capture_done), 
-				triggered	(triggered));	
+				.clk			(clk), 
+				.rst_n			(rst_n), 
+				.TrigCfg		(TrigCfg), 
+				.CH1TrigCfg		(CH1TrigCfg), 
+				.CH2TrigCfg		(CH2TrigCfg), 
+				.CH3TrigCfg		(CH3TrigCfg), 
+				.CH4TrigCfg		(CH4TrigCfg), 
+				.CH5TrigCfg		(CH5TrigCfg), 
+				.CH1Hff5		(CH1Hff5), 
+				.CH2Hff5		(CH2Hff5), 
+				.CH3Hff5		(CH3Hff5), 
+				.CH4Hff5		(CH4Hff5), 
+				.CH5Hff5		(CH5Hff5), 
+				.CH1Lff5		(CH1Lff5), 
+				.CH2Lff5		(CH2Lff5), 
+				.CH3Lff5		(CH3Lff5), 
+				.CH4Lff5		(CH4Lff5), 
+				.CH5Lff5		(CH5Lff5), 
+				.CH1L			(CH1L), 
+				.CH2L			(CH2L), 
+				.CH3L			(CH3L), 
+				.maskH			(maskH), 
+				.maskL			(maskL), 
+				.matchH			(matchH), 
+				.matchL			(matchL), 
+				.armed			(armed), 
+				.capture_done	(capture_done), 
+				.triggered		(triggered));	
 	
 	cmd_cfg cmd (
-				clk			(clk), 
-				rst_n		(rst_n), 
-				cmd			(cmd), 
-				cmd_rdy		(cmd_rdy), 
-				resp_sent	(resp_sent), 
-				capture_done(capture_done), 
-				waddr		(waddr), 
-				rdataCH1	(radataCH1), 
-				rdataCH2	(radataCH2), 
-				rdataCH3	(radataCH3), 
-				rdataCH4	(radataCH4), 
-				rdataCH5	(radataCH5), 
-				raddr		(raddr), 
-				resp		(resp), 
-				send_resp	(send_resp), 
-				clr_cmd_rdy	(clr_cmd_rdy), 
-				trig_pos	(trig_pos), 
-				decimator	(decimator), 
-				maskL		(maskL), 
-				maskH		(maskH), 
-				matchL		(matchL), 
-				matchH		(matchH), 
-				baud_cntL	(baud_cntL), 
-				baud_cntH	(baud_cntH), 
-				TrigCfg		(TrigCfgCfg), 
-				CH1TrigCfg	(CH1TrigCfg), 
-				CH2TrigCfg	(CH2TrigCfg), 
-				CH3TrigCfg	(CH3TrigCfg), 
-				CH4TrigCfg	(CH4TrigCfg), 
-				CH5TrigCfg	(CH5TrigCfg), 
-				VIH			(VIH), 
-				VIL			(VIL));
-				
+				.clk			(clk), 
+				.rst_n			(rst_n), 
+				.cmd			(cmd), 
+				.cmd_rdy		(cmd_rdy), 
+				.resp_sent		(resp_sent), 
+				.capture_done	(capture_done), 
+				.waddr			(waddr), 
+				.rdataCH1		(rdataCH1), 
+				.rdataCH2		(rdataCH2), 
+				.rdataCH3		(rdataCH3), 
+				.rdataCH4		(rdataCH4), 
+				.rdataCH5		(rdataCH5), 
+				.raddr			(raddr), 
+				.resp			(resp), 
+				.send_resp		(send_resp), 
+				.clr_cmd_rdy	(clr_cmd_rdy), 
+				.trig_pos		(trig_pos), 
+				.decimator		(decimator), 
+				.maskL			(maskL), 
+				.maskH			(maskH), 
+				.matchL			(matchL), 
+				.matchH			(matchH), 
+				.baud_cntL		(baud_cntL), 
+				.baud_cntH		(baud_cntH), 
+				.TrigCfg		(TrigCfg), 
+				.CH1TrigCfg		(CH1TrigCfg), 
+				.CH2TrigCfg		(CH2TrigCfg), 
+				.CH3TrigCfg		(CH3TrigCfg), 
+				.CH4TrigCfg		(CH4TrigCfg), 
+				.CH5TrigCfg		(CH5TrigCfg), 
+				.VIH			(VIH), 
+				.VIL			(VIL));
 	
+	Capture_Unit capture (
+				.clk			(clk), 
+				.rst_n			(rst_n), 
+				.wrt_smpl		(wrt_smpl), 
+				.triggered		(triggered), 
+				.TrigCfg		(TrigCfg), 
+				.trig_pos		(trig_pos), 
+				.waddr			(waddr), 
+				.capture_done	(capture_done), 
+				.write			(write));
+	
+	channel_sample ch1_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH1H), .CHxL(CH1L), .smpl_clk(smpl_clk), .CHxHff5(CH1Hff5), .CHxLff5(CH1Lff5), .smpl(smpl1));
+	channel_sample ch2_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH2H), .CHxL(CH2L), .smpl_clk(smpl_clk), .CHxHff5(CH2Hff5), .CHxLff5(CH2Lff5), .smpl(smpl2));
+	channel_sample ch3_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH3H), .CHxL(CH3L), .smpl_clk(smpl_clk), .CHxHff5(CH3Hff5), .CHxLff5(CH3Lff5), .smpl(smpl3));
+	channel_sample ch4_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH4H), .CHxL(CH4L), .smpl_clk(smpl_clk), .CHxHff5(CH4Hff5), .CHxLff5(CH4Lff5), .smpl(smpl4));
+	channel_sample ch5_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH5H), .CHxL(CH5L), .smpl_clk(smpl_clk), .CHxHff5(CH5Hff5), .CHxLff5(CH5Lff5), .smpl(smpl5));
 	
 endmodule  

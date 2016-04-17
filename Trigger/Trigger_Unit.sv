@@ -48,13 +48,13 @@ module Trigger_Unit (clk, rst_n, TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH
 	input clk;
 	input rst_n;
 	
-	input [7:0] TrigCfg;
+	input [5:0] TrigCfg;
 	
-	input [7:0] CH1TrigCfg;
-	input [7:0] CH2TrigCfg;
-	input [7:0] CH3TrigCfg;
-	input [7:0] CH4TrigCfg;
-	input [7:0] CH5TrigCfg;
+	input [4:0] CH1TrigCfg;
+	input [4:0] CH2TrigCfg;
+	input [4:0] CH3TrigCfg;
+	input [4:0] CH4TrigCfg;
+	input [4:0] CH5TrigCfg;
 	
 	input CH1Hff5;
 	input CH2Hff5;
