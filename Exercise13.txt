@@ -3,7 +3,7 @@ Person:
 	Ryan Bambrough - 
 		Upper Level Design
 	Tanner Hu -
-		Protocol Trigger Unit
+		X Protocol Trigger Unit
 	Joey Miller -
 		Capture Unit
 	Zachary Watchel -

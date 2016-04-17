@@ -1,0 +1,754 @@
+# //  ModelSim SE-64 10.4 Dec  2 2014 Linux 3.16.0-0.bpo.4-amd64
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading project HW5_2
+# reading /cae/apps/data/mentor-2015/modeltech/linux_x86_64/../modelsim.ini
+# Loading project UART_RX
+# Compile of UART_RX.sv failed with 1 errors.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_tx_baud.sv was successful.
+# Compile of UART_tx_control.sv was successful.
+# Compile of UART_tx_count.sv was successful.
+# Compile of UART_tx_stor.sv was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of UART_RX.sv failed with 1 errors.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_tx_baud.sv was successful.
+# Compile of UART_tx_control.sv was successful.
+# Compile of UART_tx_count.sv was successful.
+# Compile of UART_tx_stor.sv was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of UART_RX.sv failed with 1 errors.
+# Compile of UART_RX.sv failed with 1 errors.
+# Compile of UART_RX.sv failed with 1 errors.
+# Compile of UART_RX.sv failed with 1 errors.
+# Compile of UART_RX.sv failed with 1 errors.
+# Compile of UART_RX.sv was successful.
+# Compile of UART_RX_TB.sv failed with 1 errors.
+# Compile of UART_RX.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_tx_baud.sv was successful.
+# Compile of UART_tx_control.sv was successful.
+# Compile of UART_tx_count.sv was successful.
+# Compile of UART_tx_stor.sv was successful.
+# Compile of UART_RX_TB.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -novopt work.UART_RX_TB
+# vsim 
+# Start time: 20:17:13 on Apr 16,2016
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX_TB
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_tx
+# Loading work.UART_tx
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_tx_control
+# Loading work.UART_tx_control
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_tx_stor
+# Loading work.UART_tx_stor
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_tx_count
+# Loading work.UART_tx_count
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_tx_baud
+# Loading work.UART_tx_baud
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX
+# Loading work.UART_RX
+add wave -position insertpoint  \
+sim:/UART_RX_TB/clk \
+sim:/UART_RX_TB/rst_n \
+sim:/UART_RX_TB/line \
+sim:/UART_RX_TB/mat \
+sim:/UART_RX_TB/baud_cnt \
+sim:/UART_RX_TB/mask \
+sim:/UART_RX_TB/match \
+sim:/UART_RX_TB/UARTtrig \
+sim:/UART_RX_TB/trmt \
+sim:/UART_RX_TB/tx_data \
+sim:/UART_RX_TB/tx_done
+run -all
+# 1000 Cycles, that is quite a bit
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(75)
+#    Time: 10010 ns  Iteration: 2  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 75
+# Compile of UART_RX_TB.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX_TB
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Loading work.UART_RX
+run -all
+# Done
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(75)
+#    Time: 11015 ns  Iteration: 3  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 75
+# Compile of UART_RX_TB.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX_TB
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Loading work.UART_RX
+run -all
+# Done
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(76)
+#    Time: 11015 ns  Iteration: 3  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 76
+# Compile of UART_RX_TB.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX_TB
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Loading work.UART_RX
+run -all
+# Done
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(76)
+#    Time: 11015 ns  Iteration: 3  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 76
+add wave -position insertpoint sim:/UART_RX_TB/rx/*
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Loading work.UART_RX
+run -all
+# Done
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(76)
+#    Time: 11015 ns  Iteration: 3  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 76
+# Compile of UART_RX.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX
+# Loading work.UART_RX
+run -all
+# Done
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(76)
+#    Time: 11015 ns  Iteration: 3  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 76
+# Compile of UART_RX.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX
+# Loading work.UART_RX
+run -all
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(76)
+#    Time: 11015 ns  Iteration: 3  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 76
+run -all
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(76)
+#    Time: 22025 ns  Iteration: 3  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 76
+# Compile of UART_RX.sv was successful.
+# Compile of UART_RX_TB.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX_TB
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX
+# Loading work.UART_RX
+run -all
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(76)
+#    Time: 11015 ns  Iteration: 3  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 76
+# Compile of UART_RX_TB.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX_TB
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Loading work.UART_RX
+run -all
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(78)
+#    Time: 21405 ns  Iteration: 4  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 78
+# Compile of UART_RX_TB.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX_TB
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Loading work.UART_RX
+run -all
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(80)
+#    Time: 21410 ns  Iteration: 1  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 80
+# Compile of UART_RX_TB.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX_TB
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Loading work.UART_RX
+run -all
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = c7
+# Tx_Data | Mask = 5f
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# UARTtrig = 1
+# Match | Mask = de
+# Tx_Data | Mask = de
+# Successful Match
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = bf
+# Tx_Data | Mask = 6f
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = 3f
+# Tx_Data | Mask = 7c
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = fe
+# Tx_Data | Mask = 75
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# UARTtrig = 1
+# Match | Mask = f7
+# Tx_Data | Mask = f7
+# Successful Match
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = fe
+# Tx_Data | Mask = f3
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = af
+# Tx_Data | Mask = b7
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# UARTtrig = 1
+# Match | Mask = bf
+# Tx_Data | Mask = bf
+# Successful Match
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = bf
+# Tx_Data | Mask = bf
+# You didn't trigger
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(85)
+#    Time: 77080 ns  Iteration: 1  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 85
+# Compile of UART_RX_TB.sv was successful.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/work.UART_RX_TB
+# Loading sv_std.std
+# Loading work.UART_RX_TB
+# Loading work.UART_tx
+# Loading work.UART_tx_control
+# Loading work.UART_tx_stor
+# Loading work.UART_tx_count
+# Loading work.UART_tx_baud
+# Loading work.UART_RX
+run -all
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = c7
+# Tx_Data | Mask = 5f
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# UARTtrig = 1
+# Match | Mask = de
+# Tx_Data | Mask = de
+# Successful Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = bf
+# Tx_Data | Mask = 6f
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = 3f
+# Tx_Data | Mask = 7c
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = fe
+# Tx_Data | Mask = 75
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# UARTtrig = 1
+# Match | Mask = f7
+# Tx_Data | Mask = f7
+# Successful Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = fe
+# Tx_Data | Mask = f3
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = af
+# Tx_Data | Mask = b7
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# UARTtrig = 1
+# Match | Mask = bf
+# Tx_Data | Mask = bf
+# Successful Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# UARTtrig = 1
+# Match | Mask = bf
+# Tx_Data | Mask = bf
+# Successful Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = 7f
+# Tx_Data | Mask = 2b
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# UARTtrig = 1
+# Match | Mask = 6c
+# Tx_Data | Mask = 6c
+# Successful Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# UARTtrig
+# UARTtrig = 1
+# Match | Mask = ea
+# Tx_Data | Mask = ea
+# Successful Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = 7f
+# Tx_Data | Mask = fb
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = 7d
+# Tx_Data | Mask = fd
+# Successful Not Match
+# 2
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 3
+# 1
+# Done
+# UARTtrig = 0
+# Match | Mask = ff
+# Tx_Data | Mask = af
+# Successful Not Match
+# ** Note: $stop    : /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv(100)
+#    Time: 176170 ns  Iteration: 1  Instance: /UART_RX_TB
+# Break in Module UART_RX_TB at /userspace/r/rbambrough/College/ECE_551/Protocol Trigger Unit/UART_RX_TB.sv line 100
+# End time: 21:23:00 on Apr 16,2016, Elapsed time: 1:05:47
+# Errors: 0, Warnings: 12

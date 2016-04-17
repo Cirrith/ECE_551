@@ -148,7 +148,7 @@ module cmd_cfg_tb();
 		@(posedge rst_n); //This will occur at a negedge of clk
 		
 		//Random Portion of Testbench
-		repeat(16) begin
+		repeat(10000000) begin
 			Cmd = '{$urandom_range(2,0)}; 		//Generate random valid command between 0 and 2
 			Reg = '{$urandom_range(16,0)};		//Generate random valid register for operation
 			Data = $urandom_range(255,0); 	//Generate random data to write in

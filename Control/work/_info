@@ -10,65 +10,63 @@ cModel Technology
 d/userspace/r/rbambrough/College/ECE 551/Homework 4/hw4_5
 vcmd_cfg
 Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z1 !s110 1460614756
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
 !i10b 1
 !s100 Q8ESg3TfNL8D1hNR_cQ310
 IiF;`gX2n`EPHRn7LZM>YF2
-Z2 V`JN@9S9cnhjKRR_L]QIcM3
 !s105 cmd_cfg_sv_unit
 S1
-Z3 dI:/College/ECE_551/Control
+Z2 dI:/College/ECE_551/Control
 w1460613280
 8I:/College/ECE_551/Control/cmd_cfg.sv
 FI:/College/ECE_551/Control/cmd_cfg.sv
 L0 67
-Z4 OE;L;10.3c;59
-r1
-!s85 0
-31
+Z3 OE;L;10.3c;59
 !s108 1460614756.506000
 !s107 I:/College/ECE_551/Control/cmd_cfg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Control/cmd_cfg.sv|
 !i113 0
-Z5 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z4 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vcmd_cfg_tb
 R0
-!s110 1460614757
-!i10b 1
-!s100 <[KHNJeH8n=0Lb8X@bD<N3
-I6<F:>A<l7^FYn;iSk::?K2
-R2
-!s105 cmd_cfg_tb_sv_unit
-S1
-R3
-w1460614573
-8I:/College/ECE_551/Control/cmd_cfg_tb.sv
-FI:/College/ECE_551/Control/cmd_cfg_tb.sv
-L0 10
-R4
+R1
 r1
 !s85 0
 31
-!s108 1460614757.140000
+!i10b 1
+!s100 KWbJoWHkU0n]okDkPJ4i^3
+I0IiI_=@j6`[>okEia:2ba3
+!s105 cmd_cfg_tb_sv_unit
+S1
+R2
+w1460647315
+8I:/College/ECE_551/Control/cmd_cfg_tb.sv
+FI:/College/ECE_551/Control/cmd_cfg_tb.sv
+L0 10
+R3
+!s108 1460647317.863000
 !s107 I:/College/ECE_551/Control/cmd_cfg_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Control/cmd_cfg_tb.sv|
 !i113 0
-R5
+R4
 vCommMaster
-Z6 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z7 !s110 1460525250
+Z5 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z6 !s110 1460525250
 !i10b 1
 !s100 PMKCIA`<@DaRSX[z^m7k@1
 I_Gf]IiROjY?CGJMn=0dGB3
-Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z7 VDg1SIo80bB@j0V0VzS_@n1
 !s105 CommMaster_sv_unit
 S1
-Z9 d/userspace/r/rbambrough/College/ECE_551/Control
-Z10 w1460519239
+Z8 d/userspace/r/rbambrough/College/ECE_551/Control
+Z9 w1460519239
 8/userspace/r/rbambrough/College/ECE_551/Control/CommMaster.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/CommMaster.sv
 L0 1
-Z11 OL;L;10.4;61
+Z10 OL;L;10.4;61
 r1
 !s85 0
 31
@@ -76,31 +74,30 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/CommMaster.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/CommMaster.sv|
 !i113 0
-R5
+R4
 n@comm@master
 vRAMqueue
 R0
 R1
+r1
+!s85 0
+31
 !i10b 1
 !s100 T5:kCWT3ghg]FJRM9T7j?1
 IkJ2_YeN?UEFLDe1;mdHUH3
-R2
 !s105 RAMqueue_sv_unit
 S1
-R3
+R2
 w1460519469
 8I:/College/ECE_551/Control/RAMqueue.sv
 FI:/College/ECE_551/Control/RAMqueue.sv
 L0 20
-R4
-r1
-!s85 0
-31
+R3
 !s108 1460614756.026000
 !s107 I:/College/ECE_551/Control/RAMqueue.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Control/RAMqueue.sv|
 !i113 0
-R5
+R4
 n@r@a@mqueue
 vtest
 R0
@@ -108,7 +105,7 @@ R0
 !i10b 1
 !s100 [ikUzM8CcaQ5IWO_<=Yi:0
 IKeP>HeIYMJ=4N[2CZ`=_@1
-R2
+R1
 !s105 Tester_sv_unit
 S1
 dI:/ece551/modelsim/project/ECE_551/Control
@@ -116,7 +113,7 @@ w1460587293
 8I:/ece551/modelsim/project/ECE_551/Control/Tester.sv
 FI:/ece551/modelsim/project/ECE_551/Control/Tester.sv
 L0 1
-R4
+R3
 r1
 !s85 0
 31
@@ -124,22 +121,22 @@ r1
 !s107 I:/ece551/modelsim/project/ECE_551/Control/Tester.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Control/Tester.sv|
 !i113 0
-R5
+R4
 vUART
+R5
 R6
-R7
 !i10b 1
 !s100 TAZ@YJ[DTcD4;TQ`j5a5C0
 IR;X:9DMX=Ae>chOeJP1PI1
-R8
+R7
 !s105 UART_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -147,23 +144,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t
 vUART_rx
-R6
-Z12 !s110 1460525251
+R5
+Z11 !s110 1460525251
 !i10b 1
 !s100 9zBYngi=;;`oUU0PNdNiF1
 IknQ9Q=7a>lnUUaBlT]L1m3
-R8
+R7
 !s105 UART_rx_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_rx.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_rx.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -171,23 +168,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_rx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_rx.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_rx
 vUART_rx_baud
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 W_8BA15bZeDm?HL_EGiON0
 I5]5V9`FXAUJR3d^UTjd_R3
-R8
+R7
 !s105 UART_rx_baud_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_baud.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_baud.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -195,23 +192,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_rx_baud.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_baud.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_rx_baud
 vUART_rx_control
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 FK2[Q7[K4POaFEDBNheAd3
 I06a:@UZ>0VbR0?kPVciT50
-R8
+R7
 !s105 UART_rx_control_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_control.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_control.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -219,23 +216,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_rx_control.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_control.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_rx_control
 vUART_rx_count
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 l4FgY7SCWBP>mCR`?ljSi3
 I7YUf`=o4LV?RilW1bm:Pl3
-R8
+R7
 !s105 UART_rx_count_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_count.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_count.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -243,23 +240,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_rx_count.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_count.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_rx_count
 vUART_rx_stor
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 FPQXVfP?ehPO7_X`3Q1ZK0
 IeE[V63hfXdSdfSC]e4dNX3
-R8
+R7
 !s105 UART_rx_stor_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_stor.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_stor.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -267,23 +264,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_rx_stor.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_rx_stor.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_rx_stor
 vUART_tx
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 15H8S=7MVm]T:RXH>eS5V2
 I3UZ[>W?G4TzbZCbFjI8@h1
-R8
+R7
 !s105 UART_tx_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_tx.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_tx.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -291,23 +288,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_tx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_tx.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_tx
 vUART_tx_baud
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 bb8mM?mVId^9AR2NUz4A62
 IfN=Fa72^i20l033[7_LnX1
-R8
+R7
 !s105 UART_tx_baud_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_baud.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_baud.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -315,23 +312,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_tx_baud.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_baud.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_tx_baud
 vUART_tx_control
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 mH;i_e4TZocH>TLFZk?o51
 IBKS4MlCSeJMa6bieE2[DC1
-R8
+R7
 !s105 UART_tx_control_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_control.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_control.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -339,23 +336,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_tx_control.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_control.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_tx_control
 vUART_tx_count
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 HnK?nRYN><1>IGBB>n^TA1
 I?W::YLLP3CCFZmQ>jWcVN1
-R8
+R7
 !s105 UART_tx_count_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_count.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_count.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -363,23 +360,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_tx_count.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_count.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_tx_count
 vUART_tx_stor
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 :L8<@=Jh[UoUa5zXm]kF`2
 I5JhU_59HI^E_]0Uzig6m;3
-R8
+R7
 !s105 UART_tx_stor_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_stor.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_stor.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -387,23 +384,23 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_tx_stor.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_tx_stor.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_tx_stor
 vUART_wrapper
-R6
-R12
+R5
+R11
 !i10b 1
 !s100 7OOnTH53<dIkZd=O_5?Rl2
 IgoZoKg<BB83^TaAmIASem3
-R8
+R7
 !s105 UART_wrapper_sv_unit
 S1
+R8
 R9
-R10
 8/userspace/r/rbambrough/College/ECE_551/Control/UART_wrapper.sv
 F/userspace/r/rbambrough/College/ECE_551/Control/UART_wrapper.sv
 L0 1
-R11
+R10
 r1
 !s85 0
 31
@@ -411,5 +408,5 @@ r1
 !s107 /userspace/r/rbambrough/College/ECE_551/Control/UART_wrapper.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/userspace/r/rbambrough/College/ECE_551/Control/UART_wrapper.sv|
 !i113 0
-R5
+R4
 n@u@a@r@t_wrapper

@@ -184,6 +184,7 @@ module cmd_cfg_tb();
 							$display("A read messed up. Trying to read Register %s", Reg);
 							$stop;
 						end
+						$display("Read Successful");
 						disable Forky;
 					end
 				end
