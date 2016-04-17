@@ -46,5 +46,71 @@ module dig_core(clk,rst_n,smpl_clk,wrt_smpl, decimator, VIH, VIL, CH1L, CH1H,
   ///////////////////////////////////////////////////////////////
   // Instantiate the sub units that make up your digital core //
   /////////////////////////////////////////////////////////////
-			   
+	
+	Trigger_Unit Trigger (
+				clk			(clk), 
+				rst_n		(rst_n), 
+				TrigCfg		(TrigCfg), 
+				CH1TrigCfg	(CH1TrigCfg), 
+				CH2TrigCfg	(CH2TrigCfg), 
+				CH3TrigCfg	(CH3TrigCfg), 
+				CH4TrigCfg	(CH4TrigCfg), 
+				CH5TrigCfg	(CH5TrigCfg), 
+				CH1Hff5		(CH1Hff5), 
+				CH2Hff5		(CH2Hff5), 
+				CH3Hff5		(CH3Hff5), 
+				CH4Hff5		(CH4Hff5), 
+				CH5Hff5		(CH5Hff5), 
+				CH1Lff5		(CH1Lff5), 
+				CH2Lff5		(CH2Lff5), 
+				CH3Lff5		(CH3Lff5), 
+				CH4Lff5		(CH4Lff5), 
+				CH5Lff5		(CH5Lff5), 
+				CH1L		(CH1L), 
+				CH2L		(CH2L), 
+				CH3L		(CH3L), 
+				maskH		(maskH), 
+				maskL		(maskL), 
+				matchH		(matchH), 
+				matchL		(matchL), 
+				armed		(armed), 
+				capture_done(capture_done), 
+				triggered	(triggered));	
+	
+	cmd_cfg cmd (
+				clk			(clk), 
+				rst_n		(rst_n), 
+				cmd			(cmd), 
+				cmd_rdy		(cmd_rdy), 
+				resp_sent	(resp_sent), 
+				capture_done(capture_done), 
+				waddr		(waddr), 
+				rdataCH1	(radataCH1), 
+				rdataCH2	(radataCH2), 
+				rdataCH3	(radataCH3), 
+				rdataCH4	(radataCH4), 
+				rdataCH5	(radataCH5), 
+				raddr		(raddr), 
+				resp		(resp), 
+				send_resp	(send_resp), 
+				clr_cmd_rdy	(clr_cmd_rdy), 
+				trig_pos	(trig_pos), 
+				decimator	(decimator), 
+				maskL		(maskL), 
+				maskH		(maskH), 
+				matchL		(matchL), 
+				matchH		(matchH), 
+				baud_cntL	(baud_cntL), 
+				baud_cntH	(baud_cntH), 
+				TrigCfg		(TrigCfgCfg), 
+				CH1TrigCfg	(CH1TrigCfg), 
+				CH2TrigCfg	(CH2TrigCfg), 
+				CH3TrigCfg	(CH3TrigCfg), 
+				CH4TrigCfg	(CH4TrigCfg), 
+				CH5TrigCfg	(CH5TrigCfg), 
+				VIH			(VIH), 
+				VIL			(VIL));
+				
+	
+	
 endmodule  

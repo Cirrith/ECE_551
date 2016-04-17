@@ -8,7 +8,7 @@
 			CHxTrigCfg [7:0] - 
 			CHxHff5 - 
 			CHxLff5 - 
-			set_armed - 
+			armed - 
 	
 	OUTPUTS:
 			CHxTrig - 
@@ -23,14 +23,14 @@
 			Neg_Edge_Trig - 
 			Pos_Edge_Trig - 
 **************************************************************************************************/
-module Channel_Trigger_Unit();
+module Channel_Trigger_Unit(clk, rst_n, CHxTrigCfg, CHxHff5, CHxLff5, armed, CHxTrig);
 	
 	input clk;
 	input rst_n;
 	input [7:0] CHxTrigCfg;
 	input CHxHff5;
 	input CHxLff5;
-	input set_armed;
+	input armed;
 	
 	output CHxTrig;
 	
@@ -64,7 +64,7 @@ module Channel_Trigger_Unit();
 	always_ff @ (posedge CHxHff5, negedge rst_n) begin		//Edge triggered 1st flip-flop High
 		if(!rst_n)
 			Pos_Edge[0] <= 0;
-		else if (!set_armed)
+		else if (!armed)
 			Pos_Edge[0] <= 0;
 		else
 			Pos_Edge[0] <= 1;
@@ -73,7 +73,7 @@ module Channel_Trigger_Unit();
 	always_ff @ (negedge CHxLff5, negedge rst_n) begin		//Edge triggered 1st flip-flop Low
 		if(!rst_n)
 			Neg_Edge[0] <= 0;
-		else if (!set_armed)
+		else if (!armed)
 			Neg_Edge <= 0;
 		else
 			Neg_Edge[0] <= 1;

@@ -6,15 +6,15 @@
 /			clk - Clock
 /			rst_n - Reset
 /			TrigCfg [7:0] - Configuration for Protocol Unit
-/			maskH [7:0] - 
-/			maskL [7:0] - 
-/			matchH [7:0] -
-/			matchL [7:0] - 
-/			baud_cntH [7:0] -
-/			baud_cntL [7:0] - 
-/			CH1L - 
-/			CH2L - 
-/			CH3L - 
+/			maskH [7:0] - Top 15:8 of mask for SPI
+/			maskL [7:0] - Lower 7:0 of mask for UART and SPI
+/			matchH [7:0] - Top 15:8 of mask for SPI
+/			matchL [7:0] - Lower 7:0 of mask for UART and SPI
+/			baud_cntH [7:0] - Top 15:8 of baud count for UART
+/			baud_cntL [7:0] - Lower 7:0 of baud count for UART
+/			CH1L - Lower level for Channel 1
+/			CH2L - Lower level for Channel 2
+/			CH3L - Lower level for Channel 3
 /	
 /	OUTPUTS:
 /			protTrig - Ahhh, the classic one output. What does it really mean to only have one output?
@@ -23,8 +23,8 @@
 /			SPItrig - Whether SPI has triggered or not
 /			UARTtrig - Whether UART has triggered or not
 **************************************************************************************************/
-module Protocol_Trigger_Unit();
-	//TODO: ADD BAUD TO UART_RX
+module Protocol_Trigger_Unit(clk, rst_n, TrigCfg, maskH, maskL, matchH, matchL, baud_cntH, baud_cntL, CH1L, CH2L, CH3L, protTrig);
+
 	input clk;
 	input rst_n;
 	input [7:0] TrigCfg;

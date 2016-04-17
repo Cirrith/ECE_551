@@ -8,7 +8,7 @@
 /			cmd [15:0] - Command to execute
 /			cmd_rdy - Recieved a command
 /			resp_sent - Respone was sent via UART
-/			set_capture_done - Capture is complete
+/			capture_done - Capture is complete
 /			waddr [LOG2-1:0] - Writing address from RAM (Assuming that all ram are writing to the same address)
 /			rdataCH1 [7:0] - Data read from channel 1
 /			rdataCH2 [7:0] - Data read from channel 2
@@ -64,7 +64,7 @@
 /			trig_posH_nxt - Data to be written to trig_posH register on next posedge clk
 /			trig_posL_nxt - Data to be written to trig_posL register on next posedge clk
 **************************************************************************************************/
-module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rdataCH1, rdataCH2, rdataCH3, rdataCH4, rdataCH5, raddr, resp, send_resp, clr_cmd_rdy, trig_pos, decimator, maskL, maskH, matchL, matchH, baud_cntL, baud_cntH, TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, VIH, VIL);
+module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataCH1, rdataCH2, rdataCH3, rdataCH4, rdataCH5, raddr, resp, send_resp, clr_cmd_rdy, trig_pos, decimator, maskL, maskH, matchL, matchH, baud_cntL, baud_cntH, TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, VIH, VIL);
 	
 	parameter LOG2 = 9; //Default Size for Data
 	parameter ENTRIES = 384;
@@ -85,7 +85,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 	input [15:0] cmd;
 	input cmd_rdy;
 	input resp_sent;
-	input set_capture_done;
+	input capture_done;
 	
 	input [LOG2-1:0] waddr;
 	
@@ -151,7 +151,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 			TrigCfg <= 6'h03;
 		else if(wrt_reg & (register == TrigCfg_Reg))
 			TrigCfg <= data[5:0];
-		else if(set_capture_done)
+		else if(capture_done)
 			TrigCfg <= TrigCfg | 6'h20;
 	end
 	
@@ -353,13 +353,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, set_capture_done, waddr, rd
 			end
 			
 			RAM : begin
-				case (ccc)
-					//CH1 : begin resp = rdataCH1; $display("Wrote Channel1, %t", $time); end
-					//CH2 : begin resp = rdataCH2; $display("Wrote Channel2, %t", $time); end
-					//CH3 : begin resp = rdataCH3; $display("Wrote Channel3, %t", $time); end
-					//Ch4 : begin resp = rdataCH4; $display("Wrote Channel4, %t", $time); end
-					//Ch5 : begin resp = rdataCH5; $display("Wrote Channel5, %t", $time); end
-					
+				case (ccc)			
 					CH1 : resp = rdataCH1;
 					CH2 : resp = rdataCH2;
 					CH3 : resp = rdataCH3;
