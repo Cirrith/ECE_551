@@ -159,10 +159,10 @@ module dig_core(clk,rst_n,smpl_clk,wrt_smpl, decimator, VIH, VIL, CH1L, CH1H,
 				.capture_done	(capture_done), 
 				.write			(write));
 	
-	channel_sample ch1_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH1H), .CHxL(CH1L), .smpl_clk(smpl_clk), .CHxHff5(CH1Hff5), .CHxLff5(CH1Lff5), .smpl(smpl1));
-	channel_sample ch2_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH2H), .CHxL(CH2L), .smpl_clk(smpl_clk), .CHxHff5(CH2Hff5), .CHxLff5(CH2Lff5), .smpl(smpl2));
-	channel_sample ch3_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH3H), .CHxL(CH3L), .smpl_clk(smpl_clk), .CHxHff5(CH3Hff5), .CHxLff5(CH3Lff5), .smpl(smpl3));
-	channel_sample ch4_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH4H), .CHxL(CH4L), .smpl_clk(smpl_clk), .CHxHff5(CH4Hff5), .CHxLff5(CH4Lff5), .smpl(smpl4));
-	channel_sample ch5_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH5H), .CHxL(CH5L), .smpl_clk(smpl_clk), .CHxHff5(CH5Hff5), .CHxLff5(CH5Lff5), .smpl(smpl5));
+	channel_sample ch1_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH1H), .CHxL(CH1L), .smpl_clk(smpl_clk), .CHxHff5(CH1Hff5), .CHxLff5(CH1Lff5), .smpl(wdataCH1));
+	channel_sample ch2_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH2H), .CHxL(CH2L), .smpl_clk(smpl_clk), .CHxHff5(CH2Hff5), .CHxLff5(CH2Lff5), .smpl(wdataCH2));
+	channel_sample ch3_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH3H), .CHxL(CH3L), .smpl_clk(smpl_clk), .CHxHff5(CH3Hff5), .CHxLff5(CH3Lff5), .smpl(wdataCH3));
+	channel_sample ch4_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH4H), .CHxL(CH4L), .smpl_clk(smpl_clk), .CHxHff5(CH4Hff5), .CHxLff5(CH4Lff5), .smpl(wdataCH4));
+	channel_sample ch5_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH5H), .CHxL(CH5L), .smpl_clk(smpl_clk), .CHxHff5(CH5Hff5), .CHxLff5(CH5Lff5), .smpl(wdataCH5));
 	
 endmodule  

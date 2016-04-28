@@ -47,21 +47,23 @@ module Channel_Trigger_Unit(clk, rst_n, CHxTrigCfg, CHxHff5, CHxLff5, armed, CHx
 	
 	assign CHxTrig = Low_Level_Trig | High_Level_Trig | Neg_Edge_Trig | Pos_Edge_Trig | CHxTrigCfg[0];
 	
-	assign Low_Level_Trig = Low_Level & CHxTrigCfg[1];
+	assign Low_Level_Trig = ~Low_Level & CHxTrigCfg[1];
 	assign High_Level_Trig = High_Level & CHxTrigCfg[2];
 	assign Neg_Edge_Trig = Neg_Edge[1] & CHxTrigCfg[3];
 	assign Pos_Edge_Trig = Pos_Edge[1] & CHxTrigCfg[4];
 	
 	always_ff @ (posedge clk, negedge rst_n) begin		//High and Low Level flip-flops
-		if(!rst_n)
+		if(!rst_n) begin
 			High_Level <= 0;
 			Low_Level <= 0;
-		else
+		end
+		else begin
 			High_Level <= CHxHff5;
 			Low_Level <= CHxLff5;
+		end
 	end
 	
-	always_ff @ (posedge CHxHff5, negedge rst_n) begin		//Edge triggered 1st flip-flop High
+	always_ff @ (posedge CHxHff5, negedge rst_n, negedge armed) begin		//Edge triggered 1st flip-flop High
 		if(!rst_n)
 			Pos_Edge[0] <= 0;
 		else if (!armed)
@@ -70,7 +72,7 @@ module Channel_Trigger_Unit(clk, rst_n, CHxTrigCfg, CHxHff5, CHxLff5, armed, CHx
 			Pos_Edge[0] <= 1;
 	end
 	
-	always_ff @ (negedge CHxLff5, negedge rst_n) begin		//Edge triggered 1st flip-flop Low
+	always_ff @ (negedge CHxLff5, negedge rst_n, negedge armed) begin		//Edge triggered 1st flip-flop Low
 		if(!rst_n)
 			Neg_Edge[0] <= 0;
 		else if (!armed)
@@ -80,12 +82,14 @@ module Channel_Trigger_Unit(clk, rst_n, CHxTrigCfg, CHxHff5, CHxLff5, armed, CHx
 	end
 	
 	always_ff @ (posedge clk, negedge rst_n) begin		//Edge triggered 2nd flip-flops
-		if(!rst_n)
+		if(!rst_n) begin
 			Pos_Edge[1] <= 0;
 			Neg_Edge[1] <= 0;
-		else
+		end
+		else begin
 			Pos_Edge[1] <= Pos_Edge[0];
 			Neg_Edge[1] <= Neg_Edge[0];
+		end
 	end
 	
 endmodule

@@ -1,0 +1,6 @@
+//Test1
+
+Init
+
+READ 0x00
+WRITE 0x00 0x01

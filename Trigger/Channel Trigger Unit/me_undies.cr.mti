@@ -1,0 +1,8 @@
+{I:/College/ECE_551/Trigger/Channel Trigger Unit/Channel_Trigger_Unit_TB.sv} {1 {vlog -work work -vopt -sv -stats=none {I:/College/ECE_551/Trigger/Channel Trigger Unit/Channel_Trigger_Unit_TB.sv}
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module Channel_Trigger_Unit_TB
+
+Top level modules:
+	Channel_Trigger_Unit_TB
+
+} {} {}}

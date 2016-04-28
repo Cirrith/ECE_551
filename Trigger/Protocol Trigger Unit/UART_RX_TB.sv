@@ -22,7 +22,7 @@ module UART_RX_TB();
 	
 	UART_tx tx (.clk(clk), .rst_n(rst_n), .TX(line), .trmt(trmt), .tx_data(tx_data), .tx_done(tx_done));
 	
-	UART_RX rx (.clk(clk), .rst_n(rst_n), .RX(line), .baud_cnt(baud_cnt), .mask(mask), .match(match), .UARTtrig(UARTtrig));
+	UART_RX_Prot rx (.clk(clk), .rst_n(rst_n), .RX(line), .baud_cnt(baud_cnt), .mask(mask), .match(match), .UARTtrig(UARTtrig));
 	
 	initial
 		clk = 0;

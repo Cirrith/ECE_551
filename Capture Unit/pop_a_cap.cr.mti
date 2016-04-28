@@ -1,0 +1,8 @@
+{I:/College/ECE_551/Capture Unit/Capture_Unit.sv} {1 {vlog -work work -vopt -sv -stats=none {I:/College/ECE_551/Capture Unit/Capture_Unit.sv}
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module Capture_Unit
+
+Top level modules:
+	Capture_Unit
+
+} {} {}}
