@@ -1,10 +1,10 @@
 	module trigger_logic_tb();
 
 	reg CH1Trig, CH2Trig, CH3Trig, CH4Trig, CH5Trig, protTrig;
-	reg armed, set_capture_done;
+	reg armed, capture_done;
 	reg rst_n, clk;
 	reg triggered;
-	reg correct;
+	reg correct = 1;
 
 	trigger_logic iDUT(clk, rst_n, armed, capture_done, CH1Trig, CH2Trig, CH3Trig, CH4Trig, CH5Trig, protTrig, triggered);
 
@@ -19,7 +19,7 @@
 		CH5Trig = 1;
 		protTrig = 0;
 		armed = 0;
-		set_capture_done = 0;
+		capture_done = 0;
 		
 		repeat(2) @(negedge clk);
 		
@@ -32,7 +32,7 @@
 		@(negedge clk);
 		protTrig = 1;
 		armed = 1;
-		set_capture_done = 1;
+		capture_done = 1;
 		
 		@(posedge clk)
 		if (triggered != 0)
