@@ -1,8 +1,8 @@
-read_file -format sverilog { ./LA_dig.sv ./UART_wrapper.sv ./RAMqueue_post_synth.v ./dig_core.sv ./clk_rst_smpl.sv ./dual_PWM.sv }
+read_file -format sverilog { ./LA_dig.sv ./UART_Wrapper.sv ./RAMqueue_post_synth.v ./dig_core.sv ./clk_rst_smpl.sv ./dual_PWM.sv ./RAMqueue.sv }
 set current_design LA_dig
 
 create_clock -name "clk400MHz" -period 0.8 -waveform {0 1} {clk}
-set_dont_touch_network [find port clk]
+set_dont_touch_network [find port clk400MHz]
 
 create_generated_clock –name “clk” –source [get_port clk400MHz] –divide_by 4 [get pins iCLKRST/clk]
 set_dont_touch_network [get_pins iCLKRST/clk]
