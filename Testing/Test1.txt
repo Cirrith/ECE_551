@@ -1,6 +1,4 @@
-//Test1
+INIT
+READ TrigCfg 00
 
-Init
-
-READ 0x00
-WRITE 0x00 0x01
+Blah

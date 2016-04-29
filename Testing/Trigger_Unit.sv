@@ -43,7 +43,7 @@
 /			protTrig - Whether protocol unit has triggered or not
 /	
 **************************************************************************************************/
-module Trigger_Unit (clk, rst_n, TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, CH1Hff5, CH2Hff5, CH3Hff5, CH4Hff5, CH5Hff5, CH1Lff5, CH2Lff5, CH3Lff5, CH4Lff5, CH5Lff5, CH1L, CH2L, CH3L, maskH, maskL, matchH, matchL, armed, capture_done, triggered);	
+module Trigger_Unit (clk, rst_n, TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, CH1Hff5, CH2Hff5, CH3Hff5, CH4Hff5, CH5Hff5, CH1Lff5, CH2Lff5, CH3Lff5, CH4Lff5, CH5Lff5, CH1L, CH2L, CH3L, baud_cntH, baud_cntL, maskH, maskL, matchH, matchL, armed, capture_done, triggered);	
 	
 	input clk;
 	input rst_n;
@@ -71,6 +71,9 @@ module Trigger_Unit (clk, rst_n, TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH
 	input CH1L;
 	input CH2L;
 	input CH3L;
+	
+	input [7:0] baud_cntH;
+	input [7:0] baud_cntL;
 	
 	input [7:0] maskH;
 	input [7:0] maskL;

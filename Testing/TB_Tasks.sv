@@ -2,49 +2,62 @@
 	logic [7:0] Mem [ENTRIES-1:0];
 	
 	task Initialize;
-		send_cmd = 0;
-		clr_resp_rdy = 0;
-		host_cmd = 0;
+		UART_triggering = 0;
+		SPI_triggering = 0;
 		
+		UART_Start = 0;
+		UART_Data = 0;
+		
+		SPI_Start = 0;
+		SPI_Pos_Edge = 0;
+		SPI_Width8 = 0;
+		
+		Tran_Cmd = 0; //16 Bit Command
+		Send_Cmd = 0; //Yes or no
+		Clr_Rec_Rdy = 0;
+
 		RST_n = 0;
-		repeat(2) @(negedge clk);
+		@(negedge locked);
 		RST_n = 1;
 		
+		
 	endtask
-	
-	task SendCmd (input [1:0] Cmd, input [5:0] Reg, input [7:0] Data, input [1:0] Chan);
+
+	task SendCmd (input [1:0] Cmd, input [5:0] Reg, input [7:0] Data, input [1:0] Chan, output Status);
 		if(Cmd == ReadReg) begin
-			host_cmd = {2'h0, 1'h0, Reg, 8'h00};
+			Tran_Cmd = {2'h0, 1'h0, Reg, 8'h00};
 		end
 		else if(Cmd == WriteReg) begin
-			host_cmd = {2'h1, 1'h0, Reg, Data};
+			Tran_Cmd = {2'h1, 1'h0, Reg, Data};
 		end
 		else if(Cmd == Dump) begin
-			host_cmd = {2'h2, 3'h0, Chan, 8'h00};
+			Tran_Cmd = {2'h2, 3'h0, Chan, 8'h00};
 		end
 		else
 			$display("Bad command Entered");
 		
-		send_cmd = 1;
+		Send_Cmd = 1;
 		@(negedge clk);
-		send_cmd = 0;
+		Send_Cmd = 0;
 
 		fork : captainFork
 			begin 
 				repeat(10000) @(negedge clk);
 				$display("10000 Cycles to send is quite a while");
-				$stop;
+				Status = 0;
+				disable captainFork;
 			end
 			
 			begin
-				@(posedge cmd_sent);
+				@(posedge Cmd_Cmplt);
 				$display("Command Sent at %t", $time);
+				Status = 1;
 				disable captainFork;
 			end
 		join
-		
 	endtask
-	
+
+	/*
 	task ChkResp (input [1:0] Cmd, input [5:0] Reg);
 		fork : mrforky
 			begin
@@ -150,3 +163,5 @@
 			end
 		join
 	endtask
+	*/
+	

@@ -99,7 +99,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 	output logic [7:0] resp;
 	output logic send_resp;
 	output logic clr_cmd_rdy;
-	output [LOG2-1:0] trig_pos; //HARD CODING IT FOR 16 NEED TO FIGURE OUT HOW TO USE [LOG2-1:0] as a 
+	output [15:0] trig_pos; //HARD CODING IT FOR 16 NEED TO FIGURE OUT HOW TO USE [LOG2-1:0] as a 
 
 	output logic [3:0] decimator;
 	output logic [7:0] maskL;
@@ -108,12 +108,12 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 	output logic [7:0] matchH;
 	output logic [7:0] baud_cntL;
 	output logic [7:0] baud_cntH;
-	output logic [7:0] TrigCfg;
-	output logic [7:0] CH1TrigCfg;
-	output logic [7:0] CH2TrigCfg;
-	output logic [7:0] CH3TrigCfg;
-	output logic [7:0] CH4TrigCfg;
-	output logic [7:0] CH5TrigCfg;
+	output logic [5:0] TrigCfg;
+	output logic [4:0] CH1TrigCfg;
+	output logic [4:0] CH2TrigCfg;
+	output logic [4:0] CH3TrigCfg;
+	output logic [4:0] CH4TrigCfg;
+	output logic [4:0] CH5TrigCfg;
 	output logic [7:0] VIH;
 	output logic [7:0] VIL;
 	

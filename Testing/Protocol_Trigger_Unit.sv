@@ -27,7 +27,7 @@ module Protocol_Trigger_Unit(clk, rst_n, TrigCfg, maskH, maskL, matchH, matchL, 
 
 	input clk;
 	input rst_n;
-	input [7:0] TrigCfg;
+	input [5:0] TrigCfg;
 	input [7:0] maskH;
 	input [7:0] maskL;
 	input [7:0] matchH;

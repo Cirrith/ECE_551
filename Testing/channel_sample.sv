@@ -31,7 +31,7 @@ module channel_sample(clk, rst_n, CHxH, CHxL, smpl_clk, CHxHff5, CHxLff5, smpl);
 	input rst_n;
 	input CHxH;
 	input CHxL;
-	input [7:0] smpl_clk;
+	input smpl_clk;
 	
 	output logic CHxHff5;
 	output logic CHxLff5;

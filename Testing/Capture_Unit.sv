@@ -28,6 +28,7 @@ module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, c
 	typedef enum logic [1:0] {IDLE, RUN, DONE} State;
 	
 	parameter ENTRIES = 384;
+	parameter LOG2 = 9;
 	
 	input clk;
 	input rst_n;
@@ -36,7 +37,7 @@ module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, c
 	input [5:0] TrigCfg;
 	input [15:0] trig_pos;
 	
-	output logic [15:0] waddr;
+	output logic [LOG2-1:0] waddr;
 	output logic capture_done;
 	output logic write;
 	
