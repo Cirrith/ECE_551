@@ -31,9 +31,9 @@
 
 	task SendCmd (input Command Cmd, input Register Reg, input [7:0] Data, input Channel Chan, output [7:0] Status);
 		if(Cmd == ReadReg) begin
-			Tran_Cmd = {2'h0, 1'h0, Reg, 8'h00};
+			Tran_Cmd = {2'h0, Reg, 8'h00};
 		end else if(Cmd == WriteReg) begin
-			Tran_Cmd = {2'h1, 1'h0, Reg, Data};
+			Tran_Cmd = {2'h1, Reg, Data};
 		end else if(Cmd == Dump) begin
 			Tran_Cmd = {2'h2, 3'h0, Chan, 8'h00};
 			Address = DUT.waddr;
@@ -190,6 +190,7 @@
 		fork : senorforky
 			begin				//Receive data. See if there is a better way than a for loop
 				for(i = 0; i < ENTRIES; i = i + 1) begin
+					$display("%d", i);
 					@(posedge Rec_Rdy);
 					Mem_Rec[i] = Rec_Data;
 					@(posedge clk);
@@ -202,7 +203,7 @@
 			end
 			
 			begin				//Timeout for making a recieve
-				repeat(100000) @(negedge clk);
+				repeat(10000000) @(negedge clk);
 				$display("Errored out when recieving a DUMP, heh, dump");
 				$stop;
 			end

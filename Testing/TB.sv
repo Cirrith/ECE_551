@@ -170,7 +170,7 @@ module TB();
 	initial begin : file_block 
 		REF_CLK = 0;
 		START = 0;
-		file = $fopen("Test1.txt", "r");
+		file = $fopen("Write_Read_All.txt", "r");
 		if (file == 0) begin
 			$display("File Not Found");
 			$stop;
@@ -248,9 +248,9 @@ module TB();
 					end
 					
 					"DUMP" : begin
-						//CHAN = '{arg1[2:0]};
-						//CMD = Dump;
-						//SendCmd(CMD, 2'h00, 2'h00, CHAN, Stat);
+						REG = '{TrigCfg_Reg};
+						CMD = '{Dump};
+						SendCmd(CMD, REG, 8'h00, CHAN, Stat);
 					end
 					
 					"RUN" : begin

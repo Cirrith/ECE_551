@@ -1,0 +1,20 @@
+INIT NULL
+WRITE TrigCfg 04
+WRITE CH1TrigCfg 08
+WRITE CH2TrigCfg 07
+WRITE CH3TrigCfg 06
+WRITE CH4TrigCfg 05
+WRITE CH5TrigCfg 04
+WRITE decimator 03
+WRITE VIH 21
+WRITE VIL 32
+WRITE matchH 56
+WRITE matchL 87
+WRITE maskH 50
+WRITE maskL 20
+WRITE baud_cntH 03
+WRITE baud_cntL 0A
+WRITE trig_posH 08
+WRITE trig_posL 01
+
+End NULL

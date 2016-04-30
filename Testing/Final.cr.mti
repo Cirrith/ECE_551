@@ -60,36 +60,36 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 
 ** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(32): near "Cmd": syntax error, unexpected IDENTIFIER, expecting ')'
 ** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(84): near "Cmd": syntax error, unexpected IDENTIFIER, expecting ')'
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(127): (vlog-2730) Undefined variable: 'clk'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(148): (vlog-2730) Undefined variable: 'clk'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(132): (vlog-2730) Undefined variable: 'Tran_Cmd'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(153): (vlog-2730) Undefined variable: 'Tran_Cmd'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(132): (vlog-2730) Undefined variable: 'ReadReg'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(153): (vlog-2730) Undefined variable: 'ReadReg'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(133): (vlog-2730) Undefined variable: 'clk'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(154): (vlog-2730) Undefined variable: 'clk'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(134): (vlog-2730) Undefined variable: 'Send_Cmd'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(155): (vlog-2730) Undefined variable: 'Send_Cmd'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(140): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(161): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(141): (vlog-2730) Undefined variable: 'Rec_Data'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(162): (vlog-2730) Undefined variable: 'Rec_Data'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(143): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(164): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(148): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(169): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(156): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(177): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(161): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(182): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(167): near "Chan": syntax error, unexpected IDENTIFIER, expecting ')'
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(236): (vlog-2730) Undefined variable: 'clk'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(188): near "Chan": syntax error, unexpected IDENTIFIER, expecting ')'
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(258): (vlog-2730) Undefined variable: 'clk'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(237): (vlog-2730) Undefined variable: 'Tran_Cmd'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(259): (vlog-2730) Undefined variable: 'Tran_Cmd'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(239): (vlog-2730) Undefined variable: 'Send_Cmd'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(261): (vlog-2730) Undefined variable: 'Send_Cmd'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(251): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(273): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
 
 
 } {3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 48.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0 59.0 60.0 61.0 62.0 63.0 64.0 65.0} {}} I:/College/ECE_551/Testing/dig_core.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/dig_core.sv
@@ -148,13 +148,6 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	UART_tx
 
-} {} {}} I:/College/ECE_551/Testing/CommMaster.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/CommMaster.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module CommMaster
-
-Top level modules:
-	CommMaster
-
 } {} {}} I:/College/ECE_551/Testing/LA_dig.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/LA_dig.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module LA_dig
@@ -162,12 +155,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	LA_dig
 
-} {} {}} I:/College/ECE_551/Testing/AFE.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_551/Testing/AFE.v
+} {} {}} I:/College/ECE_551/Testing/CommMaster.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/CommMaster.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module AFE
+-- Compiling module CommMaster
 
 Top level modules:
-	AFE
+	CommMaster
 
 } {} {}} I:/College/ECE_551/Testing/SPI_RX_Edge.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/SPI_RX_Edge.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -176,12 +169,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	SPI_RX_Edge
 
-} {} {}} I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv
+} {} {}} I:/College/ECE_551/Testing/AFE.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_551/Testing/AFE.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module Channel_Trigger_Unit
+-- Compiling module AFE
 
 Top level modules:
-	Channel_Trigger_Unit
+	AFE
 
 } {} {}} I:/College/ECE_551/Testing/cmd_cfg.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/cmd_cfg.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -197,19 +190,19 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	Capture_Unit
 
-} {} {}} I:/College/ECE_551/Testing/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_wrapper.sv
+} {} {}} I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART_wrapper
+-- Compiling module Channel_Trigger_Unit
 
 Top level modules:
-	UART_wrapper
+	Channel_Trigger_Unit
 
-} {} {}} I:/College/ECE_551/Testing/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/PWM8.sv
+} {} {}} I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module PWM8
+-- Compiling module Protocol_Trigger_Unit
 
 Top level modules:
-	PWM8
+	Protocol_Trigger_Unit
 
 } {} {}} I:/College/ECE_551/Testing/UART.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -218,12 +211,33 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	UART
 
-} {} {}} I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv
+} {} {}} I:/College/ECE_551/Testing/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/PWM8.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module Protocol_Trigger_Unit
+-- Compiling module PWM8
 
 Top level modules:
-	Protocol_Trigger_Unit
+	PWM8
+
+} {} {}} I:/College/ECE_551/Testing/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_wrapper.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module UART_wrapper
+
+Top level modules:
+	UART_wrapper
+
+} {} {}} I:/College/ECE_551/Testing/UART_rx_count.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_rx_count.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module UART_rx_count
+
+Top level modules:
+	UART_rx_count
+
+} {} {}} I:/College/ECE_551/Testing/UART_rx_control.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_rx_control.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module UART_rx_control
+
+Top level modules:
+	UART_rx_control
 
 } {} {}} I:/College/ECE_551/Testing/LA_dig_tb.sv {0 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/LA_dig_tb.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -286,81 +300,60 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 ** at tb_tasks.sv(109): (vlog-2730) Undefined variable: 'Rec_Data'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(132): (vlog-2730) Undefined variable: 'Tran_Cmd'.
+** at tb_tasks.sv(153): (vlog-2730) Undefined variable: 'Tran_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(134): (vlog-2730) Undefined variable: 'Send_Cmd'.
+** at tb_tasks.sv(155): (vlog-2730) Undefined variable: 'Send_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(140): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** at tb_tasks.sv(161): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(141): (vlog-2730) Undefined variable: 'Rec_Data'.
+** at tb_tasks.sv(162): (vlog-2730) Undefined variable: 'Rec_Data'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(143): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** at tb_tasks.sv(164): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(148): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** at tb_tasks.sv(169): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(156): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** at tb_tasks.sv(177): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(161): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
+** at tb_tasks.sv(182): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(172): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** at tb_tasks.sv(194): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(173): (vlog-2730) Undefined variable: 'Rec_Data'.
+** at tb_tasks.sv(195): (vlog-2730) Undefined variable: 'Rec_Data'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(176): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** at tb_tasks.sv(198): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(205): (vlog-2730) Undefined variable: 'CH4'.
+** at tb_tasks.sv(227): (vlog-2730) Undefined variable: 'CH4'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(210): (vlog-2730) Undefined variable: 'CH5'.
+** at tb_tasks.sv(232): (vlog-2730) Undefined variable: 'CH5'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(237): (vlog-2730) Undefined variable: 'Tran_Cmd'.
+** at tb_tasks.sv(259): (vlog-2730) Undefined variable: 'Tran_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(239): (vlog-2730) Undefined variable: 'Send_Cmd'.
+** at tb_tasks.sv(261): (vlog-2730) Undefined variable: 'Send_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(251): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
+** at tb_tasks.sv(273): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
 
 
-} {4.0 5.0 7.0 8.0 10.0 11.0 13.0 14.0 16.0 17.0 19.0 20.0 22.0 23.0 25.0 26.0 28.0 29.0 31.0 32.0 34.0 35.0 37.0 38.0 40.0 41.0 43.0 44.0 46.0 47.0 49.0 50.0 52.0 53.0 55.0 56.0 58.0 59.0 61.0 62.0 64.0 65.0 67.0 68.0 70.0 71.0 73.0 74.0 76.0 77.0 79.0 80.0 82.0 83.0 85.0 86.0 88.0 89.0 91.0 92.0 94.0 95.0 97.0 98.0 100.0 101.0 103.0 104.0 106.0 107.0} {}} I:/College/ECE_551/Testing/UART_rx_control.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_rx_control.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART_rx_control
-
-Top level modules:
-	UART_rx_control
-
-} {} {}} I:/College/ECE_551/Testing/UART_rx_count.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_rx_count.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART_rx_count
-
-Top level modules:
-	UART_rx_count
-
-} {} {}} I:/College/ECE_551/Testing/SPI_mstr.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_551/Testing/SPI_mstr.v
+} {4.0 5.0 7.0 8.0 10.0 11.0 13.0 14.0 16.0 17.0 19.0 20.0 22.0 23.0 25.0 26.0 28.0 29.0 31.0 32.0 34.0 35.0 37.0 38.0 40.0 41.0 43.0 44.0 46.0 47.0 49.0 50.0 52.0 53.0 55.0 56.0 58.0 59.0 61.0 62.0 64.0 65.0 67.0 68.0 70.0 71.0 73.0 74.0 76.0 77.0 79.0 80.0 82.0 83.0 85.0 86.0 88.0 89.0 91.0 92.0 94.0 95.0 97.0 98.0 100.0 101.0 103.0 104.0 106.0 107.0} {}} I:/College/ECE_551/Testing/SPI_mstr.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_551/Testing/SPI_mstr.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module SPI_mstr
 
 Top level modules:
 	SPI_mstr
-
-} {} {}} I:/College/ECE_551/Testing/UART_tx_control.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_tx_control.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART_tx_control
-
-Top level modules:
-	UART_tx_control
 
 } {} {}} I:/College/ECE_551/Testing/UART_tx_count.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_tx_count.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -369,12 +362,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	UART_tx_count
 
-} {} {}} I:/College/ECE_551/Testing/counter.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/counter.sv
+} {} {}} I:/College/ECE_551/Testing/UART_tx_control.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_tx_control.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module counter
+-- Compiling module UART_tx_control
 
 Top level modules:
-	counter
+	UART_tx_control
 
 } {} {}} I:/College/ECE_551/Testing/UART_rx_baud.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_rx_baud.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -383,12 +376,19 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	UART_rx_baud
 
-} {} {}} I:/College/ECE_551/Testing/UART_RX_Prot.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_RX_Prot.sv
+} {} {}} I:/College/ECE_551/Testing/counter.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/counter.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART_RX_Prot
+-- Compiling module counter
 
 Top level modules:
-	UART_RX_Prot
+	counter
+
+} {} {}} I:/College/ECE_551/Testing/trigger_logic.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/trigger_logic.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module trigger_logic
+
+Top level modules:
+	trigger_logic
 
 } {} {}} I:/College/ECE_551/Testing/dual_PWM.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/dual_PWM.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -397,11 +397,11 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	dual_PWM
 
-} {} {}} I:/College/ECE_551/Testing/trigger_logic.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/trigger_logic.sv
+} {} {}} I:/College/ECE_551/Testing/UART_RX_Prot.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_RX_Prot.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module trigger_logic
+-- Compiling module UART_RX_Prot
 
 Top level modules:
-	trigger_logic
+	UART_RX_Prot
 
 } {} {}}

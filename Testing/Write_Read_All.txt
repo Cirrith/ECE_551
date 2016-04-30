@@ -1,0 +1,37 @@
+INIT NULL
+WRITE TrigCfg 04
+READ TrigCfg
+WRITE CH1TrigCfg 08
+READ CH1TrigCfg
+WRITE CH2TrigCfg 07
+READ CH2TrigCfg
+WRITE CH3TrigCfg 06
+READ CH3TrigCfg
+WRITE CH4TrigCfg 05
+READ CH4TrigCfg
+WRITE CH5TrigCfg 04
+READ CH5TrigCfg
+WRITE decimator 03
+READ decimator
+WRITE VIH 21
+READ VIH
+WRITE VIL 32
+READ VIL
+WRITE matchH 56
+READ matchH
+WRITE matchL 87
+READ matchL
+WRITE maskH 50
+READ maskH
+WRITE maskL 20
+READ maskL
+WRITE baud_cntH 03
+READ baud_cntH
+WRITE baud_cntL 0A
+READ baud_cntL
+WRITE trig_posH 08
+READ trig_posH
+WRITE trig_posL 01
+READ trig_posL
+
+End NULL
