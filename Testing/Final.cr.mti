@@ -59,40 +59,38 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 ** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(27): (vlog-2730) Undefined variable: 'REF_CLK'.
 
 ** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(32): near "Cmd": syntax error, unexpected IDENTIFIER, expecting ')'
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(84): near "Cmd": syntax error, unexpected IDENTIFIER, expecting ')'
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(148): (vlog-2730) Undefined variable: 'clk'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(89): near "Cmd": syntax error, unexpected IDENTIFIER, expecting ')'
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(152): (vlog-2730) Undefined variable: 'Tran_Cmd'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(153): (vlog-2730) Undefined variable: 'Tran_Cmd'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(153): (vlog-2730) Undefined variable: 'clk'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(153): (vlog-2730) Undefined variable: 'ReadReg'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(154): (vlog-2730) Undefined variable: 'Send_Cmd'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(154): (vlog-2730) Undefined variable: 'clk'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(167): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(155): (vlog-2730) Undefined variable: 'Send_Cmd'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(168): (vlog-2730) Undefined variable: 'Rec_Data'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(161): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(170): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(162): (vlog-2730) Undefined variable: 'Rec_Data'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(175): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(164): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(183): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(169): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(184): (vlog-2730) Undefined variable: 'ReadReg'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(177): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(188): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(182): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(194): near "Chan": syntax error, unexpected IDENTIFIER, expecting ')'
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(265): (vlog-2730) Undefined variable: 'clk'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(188): near "Chan": syntax error, unexpected IDENTIFIER, expecting ')'
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(258): (vlog-2730) Undefined variable: 'clk'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(266): (vlog-2730) Undefined variable: 'Tran_Cmd'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(259): (vlog-2730) Undefined variable: 'Tran_Cmd'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(268): (vlog-2730) Undefined variable: 'Send_Cmd'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(261): (vlog-2730) Undefined variable: 'Send_Cmd'.
-
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(273): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(280): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
 
 
-} {3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 48.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0 59.0 60.0 61.0 62.0 63.0 64.0 65.0} {}} I:/College/ECE_551/Testing/dig_core.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/dig_core.sv
+} {3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 48.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 57.0 58.0 59.0 60.0 61.0 62.0 63.0} {}} I:/College/ECE_551/Testing/dig_core.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/dig_core.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module dig_core
 
@@ -279,73 +277,73 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 ** at tb_tasks.sv(38): (vlog-2730) Undefined variable: 'Tran_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(47): (vlog-2730) Undefined variable: 'CH4'.
+** at tb_tasks.sv(50): (vlog-2730) Undefined variable: 'CH4'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(49): (vlog-2730) Undefined variable: 'CH5'.
+** at tb_tasks.sv(53): (vlog-2730) Undefined variable: 'CH5'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(59): (vlog-2730) Undefined variable: 'Send_Cmd'.
+** at tb_tasks.sv(64): (vlog-2730) Undefined variable: 'Send_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(71): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
+** at tb_tasks.sv(76): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(94): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** at tb_tasks.sv(99): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(101): (vlog-2730) Undefined variable: 'Rec_Data'.
+** at tb_tasks.sv(106): (vlog-2730) Undefined variable: 'Rec_Data'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(109): (vlog-2730) Undefined variable: 'Rec_Data'.
+** at tb_tasks.sv(114): (vlog-2730) Undefined variable: 'Rec_Data'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(153): (vlog-2730) Undefined variable: 'Tran_Cmd'.
+** at tb_tasks.sv(152): (vlog-2730) Undefined variable: 'Tran_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(155): (vlog-2730) Undefined variable: 'Send_Cmd'.
+** at tb_tasks.sv(154): (vlog-2730) Undefined variable: 'Send_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(161): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** at tb_tasks.sv(167): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(162): (vlog-2730) Undefined variable: 'Rec_Data'.
+** at tb_tasks.sv(168): (vlog-2730) Undefined variable: 'Rec_Data'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(164): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** at tb_tasks.sv(170): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(169): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** at tb_tasks.sv(175): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(177): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** at tb_tasks.sv(183): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(182): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
+** at tb_tasks.sv(188): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(194): (vlog-2730) Undefined variable: 'Rec_Rdy'.
+** at tb_tasks.sv(200): (vlog-2730) Undefined variable: 'Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(195): (vlog-2730) Undefined variable: 'Rec_Data'.
+** at tb_tasks.sv(201): (vlog-2730) Undefined variable: 'Rec_Data'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(198): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
+** at tb_tasks.sv(204): (vlog-2730) Undefined variable: 'Clr_Rec_Rdy'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(227): (vlog-2730) Undefined variable: 'CH4'.
+** at tb_tasks.sv(233): (vlog-2730) Undefined variable: 'CH4'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(232): (vlog-2730) Undefined variable: 'CH5'.
+** at tb_tasks.sv(238): (vlog-2730) Undefined variable: 'CH5'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(259): (vlog-2730) Undefined variable: 'Tran_Cmd'.
+** at tb_tasks.sv(266): (vlog-2730) Undefined variable: 'Tran_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(261): (vlog-2730) Undefined variable: 'Send_Cmd'.
+** at tb_tasks.sv(268): (vlog-2730) Undefined variable: 'Send_Cmd'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(273): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
+** at tb_tasks.sv(280): (vlog-2730) Undefined variable: 'Cmd_Cmplt'.
 
 
 } {4.0 5.0 7.0 8.0 10.0 11.0 13.0 14.0 16.0 17.0 19.0 20.0 22.0 23.0 25.0 26.0 28.0 29.0 31.0 32.0 34.0 35.0 37.0 38.0 40.0 41.0 43.0 44.0 46.0 47.0 49.0 50.0 52.0 53.0 55.0 56.0 58.0 59.0 61.0 62.0 64.0 65.0 67.0 68.0 70.0 71.0 73.0 74.0 76.0 77.0 79.0 80.0 82.0 83.0 85.0 86.0 88.0 89.0 91.0 92.0 94.0 95.0 97.0 98.0 100.0 101.0 103.0 104.0 106.0 107.0} {}} I:/College/ECE_551/Testing/SPI_mstr.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_551/Testing/SPI_mstr.v

@@ -39,14 +39,19 @@
 			Address = DUT.waddr;
 			
 			if (Chan == CH1) begin //Make a copy of the memory to be send
-				Mem_Copy = DUT.iRAMCH1.mem; 
+				Mem_Copy = DUT.iRAMCH1.mem;
+				$display("Copied RAM 1");
 			end else if (Chan == CH2) begin
+				$display("Copied RAM 2");
 				Mem_Copy = DUT.iRAMCH2.mem; 
 			end else if (Chan == CH3) begin
+				$display("Copied RAM 3");
 				Mem_Copy = DUT.iRAMCH3.mem; 
 			end else if (Chan == CH4) begin
+				$display("Copied RAM 4");
 				Mem_Copy = DUT.iRAMCH4.mem; 
 			end else if (Chan == CH5) begin
+				$display("Copied RAM 5");
 				Mem_Copy = DUT.iRAMCH5.mem; 
 			end else begin
 				$display("Entered Bad Channel");
@@ -143,19 +148,20 @@
 	endtask
 	
 	task PollCapDone;		//Called by Start
+		
+		Tran_Cmd = {2'h0, 6'h00, 8'h00};
+		@(negedge clk);
+		Send_Cmd = 1;
+		@(negedge clk);
+		Send_Cmd = 0;
+	
 		fork : saliorforky
 			begin				//Timeout
 				repeat(100000) @(negedge clk);
 				$display("100000 Cycles is quite a while for a Response");
 				$stop;
 			end
-			
-			Tran_Cmd = {ReadReg, 8'h00, 8'h00};
-			@(negedge clk);
-			Send_Cmd = 1;
-			@(negedge clk);
-			Send_Cmd = 0;
-			
+
 			begin				//Check for Capture Done in Response
 				forever begin
 					@(posedge Rec_Rdy);
@@ -190,7 +196,7 @@
 		fork : senorforky
 			begin				//Receive data. See if there is a better way than a for loop
 				for(i = 0; i < ENTRIES; i = i + 1) begin
-					$display("%d", i);
+					//$display("%d", i);
 					@(posedge Rec_Rdy);
 					Mem_Rec[i] = Rec_Data;
 					@(posedge clk);
@@ -239,6 +245,8 @@
 			$stop;
 		end
 		
+		$display("Checked RAM %d", Chan);
+		
 		for (i = 0; i < ENTRIES; i = i + 1) begin //Check that it send the right data
 			if(Mem_Rec[i] != Mem_Copy[Address]) begin
 				$display("Dump Recieved did not match up");
@@ -251,12 +259,11 @@
 				Address = Address + 1;
 			end
 		end
-		$display("Recieved Dump Successfully");
 	endtask
 	
 	task Start;
 		repeat(2)@(negedge clk);
-		Tran_Cmd = {2'h1,  8'h00, {2'h0, DUT.iDIG.TrigCfg | 6'h10}};
+		Tran_Cmd = {2'h1, 6'h00, {2'h0, DUT.iDIG.TrigCfg | 6'h10}};
 		@(negedge clk);
 		Send_Cmd = 1;
 		@(negedge clk);
@@ -265,7 +272,7 @@
 		fork : sirFork
 			begin 
 				repeat(10000) @(negedge clk);
-				$display("10009 Cycles to send is quite a while");
+				$display("10000 Cycles to send is quite a while");
 				$stop;
 			end
 			

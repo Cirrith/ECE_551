@@ -170,7 +170,7 @@ module TB();
 	initial begin : file_block 
 		REF_CLK = 0;
 		START = 0;
-		file = $fopen("Write_Read_All.txt", "r");
+		file = $fopen("Run.txt", "r");
 		if (file == 0) begin
 			$display("File Not Found");
 			$stop;
@@ -251,10 +251,12 @@ module TB();
 						REG = '{TrigCfg_Reg};
 						CMD = '{Dump};
 						SendCmd(CMD, REG, 8'h00, CHAN, Stat);
+						$display("Dump -> %d, Success", CHAN);
 					end
 					
 					"RUN" : begin
-						$stop;
+						Start;
+						$display("Run -> Success");
 					end
 					
 					"END" : begin
