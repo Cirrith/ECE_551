@@ -3,9 +3,8 @@
 module TB();
 
 	typedef enum logic [1:0] {ReadReg, WriteReg, Dump} Command;
-	typedef enum logic [2:0] {ERR, CH1, CH2, CH3, CH4, CH5} Channel;
+	typedef enum logic [2:0] {ERR, CH1, CH2, CH3, Ch4, Ch5} Channel;
 	typedef enum logic [5:0] {TrigCfg_Reg, CH1TrigCfg_Reg, CH2TrigCfg_Reg, CH3TrigCfg_Reg, CH4TrigCfg_Reg, CH5TrigCfg_Reg, decimator_Reg, VIH_Reg, VIL_Reg, matchH_Reg, matchL_Reg, maskH_Reg, maskL_Reg, baud_cntH_Reg, baud_cntL_Reg, trig_posH_Reg, trig_posL_Reg} Register;
-	//typedef enum logic [1:0] {RUN, }
 	
 	localparam ACK = 8'hA5;
 	localparam NCK = 8'hEE;
@@ -67,7 +66,7 @@ module TB();
 	logic SCLK;
 	logic SPI_Start;
 	logic SPI_Done;
-	logic [15:0] SPI_Data;
+	logic [15:0] SPI_data;
 	logic MOSI;
 	logic SPI_Pos_Edge;
 	logic SPI_Width8;
@@ -89,7 +88,7 @@ module TB();
 		.CH5H(CH5H));
 	
 	//DUT Stuff
-	LA_dig DUT(
+	LA_dig logic_analayzer(
 		.clk400MHz(clk400MHz),
 		.RST_n(RST_n),
 		.locked(locked),
@@ -146,7 +145,7 @@ module TB();
 		.SCLK(SCLK),
 		.wrt(SPI_Start),
 		.done(SPI_Done),
-		.data_out(SPI_Data),
+		.data_out(SPI_data),
 		.MOSI(MOSI),
 		.pos_edge(SPI_Pos_Edge),
 		.width8(SPI_Width8));		
@@ -169,105 +168,33 @@ module TB();
 	
 	initial begin : file_block 
 		REF_CLK = 0;
-		START = 0;
-		file = $fopen("Test1.txt", "r");
-		if (file == 0) begin
-			$display("File Not Found");
-			$stop;
+		Initialize;
+		
+		SPI_triggering = 1;
+		repeat(16) begin //SPI Testing
+		
 		end
-		@(posedge REF_CLK);
-		START = 1;
+		SPI_triggering = 0;
+		UART_triggering = 1;
+		repeat(16) begin //UART Testing
+		
+		end
+		UART_triggering = 0;
+		repeat(16) begin //Write Testing
+		
+		end
+		
+		repeat(16) begin //Read Testing
+		
+		end
+		
+		repeat(16) begin //Run Testing
+		
+		end
+		
+		repeat(16) begin //Dump Testing
+		
+		end
 	end
-	
-	initial begin
-		@(posedge START);
-		forever begin			
-			r = $fscanf(file, " %s %s %h \n", command, arg1, arg2); 
-			
-			$display("Enter Command Interpt, %s", command);
-			
-			if($feof(file)) begin
-				$display("Reached end of file");
-				$stop;		
-			end
-			
-			arg1 = arg1.tolower();
-			
-			case(arg1)
-				"trigcfg" : REG = '{TrigCfg_Reg};
-				"ch1trigcfg" : REG = '{CH1TrigCfg_Reg};
-				"ch2trigcfg" : REG = '{CH2TrigCfg_Reg};
-				"ch3trigcfg" : REG = '{CH3TrigCfg_Reg};
-				"ch4trigcfg" : REG = '{CH4TrigCfg_Reg};
-				"ch5trigcfg" : REG = '{CH5TrigCfg_Reg};
-				"decimator" : REG = '{decimator_Reg};
-				"vih" : REG = '{VIH_Reg};
-				"vil" : REG = '{VIL_Reg};
-				"matchh" : REG = '{matchH_Reg};
-				"matchl" : REG = '{matchL_Reg};
-				"maskh" : REG = '{maskH_Reg};
-				"maskl" : REG = '{maskL_Reg};
-				"baud_cnth" : REG = '{baud_cntH_Reg};
-				"baud_cntl" : REG = '{baud_cntL_Reg};
-				"trig_posh" : REG = '{trig_posH_Reg};
-				"trig_posl" : REG = '{trig_posL_Reg};
-				"1" : CHAN = '{CH1};
-				"2" : CHAN = '{CH2};
-				"3" : CHAN = '{CH3};
-				"4" : CHAN = '{CH4};
-				"5" : CHAN = '{CH5};
-				"null" : REG = '{TrigCfg_Reg};
-				default : begin
-					$display("Unhandled Input %s", arg1);
-				end
-			endcase
-			
-			if (command[0] != "/") begin
-				case (command)
-					"INIT" : begin
-						Initialize;
-						$display("Initialize Successful @ %t", $time);
-					end
-					
-					"READ" : begin
-						//$display("Read @ %t", $time);
-						CMD = '{ReadReg};
-						SendCmd(CMD, REG, 8'h00, '{ERR}, Stat);
-						$display("Read -> Register: %s, Read: %h", REG, Stat);
-					end
-					
-					"WRITE" : begin
-						CMD = '{WriteReg};
-						SendCmd(CMD, REG, arg2, '{ERR}, Stat);
-						if (Stat == 1) begin
-							$display("Write -> Register: %s, Success", REG);
-						end else begin
-							$display("Write -> Register: %s, Failure", REG);
-							$stop;
-						end
-					end
-					
-					"DUMP" : begin
-						//CHAN = '{arg1[2:0]};
-						//CMD = Dump;
-						//SendCmd(CMD, 2'h00, 2'h00, CHAN, Stat);
-					end
-					
-					"RUN" : begin
-						$stop;
-					end
-					
-					"END" : begin
-						$display("Reached End");
-						$stop;
-					end
-					default : begin
-						$display("Unknown command '%0s'", command);
-						$stop;
-					end
-				endcase
-			end //End Comment skipper
-		end //End Forever
-	end //End Initial
 endmodule
 		

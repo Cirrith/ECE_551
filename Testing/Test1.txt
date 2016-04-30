@@ -1,4 +1,20 @@
-INIT
-READ TrigCfg 00
+INIT NULL
+READ TrigCfg
+READ CH1TrigCfg
+READ CH2TrigCfg
+READ CH3TrigCfg
+READ CH4TrigCfg
+READ CH5TrigCfg
+READ decimator
+READ VIH
+READ VIL
+READ matchH
+READ matchL
+READ maskH
+READ maskL
+READ baud_cntH
+READ baud_cntL
+READ trig_posH
+READ trig_posL
 
-Blah
+End NULL

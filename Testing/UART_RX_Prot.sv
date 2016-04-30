@@ -93,21 +93,18 @@ module UART_RX_Prot(clk, rst_n, RX, baud_cnt, mask, match, UARTtrig);
 						UARTtrig = 1;
 					clr_baud = 1;
 					clr_count = 1;
-					$display("1");
 					nxtstate = IDLE;
 				end
 				else if (baud == baud_cnt/2 & count == 0) begin 		//First tick after start, start half way through block
 					shift = 1;
 					clr_baud = 1;
 					inc_count = 1;
-					$display("2");
 					nxtstate = RECIEVE;
 				end
 				else if (baud == baud_cnt) begin					//Standard movement 
 					shift = 1;
 					clr_baud = 1;
 					inc_count = 1;
-					$display("3");
 					nxtstate = RECIEVE;
 				end
 				else begin											//Nothing to do, increment and move on
