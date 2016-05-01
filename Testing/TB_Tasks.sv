@@ -286,3 +286,5 @@
 		PollCapDone;
 		
 	endtask
+	
+	task SPI(input Edge, input Length, );
