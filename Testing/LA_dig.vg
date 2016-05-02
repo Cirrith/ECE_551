@@ -1,0 +1,58 @@
+
+module LA_dig ( clk400MHz, RST_n, locked, VIH_PWM, VIL_PWM, CH1L, CH1H, CH2L, 
+        CH2H, CH3L, CH3H, CH4L, CH4H, CH5L, CH5H, RX, TX, LED );
+  input clk400MHz, RST_n, locked, CH1L, CH1H, CH2L, CH2H, CH3L, CH3H, CH4L,
+         CH4H, CH5L, CH5H, RX;
+  output VIH_PWM, VIL_PWM, TX, LED;
+  wire   clk, smpl_clk, rst_n, wrt_smpl, send_resp, resp_sent, cmd_rdy,
+         clr_cmd_rdy, we, n1;
+  wire   [3:0] decimator;
+  wire   [7:0] VIH;
+  wire   [7:0] VIL;
+  wire   [7:0] resp;
+  wire   [15:0] cmd;
+  wire   [8:0] waddr;
+  wire   [8:0] raddr;
+  wire   [7:0] wdataCH1;
+  wire   [7:0] rdataCH1;
+  wire   [7:0] wdataCH2;
+  wire   [7:0] rdataCH2;
+  wire   [7:0] wdataCH3;
+  wire   [7:0] rdataCH3;
+  wire   [7:0] wdataCH4;
+  wire   [7:0] rdataCH4;
+  wire   [7:0] wdataCH5;
+  wire   [7:0] rdataCH5;
+
+  RAMqueue iRAMCH1 ( .clk(clk), .we(we), .waddr(waddr), .raddr(raddr), .wdata(
+        wdataCH1), .rdata(rdataCH1) );
+  RAMqueue iRAMCH2 ( .clk(clk), .we(we), .waddr(waddr), .raddr(raddr), .wdata(
+        wdataCH2), .rdata(rdataCH2) );
+  RAMqueue iRAMCH3 ( .clk(clk), .we(we), .waddr(waddr), .raddr(raddr), .wdata(
+        wdataCH3), .rdata(rdataCH3) );
+  RAMqueue iRAMCH4 ( .clk(clk), .we(we), .waddr(waddr), .raddr(raddr), .wdata(
+        wdataCH4), .rdata(rdataCH4) );
+  RAMqueue iRAMCH5 ( .clk(clk), .we(we), .waddr(waddr), .raddr(raddr), .wdata(
+        wdataCH5), .rdata(rdataCH5) );
+  clk_rst_smpl iCLKRST ( .clk400MHz(clk400MHz), .RST_n(RST_n), .locked(locked), 
+        .decimator(decimator), .clk(clk), .smpl_clk(smpl_clk), .rst_n(rst_n), 
+        .wrt_smpl(wrt_smpl) );
+  dual_PWM iPWM ( .clk(clk), .rst_n(n1), .VIH(VIH), .VIL(VIL), .VIH_PWM(
+        VIH_PWM), .VIL_PWM(VIL_PWM) );
+  UART_wrapper iCOMM ( .clk(clk), .rst_n(n1), .clr_cmd_rdy(clr_cmd_rdy), .RX(
+        RX), .send_resp(send_resp), .resp(resp), .resp_sent(resp_sent), 
+        .cmd_rdy(cmd_rdy), .cmd(cmd), .TX(TX) );
+  dig_core iDIG ( .clk(clk), .rst_n(n1), .smpl_clk(smpl_clk), .wrt_smpl(
+        wrt_smpl), .decimator(decimator), .VIH(VIH), .VIL(VIL), .CH1L(CH1L), 
+        .CH1H(CH1H), .CH2L(CH2L), .CH2H(CH2H), .CH3L(CH3L), .CH3H(CH3H), 
+        .CH4L(CH4L), .CH4H(CH4H), .CH5L(CH5L), .CH5H(CH5H), .cmd(cmd), 
+        .cmd_rdy(cmd_rdy), .clr_cmd_rdy(clr_cmd_rdy), .resp(resp), .send_resp(
+        send_resp), .resp_sent(resp_sent), .we(we), .waddr(waddr), .raddr(
+        raddr), .wdataCH1(wdataCH1), .wdataCH2(wdataCH2), .wdataCH3(wdataCH3), 
+        .wdataCH4(wdataCH4), .wdataCH5(wdataCH5), .rdataCH1(rdataCH1), 
+        .rdataCH2(rdataCH2), .rdataCH3(rdataCH3), .rdataCH4(rdataCH4), 
+        .rdataCH5(rdataCH5) );
+  CKBD1BWP U1 ( .I(rst_n), .Z(n1) );
+  TIELBWP U2 ( .ZN(LED) );
+endmodule
+

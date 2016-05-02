@@ -1,0 +1,52 @@
+read_file -format sverilog { ./LA_dig.sv ./UART_wrapper.sv ./RAMqueue_post_synth.v ./dig_core.sv \
+./clk_rst_smpl.sv ./dual_PWM.sv ./RAMqueue.v ./Capture_Unit.sv ./channel_sample.sv ./cmd_cfg.sv \
+./Channel_Trigger_Unit.sv ./CommMaster.sv ./counter.sv ./Protocol_Trigger_Unit.sv ./PWM8.sv \
+./SPI_mstr.v ./SPI_RX.sv ./SPI_RX_Edge.sv ./trigger_logic.sv ./Trigger_Unit.sv ./UART.sv ./UART_rx.sv \
+./UART_rx_baud.sv ./UART_rx_control.sv ./UART_rx_count.sv ./UART_RX_Prot.sv ./UART_rx_stor.sv ./UART_tx.sv \
+./UART_tx_baud.sv ./UART_tx_control.sv ./UART_tx_count.sv ./UART_tx_stor.sv }
+
+set current_design LA_dig
+
+create_clock -name "clk400MHz" -period 0.8 -waveform {0 1} {clk}
+set_dont_touch_network [find port clk400MHz]
+
+create_generated_clock -name “clk” -source [get_port clk400MHz] -divide_by 4 [get_pins iCLKRST/clk]
+set_dont_touch_network [get_pins iCLKRST/clk]
+
+create_generated_clock -name “smpl_clk” -source [get_port clk400MHz] -divide_by 1 [get_pins iCLKRST/smpl_clk]
+set_dont_touch_network [get_pins iCLKRST/smpl_clk]
+
+set_dont_touch [find design RAMqueue*]
+
+set CH_inputs [find port CH*]
+set_input_delay -clock smpl_clk 0.25 $CH_inputs
+
+set rst_lock_inputs [find port RST_n][find port locked]
+set_input_delay -clock clk400MHz 0.25 $rst_lock_inputs
+
+set RX_input [find port RX]
+set_input_delay -clock clk 0.25 $RX_input
+
+
+
+
+set_driving_cell -lib_cell AO33D0BWP -from_pin A1 -library tcbn40lpbwptc $CH_inputs
+set_driving_cell -lib_cell AO33D0BWP -from_pin A1 -library tcbn40lpbwptc $rst_lock_inputs
+set_driving_cell -lib_cell AO33D0BWP -from_pin A1 -library tcbn40lpbwptc $RX_input
+set_drive 0.1 rst_n
+
+
+set_output_delay -clock clk 0.5 [all_outputs]
+set_load 0.00005 [all_outputs]
+
+set_wire_load_model -name TSMC32K_Lowk_Conservative -library tcbn40lpbwptc
+set_max_transition 0.15 [current_design]
+set_clock_uncertainty 0.15
+
+compile -map_effort medium
+
+report_timing -delay max > max_delay.rpt
+report_timing -delay min > min_delay.rpt
+report_area > area.txt
+
+write -format verilog LA_dig -output LA_dig.vg

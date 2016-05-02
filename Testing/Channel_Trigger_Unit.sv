@@ -76,20 +76,23 @@ module Channel_Trigger_Unit(clk, rst_n, CHxTrigCfg, CHxHff5, CHxLff5, armed, CHx
 		if(!rst_n)
 			Neg_Edge[0] <= 0;
 		else if (!armed)
-			Neg_Edge <= 0;
+			Neg_Edge[0] <= 0;
 		else
 			Neg_Edge[0] <= 1;
 	end
 	
 	always_ff @ (posedge clk, negedge rst_n) begin		//Edge triggered 2nd flip-flops
-		if(!rst_n) begin
-			Pos_Edge[1] <= 0;
+		if(!rst_n)
 			Neg_Edge[1] <= 0;
-		end
-		else begin
-			Pos_Edge[1] <= Pos_Edge[0];
+		else 
 			Neg_Edge[1] <= Neg_Edge[0];
-		end
+	end
+	
+	always_ff @ (posedge clk, negedge rst_n) begin
+		if (!rst_n)
+			Pos_Edge[1] <= 0;
+		else
+			Pos_Edge[1] <= Pos_Edge[0];
 	end
 	
 endmodule
