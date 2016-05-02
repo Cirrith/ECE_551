@@ -73,15 +73,15 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 ** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(170): (vlog-2730) Undefined variable: 'clk'.
 
 ** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(223): near "Chan": syntax error, unexpected IDENTIFIER, expecting ')'
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(299): (vlog-2730) Undefined variable: 'clk'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(300): (vlog-2730) Undefined variable: 'clk'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(306): (vlog-2730) Undefined variable: 'SPI_triggering'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(307): (vlog-2730) Undefined variable: 'SPI_triggering'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(308): (vlog-2730) Undefined variable: 'SPI_Data'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(309): (vlog-2730) Undefined variable: 'SPI_Data'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(318): (vlog-2730) Undefined variable: 'UART_triggering'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(319): (vlog-2730) Undefined variable: 'UART_triggering'.
 
-** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(320): (vlog-2730) Undefined variable: 'UART_Data'.
+** Error: I:/College/ECE_551/Testing/TB_Tasks.sv(321): (vlog-2730) Undefined variable: 'UART_Data'.
 
 
 } {3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0} {}} I:/College/ECE_551/Testing/dig_core.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/dig_core.sv
@@ -98,6 +98,13 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	UART_rx_stor
 
+} {} {}} I:/College/ECE_551/Testing/pll8x.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_551/Testing/pll8x.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module pll8x
+
+Top level modules:
+	pll8x
+
 } {} {}} I:/College/ECE_551/Testing/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_rx.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module UART_rx
@@ -111,13 +118,6 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 
 Top level modules:
 	SPI_RX
-
-} {} {}} I:/College/ECE_551/Testing/pll8x.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_551/Testing/pll8x.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module pll8x
-
-Top level modules:
-	pll8x
 
 } {} {}} I:/College/ECE_551/Testing/clk_rst_smpl.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/clk_rst_smpl.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -168,6 +168,13 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	AFE
 
+} {} {}} I:/College/ECE_551/Testing/cmd_cfg.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/cmd_cfg.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module cmd_cfg
+
+Top level modules:
+	cmd_cfg
+
 } {} {}} I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module Channel_Trigger_Unit
@@ -182,6 +189,13 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	Capture_Unit
 
+} {} {}} I:/College/ECE_551/Testing/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/PWM8.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module PWM8
+
+Top level modules:
+	PWM8
+
 } {} {}} I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module Protocol_Trigger_Unit
@@ -195,13 +209,6 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 
 Top level modules:
 	UART
-
-} {} {}} I:/College/ECE_551/Testing/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/PWM8.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module PWM8
-
-Top level modules:
-	PWM8
 
 } {} {}} I:/College/ECE_551/Testing/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_wrapper.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -309,10 +316,10 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 ** at tb_tasks.sv(271): (vlog-2730) Undefined variable: 'CH5'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(308): (vlog-2730) Undefined variable: 'SPI_Data'.
+** at tb_tasks.sv(309): (vlog-2730) Undefined variable: 'SPI_Data'.
 
 ** Error: ** while parsing file included at I:/College/ECE_551/Testing/LA_dig_tb.sv(118)
-** at tb_tasks.sv(320): (vlog-2730) Undefined variable: 'UART_Data'.
+** at tb_tasks.sv(321): (vlog-2730) Undefined variable: 'UART_Data'.
 
 
 } {4.0 5.0 7.0 8.0 10.0 11.0 13.0 14.0 16.0 17.0 19.0 20.0 22.0 23.0 25.0 26.0 28.0 29.0 31.0 32.0 34.0 35.0 37.0 38.0 40.0 41.0 43.0 44.0 46.0 47.0 49.0 50.0 52.0 53.0 55.0 56.0 58.0 59.0 61.0 62.0 64.0 65.0 67.0 68.0 70.0 71.0 73.0 74.0 76.0 77.0 79.0 80.0 82.0 83.0 85.0 86.0 88.0 89.0} {}} I:/College/ECE_551/Testing/SPI_mstr.v {1 {vlog -work work -vopt -stats=none I:/College/ECE_551/Testing/SPI_mstr.v
@@ -357,6 +364,13 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	counter
 
+} {} {}} I:/College/ECE_551/Testing/UART_RX_Prot.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_RX_Prot.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module UART_RX_Prot
+
+Top level modules:
+	UART_RX_Prot
+
 } {} {}} I:/College/ECE_551/Testing/trigger_logic.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/trigger_logic.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module trigger_logic
@@ -370,12 +384,5 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 
 Top level modules:
 	dual_PWM
-
-} {} {}} I:/College/ECE_551/Testing/UART_RX_Prot.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/Testing/UART_RX_Prot.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART_RX_Prot
-
-Top level modules:
-	UART_RX_Prot
 
 } {} {}}

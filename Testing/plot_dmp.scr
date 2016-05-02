@@ -1,0 +1,17 @@
+
+set title "Channel Dump Output from LA"
+set xlabel "Timestamp (samples)"
+set ylabel "Logic Level"
+set xrange [0:1536]
+set yrange [-1:2]
+set term wxt 0
+plot "CH1_lvl.dat" with lines
+set term wxt 1
+plot "CH2_lvl.dat" with lines
+set term wxt 2
+plot "CH3_lvl.dat" with lines
+set term wxt 3
+plot "CH4_lvl.dat" with lines
+set term wxt 4
+plot "CH5_lvl.dat" with lines
+pause -1 "Hit any key to continue" 
