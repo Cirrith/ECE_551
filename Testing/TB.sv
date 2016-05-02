@@ -170,7 +170,7 @@ module TB();
 	initial begin : file_block 
 		REF_CLK = 0;
 		START = 0;
-		file = $fopen("Run.txt", "r");
+		file = $fopen("Dump.txt", "r");
 		if (file == 0) begin
 			$display("File Not Found");
 			$stop;
@@ -255,7 +255,7 @@ module TB();
 					end
 					
 					"RUN" : begin
-						Start;
+						Start(Stat);
 						$display("Run -> Success");
 					end
 					

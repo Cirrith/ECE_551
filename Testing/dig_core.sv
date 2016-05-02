@@ -159,7 +159,8 @@ module dig_core(clk,rst_n,smpl_clk,wrt_smpl, decimator, VIH, VIL, CH1L, CH1H,
 				.trig_pos		(trig_pos), 
 				.waddr			(waddr), 
 				.capture_done	(capture_done), 
-				.write			(we));
+				.write			(we),
+				.armed			(armed));
 	
 	channel_sample ch1_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH1H), .CHxL(CH1L), .smpl_clk(smpl_clk), .CHxHff5(CH1Hff5), .CHxLff5(CH1Lff5), .smpl(wdataCH1));
 	channel_sample ch2_samp (.clk(clk), .rst_n(rst_n), .CHxH(CH2H), .CHxL(CH2L), .smpl_clk(smpl_clk), .CHxHff5(CH2Hff5), .CHxLff5(CH2Lff5), .smpl(wdataCH2));

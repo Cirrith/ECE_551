@@ -23,7 +23,7 @@
 /			state - 
 /			nxtstate - 
 **************************************************************************************************/
-module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, capture_done, write);
+module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, capture_done, write, armed);
 	
 	typedef enum logic [1:0] {IDLE, RUN, DONE} State;
 	
@@ -40,13 +40,13 @@ module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, c
 	output logic [LOG2-1:0] waddr;
 	output logic capture_done;
 	output logic write;
+	output logic armed;
 	
 	State state;
 	State nxtstate;
 	
 	logic run;
 	logic done;
-	logic armed;
 	logic [15:0] smpl_cnt;
 	logic [15:0] trig_cnt;
 	

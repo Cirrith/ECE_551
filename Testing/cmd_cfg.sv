@@ -132,12 +132,14 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 	logic [7:0] trig_posH;
 	logic [7:0] trig_posL;
 	
+	logic init_write;
+	
 	assign trig_pos = {trig_posH, trig_posL};
 	
-	assign command = '{cmd[15:14]};
-	assign register = '{cmd[12:8]};
+	assign command = Command'(cmd[15:14]);
+	assign register = Register'(cmd[12:8]);
 	assign data = cmd[7:0];
-	assign ccc = '{cmd[10:8]};
+	assign ccc = Channel'(cmd[10:8]);
 	
 	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
@@ -270,7 +272,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)
 			raddr_curr <= 9'h000;
-		else if(send_resp & (state == RAM))
+		else if((state == RAM) | init_write) //removed send_resp
 			raddr_curr <= raddr;
 	end
 	
@@ -279,6 +281,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 		send_resp = 1'h0;
 		clr_cmd_rdy = 1'h0;
 		resp = 8'h00;
+		init_write = 1'h0;
 		//raddr = 9'h000;
 		nxtstate = IDLE;
 	
@@ -297,6 +300,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 						
 						Dump : begin
 							raddr = waddr;
+							init_write = 1'h1;
 							nxtstate = RAM;
 						end
 						
@@ -365,7 +369,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 						$display("Sent a Bad Channel");
 					end
 				endcase
-				if(raddr_curr == ENTRIES-1)
+				if(raddr_curr == (ENTRIES-1))
 					raddr = 0;
 				else
 					raddr = raddr_curr + 1;

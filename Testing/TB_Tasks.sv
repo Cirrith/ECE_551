@@ -1,7 +1,8 @@
 	
-	logic [7:0] Mem_Rec [0:ENTRIES-1];
-	logic [7:0] Mem_Copy [0:ENTRIES-1];
+	logic [7:0] Mem_Rec [ENTRIES-1:0];
+	logic [7:0] Mem_Copy [ENTRIES-1:0];
 	logic [LOG2-1:0] Address;
+	integer dump_file;
 	
 	task Initialize;
 		UART_triggering = 0;
@@ -113,7 +114,7 @@
 		end else if (Cmd == WriteReg) begin
 			if(Rec_Data == ACK) begin
 				case(Reg) //Make sure it acctually wrote
-					TrigCfg_Reg : 		if(Data != {2'h0, DUT.iDIG.TrigCfg}) begin $display("Didn't Write"); $stop; end
+					TrigCfg_Reg : 		if(Data != {2'h0, DUT.iDIG.TrigCfg}) begin $display("Didn't Write, Start?"); end
 					CH1TrigCfg_Reg : 	if(Data != {3'h0, DUT.iDIG.CH1TrigCfg}) begin $display("Didn't Write"); $stop; end
 					CH2TrigCfg_Reg : 	if(Data != {3'h0, DUT.iDIG.CH2TrigCfg}) begin $display("Didn't Write"); $stop; end
 					CH3TrigCfg_Reg : 	if(Data != {3'h0, DUT.iDIG.CH3TrigCfg}) begin $display("Didn't Write"); $stop; end
@@ -138,7 +139,7 @@
 				$display("Write Failed");
 				$stop;
 			end else begin
-				$display("Unexpected Response");
+				$display("Unexpected Response, %h", Rec_Data);
 				$stop;
 			end
 		end else begin
@@ -147,8 +148,32 @@
 		end
 	endtask
 	
-	task PollCapDone;		//Called by Start
+	task PollCapDone(output [7:0] Status);		//Called by Start
+		fork : sailorforky
+			forever begin
+				SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), {2'h0, (DUT.iDIG.TrigCfg & ~6'h30)}, '{ERR}, Status);
 		
+				if(Rec_Data[5] == 1) begin
+					$display("Capture Done");
+					Clr_Rec_Rdy = 1;
+					@(negedge clk);
+					Clr_Rec_Rdy = 0;
+					disable sailorforky;
+				end else begin
+					Clr_Rec_Rdy = 1;
+					@(negedge clk);
+					Clr_Rec_Rdy = 0;
+				end
+			end
+			
+			begin				//Timeout
+				repeat(100000) @(negedge clk);
+				$display("100000 Cycles is quite a while for a Response");
+				$stop;
+			end
+		join
+		
+		/*
 		Tran_Cmd = {2'h0, 6'h00, 8'h00};
 		@(negedge clk);
 		Send_Cmd = 1;
@@ -189,6 +214,10 @@
 				end
 			end
 		join
+		
+		repeat(2)@(negedge clk);
+		*/
+		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), {2'h0, (DUT.iDIG.TrigCfg & ~6'h30)}, '{ERR}, Status);
 	endtask
 	
 	task RcvDump(input Channel Chan); //Called by SendCmd
@@ -196,7 +225,7 @@
 		fork : senorforky
 			begin				//Receive data. See if there is a better way than a for loop
 				for(i = 0; i < ENTRIES; i = i + 1) begin
-					//$display("%d", i);
+					$display("%d", i);
 					@(posedge Rec_Rdy);
 					Mem_Rec[i] = Rec_Data;
 					@(posedge clk);
@@ -220,26 +249,31 @@
 				$display("There were changes made to the memory");
 				$stop;
 			end
+			dump_file = $fopen("CH1dmp.txt","w");
 		end else if (Chan == CH2) begin
 			if (Mem_Copy != DUT.iRAMCH2.mem) begin
 				$display("There were changes made to the memory");
 				$stop;
 			end
+			dump_file = $fopen("CH2dmp.txt","w");
 		end else if (Chan == CH3) begin
 			if (Mem_Copy != DUT.iRAMCH3.mem) begin
 				$display("There were changes made to the memory");
 				$stop;
 			end
+			dump_file = $fopen("CH3dmp.txt","w");
 		end else if (Chan == CH4) begin
 			if (Mem_Copy != DUT.iRAMCH4.mem) begin
 				$display("There were changes made to the memory");
 				$stop;
 			end
+			dump_file = $fopen("CH4dmp.txt","w");
 		end else if (Chan == CH5) begin
 			if (Mem_Copy != DUT.iRAMCH5.mem) begin
 				$display("There were changes made to the memory");
 				$stop;
 			end
+			dump_file = $fopen("CH5dmp.txt","w");
 		end else begin
 			$display("Entered Bad Channel");
 			$stop;
@@ -248,11 +282,12 @@
 		$display("Checked RAM %d", Chan);
 		
 		for (i = 0; i < ENTRIES; i = i + 1) begin //Check that it send the right data
+			$display("%d", i);
 			if(Mem_Rec[i] != Mem_Copy[Address]) begin
 				$display("Dump Recieved did not match up");
 				$stop;
 			end
-				
+			$fwrite(dump_file, "%h\n", Mem_Rec[i]);
 			if(Address == ENTRIES-1) begin
 				Address = 0;
 			end else begin
@@ -261,68 +296,34 @@
 		end
 	endtask
 	
-	task Start;
+	task Start(output [7:0] Status);
 		repeat(2)@(negedge clk);
-		Tran_Cmd = {2'h1, 6'h00, {2'h0, DUT.iDIG.TrigCfg | 6'h10}};
-		@(negedge clk);
-		Send_Cmd = 1;
-		@(negedge clk);
-		Send_Cmd = 0;
+		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg),  {2'h0, DUT.iDIG.TrigCfg | 6'h10} , Channel'(ERR), Status);
 		
-		fork : sirFork
-			begin 
-				repeat(10000) @(negedge clk);
-				$display("10000 Cycles to send is quite a while");
-				$stop;
-			end
-			
-			begin
-				@(posedge Cmd_Cmplt);
-				$display("Command Sent at %t", $time);
-				disable sirFork;
-			end
-		join
-		
-		PollCapDone;
-		
+		PollCapDone(Status);		
 	endtask
 	
 	task SPI(input Edge, input Length, input [15:0] Data, output [7:0] Status);
 		SPI_triggering = 1;
 		
 		SPI_Data = Data;
-		
-		REG = '{TrigCfg_Reg};
-		CMD = '{WriteReg};
-		SendCmd(CMD, REG, {2'h0, 2'h0, Edge, Length, 1'h0, 1'h1}, '{ERR}, Status); //Set Edge and Length and Disable UART
+
+		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), {2'h0, 2'h0, Edge, Length, 1'h0, 1'h1}, '{ERR}, Status); //Set Edge and Length and Disable UART
 		$display("SPI Setup Sucessfull");
-		Start();
+		Start(Status);
 		
 		SPI_triggering = 0;
 	endtask
-	
-	
-	task UART();
+		
+	task UART(input [7:0] Data, output [7:0] Status);
 		UART_triggering = 1;
 		
-		UART_Data = Data
-		
-		REG = '{TrigCfg_Reg};
-		CMD = '{WriteReg};
-		SendCmd(CMD, REG, 8'h02, '{ERR}, Status); //Enable UART and disable SPI
+		UART_Data = Data;
+
+		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), 8'h02, '{ERR}, Status); //Enable UART and disable SPI
 		$display("UART Setup Sucessfull");
-		Start();
+		Start(Status);
 		
 		UART_triggering = 0;	
 	endtask
 	
-		UART_triggering = 0;
-		SPI_triggering = 0;
-		
-		UART_Start = 0;
-		UART_Data = 0;
-		
-		SPI_Start = 0;
-		SPI_Pos_Edge = 0;
-		SPI_Width8 = 0;
-		SPI_Data = 0;

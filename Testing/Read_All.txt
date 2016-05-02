@@ -1,20 +1,20 @@
-INIT NULL
-READ TrigCfg
-READ CH1TrigCfg
-READ CH2TrigCfg
-READ CH3TrigCfg
-READ CH4TrigCfg
-READ CH5TrigCfg
-READ decimator
-READ VIH
-READ VIL
-READ matchH
-READ matchL
-READ maskH
-READ maskL
-READ baud_cntH
-READ baud_cntL
-READ trig_posH
-READ trig_posL
+INIT NULL 0 
+READ TrigCfg 0
+READ CH1TrigCfg 0
+READ CH2TrigCfg 0
+READ CH3TrigCfg 0
+READ CH4TrigCfg 0
+READ CH5TrigCfg 0
+READ decimator 0
+READ VIH 0
+READ VIL 0
+READ matchH 0
+READ matchL 0
+READ maskH 0
+READ maskL 0
+READ baud_cntH 0 
+READ baud_cntL 0 
+READ trig_posH 0 
+READ trig_posL 0 
 
-End NULL
+End NULL 0
