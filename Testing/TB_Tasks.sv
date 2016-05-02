@@ -287,4 +287,42 @@
 		
 	endtask
 	
-	task SPI(input Edge, input Length, );
+	task SPI(input Edge, input Length, input [15:0] Data, output [7:0] Status);
+		SPI_triggering = 1;
+		
+		SPI_Data = Data;
+		
+		REG = '{TrigCfg_Reg};
+		CMD = '{WriteReg};
+		SendCmd(CMD, REG, {2'h0, 2'h0, Edge, Length, 1'h0, 1'h1}, '{ERR}, Status); //Set Edge and Length and Disable UART
+		$display("SPI Setup Sucessfull");
+		Start();
+		
+		SPI_triggering = 0;
+	endtask
+	
+	
+	task UART();
+		UART_triggering = 1;
+		
+		UART_Data = Data
+		
+		REG = '{TrigCfg_Reg};
+		CMD = '{WriteReg};
+		SendCmd(CMD, REG, 8'h02, '{ERR}, Status); //Enable UART and disable SPI
+		$display("UART Setup Sucessfull");
+		Start();
+		
+		UART_triggering = 0;	
+	endtask
+	
+		UART_triggering = 0;
+		SPI_triggering = 0;
+		
+		UART_Start = 0;
+		UART_Data = 0;
+		
+		SPI_Start = 0;
+		SPI_Pos_Edge = 0;
+		SPI_Width8 = 0;
+		SPI_Data = 0;
