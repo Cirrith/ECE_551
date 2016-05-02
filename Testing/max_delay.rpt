@@ -7,76 +7,82 @@ Report : timing
         -max_paths 1
 Design : LA_dig
 Version: J-2014.09-SP5
-Date   : Sun May  1 22:20:52 2016
+Date   : Mon May  2 18:00:59 2016
 ****************************************
 
 Operating Conditions: NCCOM   Library: tcbn40lpbwptc
 Wire Load Model Mode: segmented
 
-  Startpoint: iPWM/High/PWM_sig_reg
-              (rising edge-triggered flip-flop)
-  Endpoint: VIH_PWM (output port)
-  Path Group: (none)
+  Startpoint: iDIG/ch1_samp/CHxHff5_reg
+              (falling edge-triggered flip-flop clocked by clk400MHz)
+  Endpoint: iDIG/Trigger/CH1/High_Level_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
   Path Type: max
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
-  clk_rst_smpl       ZeroWireload          tcbn40lpbwptc
-  SPI_RX_Edge        ZeroWireload          tcbn40lpbwptc
-  UART_rx_control    ZeroWireload          tcbn40lpbwptc
-  UART_rx_count      ZeroWireload          tcbn40lpbwptc
-  UART_rx_baud       ZeroWireload          tcbn40lpbwptc
-  UART_rx_stor       ZeroWireload          tcbn40lpbwptc
-  UART_tx_control    ZeroWireload          tcbn40lpbwptc
-  UART_tx_stor       ZeroWireload          tcbn40lpbwptc
-  UART_tx_count      ZeroWireload          tcbn40lpbwptc
-  UART_tx_baud       ZeroWireload          tcbn40lpbwptc
-  SPI_RX             ZeroWireload          tcbn40lpbwptc
-  UART_RX_Prot       ZeroWireload          tcbn40lpbwptc
-  counter_0          ZeroWireload          tcbn40lpbwptc
-  counter_1          ZeroWireload          tcbn40lpbwptc
-  UART_rx            ZeroWireload          tcbn40lpbwptc
-  UART_tx            ZeroWireload          tcbn40lpbwptc
-  trigger_logic      ZeroWireload          tcbn40lpbwptc
-  Protocol_Trigger_Unit
-                     ZeroWireload          tcbn40lpbwptc
-  Channel_Trigger_Unit_0
-                     ZeroWireload          tcbn40lpbwptc
-  Channel_Trigger_Unit_1
-                     ZeroWireload          tcbn40lpbwptc
-  Channel_Trigger_Unit_2
-                     ZeroWireload          tcbn40lpbwptc
-  Channel_Trigger_Unit_3
-                     ZeroWireload          tcbn40lpbwptc
-  Channel_Trigger_Unit_4
-                     ZeroWireload          tcbn40lpbwptc
-  PWM8_0             ZeroWireload          tcbn40lpbwptc
-  PWM8_1             ZeroWireload          tcbn40lpbwptc
-  UART               ZeroWireload          tcbn40lpbwptc
-  Trigger_Unit       ZeroWireload          tcbn40lpbwptc
-  cmd_cfg            ZeroWireload          tcbn40lpbwptc
-  Capture_Unit       ZeroWireload          tcbn40lpbwptc
-  channel_sample_0   ZeroWireload          tcbn40lpbwptc
-  channel_sample_1   ZeroWireload          tcbn40lpbwptc
-  channel_sample_2   ZeroWireload          tcbn40lpbwptc
-  channel_sample_3   ZeroWireload          tcbn40lpbwptc
-  channel_sample_4   ZeroWireload          tcbn40lpbwptc
-  dual_PWM           ZeroWireload          tcbn40lpbwptc
-  UART_wrapper       ZeroWireload          tcbn40lpbwptc
   LA_dig             TSMC32K_Lowk_Conservative
                                            tcbn40lpbwptc
-  dig_core           ZeroWireload          tcbn40lpbwptc
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  iPWM/High/PWM_sig_reg/CP (DFSNQD1BWP)                   0.00       0.00 r
-  iPWM/High/PWM_sig_reg/Q (DFSNQD1BWP)                    0.12       0.12 f
-  iPWM/High/PWM_sig (PWM8_0)                              0.00       0.12 f
-  iPWM/VIH_PWM (dual_PWM)                                 0.00       0.12 f
-  VIH_PWM (out)                                           0.00       0.12 f
-  data arrival time                                                  0.12
+  clock clk400MHz (fall edge)                             2.80       2.80
+  clock network delay (ideal)                             0.00       2.80
+  iDIG/ch1_samp/CHxHff5_reg/CPN (DFNCND1BWP)              0.00       2.80 f
+  iDIG/ch1_samp/CHxHff5_reg/Q (DFNCND1BWP)                0.16       2.96 r
+  iDIG/Trigger/CH1/High_Level_reg/D (DFCNQD1BWP)          0.00       2.96 r
+  data arrival time                                                  2.96
+
+  clock clk (rise edge)                                   3.20       3.20
+  clock network delay (ideal)                             0.00       3.20
+  iDIG/Trigger/CH1/High_Level_reg/CP (DFCNQD1BWP)         0.00       3.20 r
+  library setup time                                     -0.03       3.17
+  data required time                                                 3.17
   --------------------------------------------------------------------------
-  (Path is unconstrained)
+  data required time                                                 3.17
+  data arrival time                                                 -2.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.20
+
+
+  Startpoint: iDIG/cmd_unit/decimator_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iCLKRST/smpl_clk_div_reg
+            (falling edge-triggered flip-flop clocked by clk400MHz)
+  Path Group: clk400MHz
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LA_dig             TSMC32K_Lowk_Conservative
+                                           tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  iDIG/cmd_unit/decimator_reg[2]/CP (EDFCNQD2BWP)         0.00       0.00 r
+  iDIG/cmd_unit/decimator_reg[2]/Q (EDFCNQD2BWP)          0.13       0.13 f
+  U708/ZN (INVD4BWP)                                      0.02       0.16 r
+  U710/ZN (ND2D2BWP)                                      0.03       0.19 f
+  U707/Z (OR3D0BWP)                                       0.14       0.32 f
+  U706/ZN (INVD1BWP)                                      0.04       0.36 r
+  U704/ZN (ND2D1BWP)                                      0.03       0.39 f
+  U705/ZN (CKND2D1BWP)                                    0.03       0.41 r
+  iCLKRST/smpl_clk_div_reg/D (DFND1BWP)                   0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk400MHz (fall edge)                             0.40       0.40
+  clock network delay (ideal)                             0.00       0.40
+  iCLKRST/smpl_clk_div_reg/CPN (DFND1BWP)                 0.00       0.40 f
+  library setup time                                      0.01       0.41
+  data required time                                                 0.41
+  --------------------------------------------------------------------------
+  data required time                                                 0.41
+  data arrival time                                                 -0.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
 
 
 1

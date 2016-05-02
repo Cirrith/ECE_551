@@ -180,7 +180,7 @@
 		fork : senorforky
 			begin				//Receive data. See if there is a better way than a for loop
 				for(i = 0; i < ENTRIES; i = i + 1) begin
-					$display("%d", i);
+					//$display("%d", i);
 					@(posedge Rec_Rdy);
 					Mem_Rec[i] = Rec_Data;
 					@(posedge clk);
