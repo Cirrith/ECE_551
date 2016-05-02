@@ -73,7 +73,9 @@ module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, c
 	end
 	
 	always_ff @ (posedge clk, negedge rst_n) begin		//Write Address
-		if(!rst_n | clr_waddr)
+		if(!rst_n)
+			waddr <= 0;
+		else if (clr_waddr)
 			waddr <= 0;
 		else if (inc_waddr)
 			waddr <= waddr + 1;
@@ -82,7 +84,9 @@ module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, c
 	end
 	
 	always_ff @ (posedge clk, negedge rst_n) begin		//Sample Count
-		if(!rst_n | clr_smpl_cnt)
+		if(!rst_n)
+			smpl_cnt <= 0;
+		else if (clr_smpl_cnt)
 			smpl_cnt <= 0;
 		else if (inc_smpl_cnt)
 			smpl_cnt <= smpl_cnt + 1;
@@ -91,7 +95,9 @@ module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, c
 	end
 	
 	always_ff @ (posedge clk, negedge rst_n) begin 		//Trig Count
-		if(!rst_n | clr_trig_cnt)
+		if(!rst_n)
+			trig_cnt <= 0;
+		else if (clr_trig_cnt)
 			trig_cnt <= 0;
 		else if (inc_trig_cnt)
 			trig_cnt <= trig_cnt + 1;
@@ -100,7 +106,9 @@ module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, c
 	end
 	
 	always_ff @ (posedge clk, negedge rst_n) begin		//Armed
-		if(!rst_n | clr_armed)
+		if(!rst_n)
+			armed <= 0;
+		else if (clr_armed)
 			armed <= 0;
 		else if (set_armed)
 			armed <= 1;

@@ -52,10 +52,11 @@ module UART_RX_Prot(clk, rst_n, RX, baud_cnt, mask, match, UARTtrig);
 	always_ff @ (posedge clk, negedge rst_n) begin		//Metastability for RX
 		if(!rst_n)
 			RX_met <= 2'h0;
-		else
+		else begin
 			RX_met[2] <= RX_met[1];
 			RX_met[1] <= RX_met[0];
 			RX_met[0] <= RX;
+		end
 	end
 	
 	/////STATE LOGIC\\\\\
@@ -129,7 +130,9 @@ module UART_RX_Prot(clk, rst_n, RX, baud_cnt, mask, match, UARTtrig);
 	/////COUNTING LOGIC\\\\\
 	
 	always_ff @(posedge clk, negedge rst_n) begin
-		if(!rst_n | clr_count)
+		if(!rst_n)
+			count <= 0;
+		else if (clr_count)
 			count <= 0;
 		else if (inc_count)
 			count <= count + 1;
@@ -140,7 +143,9 @@ module UART_RX_Prot(clk, rst_n, RX, baud_cnt, mask, match, UARTtrig);
 	/////BAUD LOGIC\\\\\
 	
 	always_ff @(posedge clk, negedge rst_n) begin
-		if(!rst_n | clr_baud)
+		if(!rst_n)
+			baud <= 0;
+		else if (clr_baud)
 			baud <= 0;
 		else if (inc_baud)
 			baud <= baud + 1;

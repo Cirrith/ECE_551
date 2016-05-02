@@ -15,6 +15,7 @@ module pll8x(ref_clk,RST_n,out_clk,locked);
   reg smpl_clk;
   reg [1:0] locked_cnt;
   
+  
   //// Setup a sample clock at 10GHz to sample the      ///
   //// reference clock and discover it relative period /////
   initial
@@ -34,12 +35,12 @@ module pll8x(ref_clk,RST_n,out_clk,locked);
     if (!RST_n)
 	  begin
 	    ref_period <= 0;
-		locked_cnt = 2'b00;
+		locked_cnt <= 2'b00;
 	  end
     else begin
 	  ref_period <= smpl_period;
 	  smpl_period <= 0;
-	  match = 10'h000;
+	  match <= 10'h000;
 	  if (locked_cnt<2'b11) locked_cnt <= locked_cnt + 1;
 	end
 	
@@ -50,7 +51,6 @@ module pll8x(ref_clk,RST_n,out_clk,locked);
 	  smpl_period <= smpl_period + 1;
 	end
 	
-	
    //////////////////////////////////////////////////////////
    // Toggling out_clk every 1/16 of a clock cycle.  This //
    // may be fractional for the high time of out_clk.    //
@@ -60,7 +60,7 @@ module pll8x(ref_clk,RST_n,out_clk,locked);
 	   out_clk <= 1'b1;
 	 else if ((smpl_period==match+(ref_period>>4)) && (out_clk)) begin
 	   out_clk <= 1'b0;
-	   match = match + (ref_period>>3);
+	   match <= match + (ref_period>>3);
 	 end else if ((smpl_period==match) && (!out_clk))
 	   out_clk <= 1'b1;
 	 

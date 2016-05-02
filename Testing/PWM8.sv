@@ -12,7 +12,7 @@ logic [7:0] i;
 
 counter coun(.clk(clk), .rst_n(rst_n), .count(count)); //Module that counts up at clk edge
 
-always@(posedge clk, rst_n) begin
+always@(posedge clk, negedge rst_n) begin
 	if(!rst_n)
 		PWM_sig <= 1;
 	else if (count == duty)			//Set PWM down when equal to desired duty cycle

@@ -134,10 +134,10 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 	
 	assign trig_pos = {trig_posH, trig_posL};
 	
-	assign command = '{cmd[15:14]};
-	assign register = '{cmd[12:8]};
+	assign command = Command'(cmd[15:14]);
+	assign register = Register'(cmd[12:8]);
 	assign data = cmd[7:0];
-	assign ccc = '{cmd[10:8]};
+	assign ccc = Channel'(cmd[10:8]);
 	
 	always_ff @ (posedge clk, negedge rst_n) begin
 		if(!rst_n)

@@ -5,4 +5,11 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	trigger_logic
 
+} {} {}} I:/ece551/modelsim/project/ECE_551/Trigger/trigger_logic_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Trigger/trigger_logic_tb.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module trigger_logic_tb
+
+Top level modules:
+	trigger_logic_tb
+
 } {} {}}

@@ -1,0 +1,82 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : LA_dig
+Version: J-2014.09-SP5
+Date   : Sun May  1 22:20:52 2016
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn40lpbwptc
+Wire Load Model Mode: segmented
+
+  Startpoint: iPWM/High/PWM_sig_reg
+              (rising edge-triggered flip-flop)
+  Endpoint: VIH_PWM (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  clk_rst_smpl       ZeroWireload          tcbn40lpbwptc
+  SPI_RX_Edge        ZeroWireload          tcbn40lpbwptc
+  UART_rx_control    ZeroWireload          tcbn40lpbwptc
+  UART_rx_count      ZeroWireload          tcbn40lpbwptc
+  UART_rx_baud       ZeroWireload          tcbn40lpbwptc
+  UART_rx_stor       ZeroWireload          tcbn40lpbwptc
+  UART_tx_control    ZeroWireload          tcbn40lpbwptc
+  UART_tx_stor       ZeroWireload          tcbn40lpbwptc
+  UART_tx_count      ZeroWireload          tcbn40lpbwptc
+  UART_tx_baud       ZeroWireload          tcbn40lpbwptc
+  SPI_RX             ZeroWireload          tcbn40lpbwptc
+  UART_RX_Prot       ZeroWireload          tcbn40lpbwptc
+  counter_0          ZeroWireload          tcbn40lpbwptc
+  counter_1          ZeroWireload          tcbn40lpbwptc
+  UART_rx            ZeroWireload          tcbn40lpbwptc
+  UART_tx            ZeroWireload          tcbn40lpbwptc
+  trigger_logic      ZeroWireload          tcbn40lpbwptc
+  Protocol_Trigger_Unit
+                     ZeroWireload          tcbn40lpbwptc
+  Channel_Trigger_Unit_0
+                     ZeroWireload          tcbn40lpbwptc
+  Channel_Trigger_Unit_1
+                     ZeroWireload          tcbn40lpbwptc
+  Channel_Trigger_Unit_2
+                     ZeroWireload          tcbn40lpbwptc
+  Channel_Trigger_Unit_3
+                     ZeroWireload          tcbn40lpbwptc
+  Channel_Trigger_Unit_4
+                     ZeroWireload          tcbn40lpbwptc
+  PWM8_0             ZeroWireload          tcbn40lpbwptc
+  PWM8_1             ZeroWireload          tcbn40lpbwptc
+  UART               ZeroWireload          tcbn40lpbwptc
+  Trigger_Unit       ZeroWireload          tcbn40lpbwptc
+  cmd_cfg            ZeroWireload          tcbn40lpbwptc
+  Capture_Unit       ZeroWireload          tcbn40lpbwptc
+  channel_sample_0   ZeroWireload          tcbn40lpbwptc
+  channel_sample_1   ZeroWireload          tcbn40lpbwptc
+  channel_sample_2   ZeroWireload          tcbn40lpbwptc
+  channel_sample_3   ZeroWireload          tcbn40lpbwptc
+  channel_sample_4   ZeroWireload          tcbn40lpbwptc
+  dual_PWM           ZeroWireload          tcbn40lpbwptc
+  UART_wrapper       ZeroWireload          tcbn40lpbwptc
+  LA_dig             TSMC32K_Lowk_Conservative
+                                           tcbn40lpbwptc
+  dig_core           ZeroWireload          tcbn40lpbwptc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  iPWM/High/PWM_sig_reg/CP (DFSNQD1BWP)                   0.00       0.00 r
+  iPWM/High/PWM_sig_reg/Q (DFSNQD1BWP)                    0.12       0.12 f
+  iPWM/High/PWM_sig (PWM8_0)                              0.00       0.12 f
+  iPWM/VIH_PWM (dual_PWM)                                 0.00       0.12 f
+  VIH_PWM (out)                                           0.00       0.12 f
+  data arrival time                                                  0.12
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
