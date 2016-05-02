@@ -172,51 +172,6 @@
 				$stop;
 			end
 		join
-		
-		/*
-		Tran_Cmd = {2'h0, 6'h00, 8'h00};
-		@(negedge clk);
-		Send_Cmd = 1;
-		@(negedge clk);
-		Send_Cmd = 0;
-	
-		fork : saliorforky
-			begin				//Timeout
-				repeat(100000) @(negedge clk);
-				$display("100000 Cycles is quite a while for a Response");
-				$stop;
-			end
-
-			begin				//Check for Capture Done in Response
-				forever begin
-					@(posedge Rec_Rdy);
-					if(Rec_Data[5] == 1) begin
-						$display("Capture Done");
-						Clr_Rec_Rdy = 1;
-						@(negedge clk);
-						Clr_Rec_Rdy = 0;
-						disable saliorforky;
-					end
-					Clr_Rec_Rdy = 1;
-					@(negedge clk);
-					Clr_Rec_Rdy = 0;
-				end
-			end
-			
-			begin				//Send the Read command to TrigCfg Register
-				forever begin
-					@(posedge Rec_Rdy);
-					Tran_Cmd = {ReadReg, 8'h00, 8'h00};
-					Send_Cmd = 1;
-					@(negedge clk);
-					Send_Cmd = 0;
-					@(posedge Cmd_Cmplt);
-				end
-			end
-		join
-		
-		repeat(2)@(negedge clk);
-		*/
 		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), {2'h0, (DUT.iDIG.TrigCfg & ~6'h30)}, '{ERR}, Status);
 	endtask
 	
@@ -296,34 +251,33 @@
 		end
 	endtask
 	
-	task Start(output [7:0] Status);
-		repeat(2)@(negedge clk);
-		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg),  {2'h0, DUT.iDIG.TrigCfg | 6'h10} , Channel'(ERR), Status);
+	task Start(input [15:0] Data, output [7:0] Status);
+		repeat(2) @(negedge clk);
 		
-		PollCapDone(Status);		
+		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg),  {2'h0, DUT.iDIG.TrigCfg | 6'h10} , Channel'(ERR), Status);
+
+		PollCapDone(Status);
+		
+		SPI_triggering = 0;
+		UART_triggering = 0;
+		
 	endtask
 	
 	task SPI(input Edge, input Length, input [15:0] Data, output [7:0] Status);
 		SPI_triggering = 1;
-		
 		SPI_Data = Data;
-
+		
 		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), {2'h0, 2'h0, Edge, Length, 1'h0, 1'h1}, '{ERR}, Status); //Set Edge and Length and Disable UART
 		$display("SPI Setup Sucessfull");
-		Start(Status);
-		
-		SPI_triggering = 0;
+
 	endtask
 		
 	task UART(input [7:0] Data, output [7:0] Status);
 		UART_triggering = 1;
-		
 		UART_Data = Data;
 
 		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), 8'h02, '{ERR}, Status); //Enable UART and disable SPI
 		$display("UART Setup Sucessfull");
-		Start(Status);
-		
-		UART_triggering = 0;	
+
 	endtask
 	

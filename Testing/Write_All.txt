@@ -1,4 +1,4 @@
-INIT NULL
+INIT NULL 0
 WRITE TrigCfg 04
 WRITE CH1TrigCfg 08
 WRITE CH2TrigCfg 07
@@ -17,4 +17,4 @@ WRITE baud_cntL 0A
 WRITE trig_posH 08
 WRITE trig_posL 01
 
-End NULL
+End NULL 0

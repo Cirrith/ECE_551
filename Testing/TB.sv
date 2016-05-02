@@ -170,7 +170,7 @@ module TB();
 	initial begin : file_block 
 		REF_CLK = 0;
 		START = 0;
-		file = $fopen("Dump.txt", "r");
+		file = $fopen("Fall_Edge_3.txt", "r");
 		if (file == 0) begin
 			$display("File Not Found");
 			$stop;
@@ -218,7 +218,9 @@ module TB();
 				"5" : CHAN = '{CH5};
 				"null" : REG = '{TrigCfg_Reg};
 				default : begin
-					$display("Unhandled Input %s", arg1);
+					if(command != "SPI" | command != "UART") begin
+						$display("Unhandled Input %s", arg1);
+					end
 				end
 			endcase
 			
@@ -255,8 +257,16 @@ module TB();
 					end
 					
 					"RUN" : begin
-						Start(Stat);
+						Start(16'h0000, Stat);
 						$display("Run -> Success");
+					end
+					
+					"SPI" : begin
+						//Data =  
+					end
+					
+					"UART" : begin
+					
 					end
 					
 					"END" : begin
