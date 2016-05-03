@@ -16,6 +16,7 @@ module RAMqueue_ENTRIES384_LOG29(clk,we,waddr,raddr,wdata,rdata);
   input [7:0] wdata;		// data to write
   output reg [7:0] rdata;	// data being read
 
+
   // synopsys translate_off
   reg [7:0] mem [ENTRIES-1:0];
 
