@@ -184,6 +184,7 @@ module TB();
 		REF_CLK = 0;
 		START = 0;
 		file = $fopen("Rise_Edge_1.txt", "r");
+
 		if (file == 0) begin
 			$display("File Not Found");
 			$stop;
