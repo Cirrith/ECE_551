@@ -1,0 +1,27 @@
+
+State Machine - |LA_dig|dig_core:iDIG|Capture_Unit:capture|state
+Name state.IDLE state.DONE state.RUN 
+state.IDLE 0 0 0 
+state.RUN 1 0 1 
+state.DONE 1 1 0 
+
+State Machine - |LA_dig|dig_core:iDIG|cmd_cfg:cmd_unit|state
+Name state.ERROR state.RESP state.RAM state.READ state.WRITE state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.WRITE 0 0 0 0 1 1 
+state.READ 0 0 0 1 0 1 
+state.RAM 0 0 1 0 0 1 
+state.RESP 0 1 0 0 0 1 
+state.ERROR 1 0 0 0 0 1 
+
+State Machine - |LA_dig|UART_wrapper:iCOMM|state
+Name state.IDLE state.READY state.STORE 
+state.IDLE 0 0 0 
+state.STORE 1 0 1 
+state.READY 1 1 0 
+
+State Machine - |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_control:control_dv|q
+Name q.IDLE q.SHIFT q.TRANS 
+q.IDLE 0 0 0 
+q.TRANS 1 0 1 
+q.SHIFT 1 1 0 
