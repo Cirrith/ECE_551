@@ -1,0 +1,79 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dI:/College/ECE_551/Testing
+vProt_TB
+Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 =6HVWhEEDRKDE6NN[P>mK3
+Ik`O^L8eV`38o50J5[SQb81
+!s105 Prot_TB_sv_unit
+S1
+Z2 dI:/College/ECE_551/UART
+w1462233983
+8I:/College/ECE_551/UART/Prot_TB.sv
+FI:/College/ECE_551/UART/Prot_TB.sv
+L0 1
+Z3 OE;L;10.3c;59
+!s108 1462233988.515000
+!s107 I:/College/ECE_551/UART/Prot_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/UART/Prot_TB.sv|
+!i113 0
+Z4 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@prot_@t@b
+vUART_RX_Prot
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 cni4Z2<I5YUi0=:JKK50Z1
+I:UB1jBA:6OTO5gj0@oFGX3
+!s105 UART_RX_Prot_sv_unit
+S1
+R2
+w1462233020
+8I:/College/ECE_551/UART/UART_RX_Prot.sv
+FI:/College/ECE_551/UART/UART_RX_Prot.sv
+L0 21
+R3
+!s108 1462233964.780000
+!s107 I:/College/ECE_551/UART/UART_RX_Prot.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/UART/UART_RX_Prot.sv|
+!i113 0
+R4
+n@u@a@r@t_@r@x_@prot
+vUART_tx_Prot
+R0
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 E53CgGY`@Wm:;n>d2YEIh2
+IUVjd1kR8?g[?T@[21PebV2
+!s105 UART_tx_Prot_sv_unit
+S1
+R2
+w1462233579
+8I:/College/ECE_551/UART/UART_tx_Prot.sv
+FI:/College/ECE_551/UART/UART_tx_Prot.sv
+L0 1
+R3
+!s108 1462233965.080000
+!s107 I:/College/ECE_551/UART/UART_tx_Prot.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/UART/UART_tx_Prot.sv|
+!i113 0
+R4
+n@u@a@r@t_tx_@prot

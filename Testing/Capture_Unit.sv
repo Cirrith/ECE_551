@@ -25,11 +25,11 @@
 **************************************************************************************************/
 module Capture_Unit(clk, rst_n, wrt_smpl, triggered, TrigCfg, trig_pos, waddr, capture_done, write, armed);
 	
+	parameter 	ENTRIES = 384,	// defaults to 384 for simulation, use 12288 for DE-0
+			LOG2 = 9;		// Log base 2 of number of entries
+	
 	typedef enum logic [1:0] {IDLE, RUN, DONE} State;
-	
-	parameter ENTRIES = 384;
-	parameter LOG2 = 9;
-	
+
 	input clk;
 	input rst_n;
 	input wrt_smpl;

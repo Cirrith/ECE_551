@@ -24,7 +24,7 @@ module TB();
 	//logic [80*8:1] command; 
 	string arg1;
 	//logic [7:0] arg1;
-	logic [7:0] arg2; 
+	logic [17:0] arg2; 
 	logic UART_triggering;
 	logic SPI_triggering;
 	logic START;
@@ -71,6 +71,9 @@ module TB();
 	logic MOSI;
 	logic SPI_Pos_Edge;
 	logic SPI_Width8;
+	logic Length;
+	logic Edge;
+	logic [15:0] Data;
 	
 	//Data Generator
 	AFE analog_front_end(
@@ -128,7 +131,7 @@ module TB();
 		.TX(TX),
 		.rec_data(Rec_Data),
 		.rec_rdy(Rec_Rdy));
-	
+	/*
 	//UART Module for testing protocol triggering
 	UART_tx uart_tx(
 		.clk(clk),
@@ -137,6 +140,16 @@ module TB();
 		.trmt(UART_Start),
 		.tx_data(UART_Data),
 		.tx_done(UART_Done));
+	*/
+	
+	UART_tx_Prot uart_tx(
+		.clk(clk),
+		.rst_n(RST_n),
+		.trmt(UART_Start),
+		.tx_data(UART_Data),
+		.baud_cnt({DUT.iDIG.baud_cntH, DUT.iDIG.baud_cntL}),
+		.tx_done(UART_Done),
+		.TX(TX_UART));
 	
 	//SPI Module for testing protocol triggering
 	SPI_mstr spi_tx(
@@ -170,7 +183,7 @@ module TB();
 	initial begin : file_block 
 		REF_CLK = 0;
 		START = 0;
-		file = $fopen("Fall_Edge_3.txt", "r");
+		file = $fopen("Rise_Edge_1.txt", "r");
 		if (file == 0) begin
 			$display("File Not Found");
 			$stop;
@@ -240,7 +253,7 @@ module TB();
 					
 					"WRITE" : begin
 						CMD = '{WriteReg};
-						SendCmd(CMD, REG, arg2, '{ERR}, Stat);
+						SendCmd(CMD, REG, arg2[7:0], '{ERR}, Stat);
 						if (Stat == 1) begin
 							$display("Write -> Register: %s, Success", REG);
 						end else begin
@@ -257,16 +270,22 @@ module TB();
 					end
 					
 					"RUN" : begin
-						Start(16'h0000, Stat);
+						Start(Stat);
 						$display("Run -> Success");
 					end
 					
 					"SPI" : begin
-						//Data =  
+						$display("Data: %h", arg2);
+						Length = arg2[17];
+						Edge = arg2[16];
+						Data =  arg2[15:0];
+						SPI(Length, Edge, Data, Stat);
 					end
 					
 					"UART" : begin
-					
+						Data = {8'h00, arg2[7:0]};
+						$display("Data %h", Data);
+						UART(Data[7:0], Stat);
 					end
 					
 					"END" : begin

@@ -22,7 +22,7 @@ w1453065746
 FI:/College/ECE_551/Testing/AFE.v
 L0 1
 Z2 OE;L;10.3c;59
-!s108 1462228617.787000
+!s108 1462249676.051000
 !s107 I:/College/ECE_551/Testing/AFE.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_551/Testing/AFE.v|
 !i113 0
@@ -40,16 +40,16 @@ IVC@SMQ]XkTgWXfGYV>HPn1
 !s105 Capture_Unit_sv_unit
 S1
 R1
-Z5 w1462166414
+w1462166414
 8I:/College/ECE_551/Testing/Capture_Unit.sv
 FI:/College/ECE_551/Testing/Capture_Unit.sv
-Z6 L0 26
+Z5 L0 26
 R2
-!s108 1462228618.211000
+!s108 1462249676.307000
 !s107 I:/College/ECE_551/Testing/Capture_Unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/Capture_Unit.sv|
 !i113 0
-Z7 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@capture_@unit
 vchannel_sample
 R4
@@ -68,11 +68,11 @@ w1461889886
 FI:/College/ECE_551/Testing/channel_sample.sv
 L0 28
 R2
-!s108 1462228618.577000
+!s108 1462249676.604000
 !s107 I:/College/ECE_551/Testing/channel_sample.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/channel_sample.sv|
 !i113 0
-R7
+R6
 vChannel_Trigger_Unit
 R4
 R0
@@ -85,16 +85,16 @@ I:l^mA9J?IB3mWgWgmT1]T0
 !s105 Channel_Trigger_Unit_sv_unit
 S1
 R1
-Z8 w1462166413
+Z7 w1462166413
 8I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv
 FI:/College/ECE_551/Testing/Channel_Trigger_Unit.sv
-R6
+R5
 R2
-!s108 1462228618.978000
+!s108 1462249676.871000
 !s107 I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv|
 !i113 0
-R7
+R6
 n@channel_@trigger_@unit
 vclk_rst_smpl
 R4
@@ -113,11 +113,11 @@ w1456090434
 FI:/College/ECE_551/Testing/clk_rst_smpl.sv
 L0 1
 R2
-!s108 1462228619.382000
+!s108 1462249677.168000
 !s107 I:/College/ECE_551/Testing/clk_rst_smpl.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/clk_rst_smpl.sv|
 !i113 0
-R7
+R6
 vcmd_cfg
 R4
 R0
@@ -125,21 +125,21 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 OaBGKEg=M[^aMV]?_j4;m2
-Ijaa1XPGPFS;nXfFPnEiA;2
+!s100 <cZ>ofSYM<noLaVVZzGXZ0
+IC]@YWj26RIc@>aP5CmZhN3
 !s105 cmd_cfg_sv_unit
 S1
 R1
-R5
+w1462250211
 8I:/College/ECE_551/Testing/cmd_cfg.sv
 FI:/College/ECE_551/Testing/cmd_cfg.sv
 L0 67
 R2
-!s108 1462228619.808000
+!s108 1462250243.217000
 !s107 I:/College/ECE_551/Testing/cmd_cfg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/cmd_cfg.sv|
 !i113 0
-R7
+R6
 vCommMaster
 R4
 R0
@@ -157,11 +157,11 @@ w1461883636
 FI:/College/ECE_551/Testing/CommMaster.sv
 L0 1
 R2
-!s108 1462228620.823000
+!s108 1462249677.833000
 !s107 I:/College/ECE_551/Testing/CommMaster.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/CommMaster.sv|
 !i113 0
-R7
+R6
 n@comm@master
 vcounter
 R4
@@ -180,11 +180,11 @@ w1456247869
 FI:/College/ECE_551/Testing/counter.sv
 L0 1
 R2
-!s108 1462228621.326000
+!s108 1462249678.819000
 !s107 I:/College/ECE_551/Testing/counter.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/counter.sv|
 !i113 0
-R7
+R6
 vdig_core
 R4
 R0
@@ -202,11 +202,11 @@ w1462153989
 FI:/College/ECE_551/Testing/dig_core.sv
 L0 1
 R2
-!s108 1462228621.730000
+!s108 1462249679.082000
 !s107 I:/College/ECE_551/Testing/dig_core.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/dig_core.sv|
 !i113 0
-R7
+R6
 vdual_PWM
 R4
 R0
@@ -224,11 +224,11 @@ w1460043325
 FI:/College/ECE_551/Testing/dual_PWM.sv
 L0 14
 R2
-!s108 1462228622.144000
+!s108 1462249679.377000
 !s107 I:/College/ECE_551/Testing/dual_PWM.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/dual_PWM.sv|
 !i113 0
-R7
+R6
 ndual_@p@w@m
 vLA_dig
 R4
@@ -247,11 +247,11 @@ w1461883701
 FI:/College/ECE_551/Testing/LA_dig.sv
 L0 1
 R2
-!s108 1462228622.492000
+!s108 1462249679.726000
 !s107 I:/College/ECE_551/Testing/LA_dig.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/LA_dig.sv|
 !i113 0
-R7
+R6
 n@l@a_dig
 vLA_dig_tb
 R4
@@ -276,7 +276,7 @@ r1
 !s107 tb_tasks.sv|I:/College/ECE_551/Testing/LA_dig_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/LA_dig_tb.sv|
 !i113 0
-R7
+R6
 n@l@a_dig_tb
 vpll8x
 R0
@@ -287,12 +287,12 @@ r1
 !s100 cc2mRkn`;4N;BK4d=@8l91
 InZ?SS<zK?:aa@2JI>4>nc3
 R1
-R8
+R7
 8I:/College/ECE_551/Testing/pll8x.v
 FI:/College/ECE_551/Testing/pll8x.v
 L0 2
 R2
-!s108 1462228624.014000
+!s108 1462249680.271000
 !s107 I:/College/ECE_551/Testing/pll8x.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_551/Testing/pll8x.v|
 !i113 0
@@ -312,13 +312,13 @@ R1
 w1461888217
 8I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv
 FI:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv
-R6
+R5
 R2
-!s108 1462228624.397000
+!s108 1462249680.526000
 !s107 I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv|
 !i113 0
-R7
+R6
 n@protocol_@trigger_@unit
 vPWM8
 R4
@@ -332,16 +332,16 @@ IPCla6i]Vi>Ci25e11U:9T1
 !s105 PWM8_sv_unit
 S1
 R1
-R8
+R7
 8I:/College/ECE_551/Testing/PWM8.sv
 FI:/College/ECE_551/Testing/PWM8.sv
 L0 1
 R2
-!s108 1462228624.855000
+!s108 1462249680.795000
 !s107 I:/College/ECE_551/Testing/PWM8.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/PWM8.sv|
 !i113 0
-R7
+R6
 n@p@w@m8
 vRAMqueue
 R0
@@ -357,7 +357,7 @@ w1458616762
 FI:/College/ECE_551/Testing/RAMqueue.v
 L0 1
 R2
-!s108 1462228625.322000
+!s108 1462249681.055000
 !s107 I:/College/ECE_551/Testing/RAMqueue.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_551/Testing/RAMqueue.v|
 !i113 0
@@ -377,7 +377,7 @@ w1459812447
 FI:/College/ECE_551/Testing/SPI_mstr.v
 L0 9
 R2
-!s108 1462228625.770000
+!s108 1462249681.308000
 !s107 I:/College/ECE_551/Testing/SPI_mstr.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_551/Testing/SPI_mstr.v|
 !i113 0
@@ -400,11 +400,11 @@ w1460860847
 FI:/College/ECE_551/Testing/SPI_RX.sv
 L0 41
 R2
-!s108 1462228626.163000
+!s108 1462249681.569000
 !s107 I:/College/ECE_551/Testing/SPI_RX.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/SPI_RX.sv|
 !i113 0
-R7
+R6
 n@s@p@i_@r@x
 vSPI_RX_Edge
 R4
@@ -423,11 +423,11 @@ w1460860846
 FI:/College/ECE_551/Testing/SPI_RX_Edge.sv
 L0 20
 R2
-!s108 1462228626.531000
+!s108 1462249681.836000
 !s107 I:/College/ECE_551/Testing/SPI_RX_Edge.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/SPI_RX_Edge.sv|
 !i113 0
-R7
+R6
 n@s@p@i_@r@x_@edge
 vTB
 R4
@@ -436,22 +436,22 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 I??1A36916oO4<AkD1?E]1
-I<Nl=4C0f@Y95D<PMVgMR00
+!s100 6NzYZM9S8<?gjGb>``U740
+IBb]=LLJW4Y7O1c;RP:QTj3
 !s105 TB_sv_unit
 S1
 R1
-w1462229792
+w1462250236
 8I:/College/ECE_551/Testing/TB.sv
 FI:/College/ECE_551/Testing/TB.sv
 FTB_Tasks.sv
 L0 3
 R2
-!s108 1462229796.193000
+!s108 1462250243.491000
 !s107 TB_Tasks.sv|I:/College/ECE_551/Testing/TB.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/TB.sv|
 !i113 0
-R7
+R6
 n@t@b
 vtrigger_logic
 R4
@@ -470,11 +470,11 @@ w1460916301
 FI:/College/ECE_551/Testing/trigger_logic.sv
 L0 25
 R2
-!s108 1462228627.572000
+!s108 1462249682.688000
 !s107 I:/College/ECE_551/Testing/trigger_logic.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/trigger_logic.sv|
 !i113 0
-R7
+R6
 vTrigger_Unit
 R4
 R0
@@ -492,11 +492,11 @@ w1461888469
 FI:/College/ECE_551/Testing/Trigger_Unit.sv
 L0 46
 R2
-!s108 1462228627.975000
+!s108 1462249683.014000
 !s107 I:/College/ECE_551/Testing/Trigger_Unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/Trigger_Unit.sv|
 !i113 0
-R7
+R6
 n@trigger_@unit
 vUART
 R4
@@ -515,11 +515,11 @@ w1460043324
 FI:/College/ECE_551/Testing/UART.sv
 L0 11
 R2
-!s108 1462228628.398000
+!s108 1462249683.286000
 !s107 I:/College/ECE_551/Testing/UART.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t
 vUART_rx
 R4
@@ -538,11 +538,11 @@ w1459873918
 FI:/College/ECE_551/Testing/UART_rx.sv
 L0 1
 R2
-!s108 1462228628.738000
+!s108 1462249683.549000
 !s107 I:/College/ECE_551/Testing/UART_rx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_rx
 vUART_rx_baud
 R4
@@ -561,11 +561,11 @@ w1456961187
 FI:/College/ECE_551/Testing/UART_rx_baud.sv
 L0 1
 R2
-!s108 1462228629.096000
+!s108 1462249683.798000
 !s107 I:/College/ECE_551/Testing/UART_rx_baud.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx_baud.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_rx_baud
 vUART_rx_control
 R4
@@ -584,11 +584,11 @@ w1459874343
 FI:/College/ECE_551/Testing/UART_rx_control.sv
 L0 1
 R2
-!s108 1462228629.447000
+!s108 1462249684.062000
 !s107 I:/College/ECE_551/Testing/UART_rx_control.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx_control.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_rx_control
 vUART_rx_count
 R4
@@ -607,11 +607,11 @@ w1456706633
 FI:/College/ECE_551/Testing/UART_rx_count.sv
 L0 1
 R2
-!s108 1462228629.820000
+!s108 1462249684.325000
 !s107 I:/College/ECE_551/Testing/UART_rx_count.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx_count.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_rx_count
 vUART_RX_Prot
 R4
@@ -625,16 +625,16 @@ I^;8ZlNNc0I3ERzZ^IV;i90
 !s105 UART_RX_Prot_sv_unit
 S1
 R1
-R8
+w1462233003
 8I:/College/ECE_551/Testing/UART_RX_Prot.sv
 FI:/College/ECE_551/Testing/UART_RX_Prot.sv
 L0 21
 R2
-!s108 1462228630.240000
+!s108 1462249684.572000
 !s107 I:/College/ECE_551/Testing/UART_RX_Prot.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_RX_Prot.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_@r@x_@prot
 vUART_rx_stor
 R4
@@ -653,11 +653,11 @@ w1456855611
 FI:/College/ECE_551/Testing/UART_rx_stor.sv
 L0 1
 R2
-!s108 1462228630.647000
+!s108 1462249684.843000
 !s107 I:/College/ECE_551/Testing/UART_rx_stor.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx_stor.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_rx_stor
 vUART_tx
 R4
@@ -676,11 +676,11 @@ w1456961188
 FI:/College/ECE_551/Testing/UART_tx.sv
 L0 1
 R2
-!s108 1462228630.983000
+!s108 1462249685.244000
 !s107 I:/College/ECE_551/Testing/UART_tx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_tx
 vUART_tx_baud
 R4
@@ -699,11 +699,11 @@ w1456961189
 FI:/College/ECE_551/Testing/UART_tx_baud.sv
 L0 1
 R2
-!s108 1462228631.328000
+!s108 1462249685.514000
 !s107 I:/College/ECE_551/Testing/UART_tx_baud.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx_baud.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_tx_baud
 vUART_tx_control
 R4
@@ -722,11 +722,11 @@ w1459871369
 FI:/College/ECE_551/Testing/UART_tx_control.sv
 L0 1
 R2
-!s108 1462228631.928000
+!s108 1462249685.787000
 !s107 I:/College/ECE_551/Testing/UART_tx_control.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx_control.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_tx_control
 vUART_tx_count
 R4
@@ -745,12 +745,35 @@ w1456638703
 FI:/College/ECE_551/Testing/UART_tx_count.sv
 L0 1
 R2
-!s108 1462228632.363000
+!s108 1462249686.048000
 !s107 I:/College/ECE_551/Testing/UART_tx_count.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx_count.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_tx_count
+vUART_tx_Prot
+R4
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 E53CgGY`@Wm:;n>d2YEIh2
+IDDaGlP`Nih_c<I7U>V01;0
+!s105 UART_tx_Prot_sv_unit
+S1
+R1
+w1462233579
+8I:/College/ECE_551/Testing/UART_tx_Prot.sv
+FI:/College/ECE_551/Testing/UART_tx_Prot.sv
+L0 1
+R2
+!s108 1462249686.553000
+!s107 I:/College/ECE_551/Testing/UART_tx_Prot.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx_Prot.sv|
+!i113 0
+R6
+n@u@a@r@t_tx_@prot
 vUART_tx_stor
 R4
 R0
@@ -768,11 +791,11 @@ w1456851850
 FI:/College/ECE_551/Testing/UART_tx_stor.sv
 L0 1
 R2
-!s108 1462228632.744000
+!s108 1462249686.302000
 !s107 I:/College/ECE_551/Testing/UART_tx_stor.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx_stor.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_tx_stor
 vUART_wrapper
 R4
@@ -791,9 +814,9 @@ w1461271744
 FI:/College/ECE_551/Testing/UART_wrapper.sv
 L0 1
 R2
-!s108 1462228617.267000
+!s108 1462249675.593000
 !s107 I:/College/ECE_551/Testing/UART_wrapper.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_wrapper.sv|
 !i113 0
-R7
+R6
 n@u@a@r@t_wrapper

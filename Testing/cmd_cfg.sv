@@ -66,8 +66,8 @@
 **************************************************************************************************/
 module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataCH1, rdataCH2, rdataCH3, rdataCH4, rdataCH5, raddr, resp, send_resp, clr_cmd_rdy, trig_pos, decimator, maskL, maskH, matchL, matchH, baud_cntL, baud_cntH, TrigCfg, CH1TrigCfg, CH2TrigCfg, CH3TrigCfg, CH4TrigCfg, CH5TrigCfg, VIH, VIL);
 	
-	parameter LOG2 = 9; //Default Size for Data
-	parameter ENTRIES = 384;
+	parameter 	ENTRIES = 384,	// defaults to 384 for simulation, use 12288 for DE-0
+				LOG2 = 9;		// Log base 2 of number of entries
 	
 	//Not sure if need enum
 	
@@ -282,7 +282,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 		clr_cmd_rdy = 1'h0;
 		resp = 8'h00;
 		init_write = 1'h0;
-		//raddr = 9'h000;
+		raddr = raddr_curr;
 		nxtstate = IDLE;
 	
 		case(state)
@@ -348,12 +348,6 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 				resp = ACK;
 				clr_cmd_rdy = 1'h1;
 				nxtstate = IDLE;
-				/*
-				if (register != Register) begin //Sent bad Register *REDUCE* This may be quite big
-					resp = NAK;
-					$display("Sent a Bad Register");
-				end
-				*/
 			end
 			
 			RAM : begin
@@ -395,12 +389,6 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 				send_resp = 1'h1;
 				nxtstate = IDLE;
 			end
-			
-			/*default : begin				//This should be impossible to get into, b/c two bits for state and four defined states
-				nxtstate = ERROR;
-				$display("Entered a Bad State, %d", state);
-			end
-			*///This is messing up the TestBench
 		endcase
 	end
 endmodule

@@ -1,0 +1,22 @@
+I:/College/ECE_551/UART/UART_RX_Prot.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/UART/UART_RX_Prot.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module UART_RX_Prot
+
+Top level modules:
+	UART_RX_Prot
+
+} {} {}} I:/College/ECE_551/UART/Prot_TB.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/UART/Prot_TB.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module Prot_TB
+
+Top level modules:
+	Prot_TB
+
+} {} {}} I:/College/ECE_551/UART/UART_tx_Prot.sv {1 {vlog -work work -vopt -sv -stats=none I:/College/ECE_551/UART/UART_tx_Prot.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module UART_tx_Prot
+
+Top level modules:
+	UART_tx_Prot
+
+} {} {}}

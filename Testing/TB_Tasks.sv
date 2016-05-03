@@ -22,8 +22,6 @@
 		
 		Address = 0;
 		
-		
-		
 		RST_n = 0;
 		repeat(2) @(negedge REF_CLK);
 		//@(posedge locked);
@@ -151,7 +149,7 @@
 	task PollCapDone(output [7:0] Status);		//Called by Start
 		fork : sailorforky
 			forever begin
-				SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), {2'h0, (DUT.iDIG.TrigCfg & ~6'h30)}, '{ERR}, Status);
+				SendCmd(Command'(ReadReg), Register'(TrigCfg_Reg), {2'h0, (DUT.iDIG.TrigCfg & ~6'h30)}, '{ERR}, Status);
 		
 				if(Rec_Data[5] == 1) begin
 					$display("Capture Done");
@@ -168,11 +166,11 @@
 			
 			begin				//Timeout
 				repeat(100000) @(negedge clk);
-				$display("100000 Cycles is quite a while for a Response");
+				$display("100000 Cycles is quite a while for a Capture");
 				$stop;
 			end
 		join
-		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), {2'h0, (DUT.iDIG.TrigCfg & ~6'h30)}, '{ERR}, Status);
+		SendCmd(Command'(ReadReg), Register'(TrigCfg_Reg), {2'h0, (DUT.iDIG.TrigCfg & ~6'h30)}, '{ERR}, Status);
 	endtask
 	
 	task RcvDump(input Channel Chan); //Called by SendCmd
@@ -180,7 +178,7 @@
 		fork : senorforky
 			begin				//Receive data. See if there is a better way than a for loop
 				for(i = 0; i < ENTRIES; i = i + 1) begin
-					$display("%d", i);
+					//$display("%d", i);
 					@(posedge Rec_Rdy);
 					Mem_Rec[i] = Rec_Data;
 					@(posedge clk);
@@ -237,7 +235,7 @@
 		$display("Checked RAM %d", Chan);
 		
 		for (i = 0; i < ENTRIES; i = i + 1) begin //Check that it send the right data
-			$display("%d", i);
+			//$display("%d", i);
 			if(Mem_Rec[i] != Mem_Copy[Address]) begin
 				$display("Dump Recieved did not match up");
 				$stop;
@@ -251,25 +249,33 @@
 		end
 	endtask
 	
-	task Start(input [15:0] Data, output [7:0] Status);
+	task Start(output [7:0] Status);
 		repeat(2) @(negedge clk);
 		
 		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg),  {2'h0, DUT.iDIG.TrigCfg | 6'h10} , Channel'(ERR), Status);
-
+		if(UART_triggering) begin
+			UART_Start = 1'h1;
+			repeat(2)@(negedge clk);
+			UART_Start = 1'h0;
+		end else if(SPI_triggering) begin
+			SPI_Start = 1'h1;
+			repeat(2)@(negedge clk);
+			SPI_Start = 1'h0;
+		end
 		PollCapDone(Status);
-		
-		SPI_triggering = 0;
-		UART_triggering = 0;
-		
 	endtask
 	
-	task SPI(input Edge, input Length, input [15:0] Data, output [7:0] Status);
+	task SPI(input Length, input Edge, input [15:0] Data, output [7:0] Status);
 		SPI_triggering = 1;
 		SPI_Data = Data;
+		SPI_Pos_Edge = Edge;
+		SPI_Width8 = Length;
 		
 		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), {2'h0, 2'h0, Edge, Length, 1'h0, 1'h1}, '{ERR}, Status); //Set Edge and Length and Disable UART
 		$display("SPI Setup Sucessfull");
-
+		repeat(2)@(negedge clk);
+		Start(Status);
+		SPI_triggering = 0;
 	endtask
 		
 	task UART(input [7:0] Data, output [7:0] Status);
@@ -278,6 +284,9 @@
 
 		SendCmd(Command'(WriteReg), Register'(TrigCfg_Reg), 8'h02, '{ERR}, Status); //Enable UART and disable SPI
 		$display("UART Setup Sucessfull");
-
+		while(DUT.iDIG.Trigger.Prot_Trig.uart.state != 1'h0)
+		repeat(2)@(negedge clk);
+		Start(Status);
+		UART_triggering = 0;
 	endtask
 	
