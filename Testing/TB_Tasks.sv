@@ -237,7 +237,7 @@
 		$display("Checked RAM %d", Chan);
 		
 		for (i = 0; i < ENTRIES; i = i + 1) begin //Check that it send the right data
-			$display("%d", i);
+			//$display("%d", i);
 			if(Mem_Rec[i] != Mem_Copy[Address]) begin
 				$display("Dump Recieved did not match up");
 				$stop;

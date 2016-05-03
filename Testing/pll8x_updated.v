@@ -1,5 +1,5 @@
 `timescale 100ps / 10ps
-module pll8x(ref_clk,RST_n,out_clk,locked);
+module pll8x_updated(ref_clk,RST_n,out_clk,locked);
   //////////////////////////////////////////////
   // A rather cheesy model of a PLL to perform 8X clock multiplication.
   // `timescale require to be 100ps as above.  Period of ref clock 

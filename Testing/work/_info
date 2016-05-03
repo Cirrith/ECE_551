@@ -7,268 +7,277 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/ProgramData/App-V/2191B702-5279-4048-91BA-BCF8F2A20B49/21710E5E-1DEB-4C76-9578-9609978C17F5/Root/examples
+Z0 dC:/ProgramData/App-V/2191B702-5279-4048-91BA-BCF8F2A20B49/21710E5E-1DEB-4C76-9578-9609978C17F5/Root/examples
+T_opt
+!s110 1462234243
+VmZYbg4EAJKHQV;Y=@0@1K1
+04 2 4 work TB fast 0
+=1-a0d3c10fdba4-5727ec81-16e-b3c
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;10.3c;59
+R0
 vAFE
-Z0 V`JN@9S9cnhjKRR_L]QIcM3
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
 r1
 !s85 0
 31
 !i10b 1
 !s100 WjDZJe^GT221EdRAH<ddz3
-IUlFDDBKK^lOgId0f?3dYi0
-Z1 dI:/College/ECE_551/Testing
-w1453065746
-8I:/College/ECE_551/Testing/AFE.v
-FI:/College/ECE_551/Testing/AFE.v
+I?TYHNAOfN7`Ml@HKH0_;W0
+Z2 dI:/ece551/modelsim/project/ECE_551/Testing
+Z3 w1461887003
+8I:/ece551/modelsim/project/ECE_551/Testing/AFE.v
+FI:/ece551/modelsim/project/ECE_551/Testing/AFE.v
 L0 1
-Z2 OE;L;10.3c;59
-!s108 1462228617.787000
-!s107 I:/College/ECE_551/Testing/AFE.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_551/Testing/AFE.v|
+Z4 OE;L;10.3c;59
+!s108 1462234132.486000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/AFE.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/AFE.v|
 !i113 0
-Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@a@f@e
 vCapture_Unit
-Z4 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-R0
+Z6 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 WOdfc@n>zgnRB;aRNGfKg3
-IVC@SMQ]XkTgWXfGYV>HPn1
+Ij084@Kg9XIjPk9X^F0RL43
 !s105 Capture_Unit_sv_unit
 S1
-R1
-Z5 w1462166414
-8I:/College/ECE_551/Testing/Capture_Unit.sv
-FI:/College/ECE_551/Testing/Capture_Unit.sv
-Z6 L0 26
 R2
-!s108 1462228618.211000
-!s107 I:/College/ECE_551/Testing/Capture_Unit.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/Capture_Unit.sv|
+Z7 w1462222278
+8I:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv
+Z8 L0 26
+R4
+!s108 1462234133.285000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv|
 !i113 0
-Z7 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@capture_@unit
 vchannel_sample
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 P12j5o1o6RMaV36RF^;JX2
-IbkoP>jT;?CM6@j?>_X_]>3
+Ic?;K5A]Y92RNZh9oKHWO>0
 !s105 channel_sample_sv_unit
 S1
-R1
-w1461889886
-8I:/College/ECE_551/Testing/channel_sample.sv
-FI:/College/ECE_551/Testing/channel_sample.sv
-L0 28
 R2
-!s108 1462228618.577000
-!s107 I:/College/ECE_551/Testing/channel_sample.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/channel_sample.sv|
-!i113 0
-R7
-vChannel_Trigger_Unit
+Z10 w1462150050
+8I:/ece551/modelsim/project/ECE_551/Testing/channel_sample.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/channel_sample.sv
+L0 28
 R4
-R0
+!s108 1462234133.628000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/channel_sample.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/channel_sample.sv|
+!i113 0
+R9
+vChannel_Trigger_Unit
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 cD]2zO6=V^oi9]IP>l2703
-I:l^mA9J?IB3mWgWgmT1]T0
+IH2h45]6;MMkg0gSSj0;NP3
 !s105 Channel_Trigger_Unit_sv_unit
 S1
-R1
-Z8 w1462166413
-8I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv
-FI:/College/ECE_551/Testing/Channel_Trigger_Unit.sv
-R6
 R2
-!s108 1462228618.978000
-!s107 I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/Channel_Trigger_Unit.sv|
+w1462154067
+8I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv
+R8
+R4
+!s108 1462234134.018000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv|
 !i113 0
-R7
+R9
 n@channel_@trigger_@unit
 vclk_rst_smpl
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 k9;bGC6A<b5Ug6Qj1VP@m3
-IX@zWKa:D>PKbnzi_2^gM^0
+I@Gm>Ghja3dRzz07C5<<<Z3
 !s105 clk_rst_smpl_sv_unit
 S1
-R1
-w1456090434
-8I:/College/ECE_551/Testing/clk_rst_smpl.sv
-FI:/College/ECE_551/Testing/clk_rst_smpl.sv
-L0 1
 R2
-!s108 1462228619.382000
-!s107 I:/College/ECE_551/Testing/clk_rst_smpl.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/clk_rst_smpl.sv|
-!i113 0
-R7
-vcmd_cfg
+Z11 w1461887005
+8I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv
+L0 1
 R4
-R0
+!s108 1462234134.455000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv|
+!i113 0
+R9
+vcmd_cfg
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 OaBGKEg=M[^aMV]?_j4;m2
-Ijaa1XPGPFS;nXfFPnEiA;2
+IL0Ym:X>kIdZXLF1CEDk@63
 !s105 cmd_cfg_sv_unit
 S1
-R1
-R5
-8I:/College/ECE_551/Testing/cmd_cfg.sv
-FI:/College/ECE_551/Testing/cmd_cfg.sv
-L0 67
 R2
-!s108 1462228619.808000
-!s107 I:/College/ECE_551/Testing/cmd_cfg.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/cmd_cfg.sv|
-!i113 0
 R7
-vCommMaster
+8I:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv
+L0 67
 R4
-R0
+!s108 1462234134.813000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv|
+!i113 0
+R9
+vCommMaster
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 c2^0c=cabZJ9gXh2lYdB`1
-IBCMW:Od3HhnTDHaBUfjbX3
+IkW9QT12WYFg9nd3`0H>3]0
 !s105 CommMaster_sv_unit
 S1
-R1
-w1461883636
-8I:/College/ECE_551/Testing/CommMaster.sv
-FI:/College/ECE_551/Testing/CommMaster.sv
-L0 1
 R2
-!s108 1462228620.823000
-!s107 I:/College/ECE_551/Testing/CommMaster.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/CommMaster.sv|
+R3
+8I:/ece551/modelsim/project/ECE_551/Testing/CommMaster.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/CommMaster.sv
+L0 1
+R4
+!s108 1462234135.250000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/CommMaster.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/CommMaster.sv|
 !i113 0
-R7
+R9
 n@comm@master
 vcounter
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 KONYAaW<dR2L`6Zk9]6TZ2
-I1e05`O7nV=R[]I_Iz;VTz2
+IQ?bziD2:G]fUC_A@FhEI>1
 !s105 counter_sv_unit
 S1
-R1
-w1456247869
-8I:/College/ECE_551/Testing/counter.sv
-FI:/College/ECE_551/Testing/counter.sv
-L0 1
 R2
-!s108 1462228621.326000
-!s107 I:/College/ECE_551/Testing/counter.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/counter.sv|
-!i113 0
-R7
-vdig_core
+R11
+8I:/ece551/modelsim/project/ECE_551/Testing/counter.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/counter.sv
+L0 1
 R4
-R0
+!s108 1462234135.593000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/counter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/counter.sv|
+!i113 0
+R9
+vdig_core
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 E6bE3_4HZ124GzGELV`FL0
-IJoX2K_a`VcGBRXzzjUZP11
+IH=8Z@0F>Na:F6T;k1h^=m3
 !s105 dig_core_sv_unit
 S1
-R1
-w1462153989
-8I:/College/ECE_551/Testing/dig_core.sv
-FI:/College/ECE_551/Testing/dig_core.sv
-L0 1
 R2
-!s108 1462228621.730000
-!s107 I:/College/ECE_551/Testing/dig_core.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/dig_core.sv|
-!i113 0
 R7
-vdual_PWM
+8I:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv
+L0 1
 R4
-R0
+!s108 1462234135.921000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv|
+!i113 0
+R9
+vdual_PWM
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 YX9H?XiToGf46R]XcYgEz1
-ILRVAUKzV6VmSNlV@IF0Q;2
+Ii4lMgbSRMKUkSS@;W;XN_3
 !s105 dual_PWM_sv_unit
 S1
-R1
-w1460043325
-8I:/College/ECE_551/Testing/dual_PWM.sv
-FI:/College/ECE_551/Testing/dual_PWM.sv
-L0 14
 R2
-!s108 1462228622.144000
-!s107 I:/College/ECE_551/Testing/dual_PWM.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/dual_PWM.sv|
+R11
+8I:/ece551/modelsim/project/ECE_551/Testing/dual_PWM.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/dual_PWM.sv
+L0 14
+R4
+!s108 1462234136.217000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/dual_PWM.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/dual_PWM.sv|
 !i113 0
-R7
+R9
 ndual_@p@w@m
 vLA_dig
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 i=5bV?dX@kDdIKfFCA:3_0
-IlCc;AL[YXS=OjJ@AnXn5T1
+IO@SIELz`joY`?YA^<6b^Q2
 !s105 LA_dig_sv_unit
 S1
-R1
-w1461883701
-8I:/College/ECE_551/Testing/LA_dig.sv
-FI:/College/ECE_551/Testing/LA_dig.sv
-L0 1
 R2
-!s108 1462228622.492000
-!s107 I:/College/ECE_551/Testing/LA_dig.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/LA_dig.sv|
+Z12 w1461887004
+8I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv
+L0 1
+R4
+!s108 1462234136.654000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv|
 !i113 0
-R7
+R9
 n@l@a_dig
 vLA_dig_tb
-R4
+R6
 !s110 1461891786
 !i10b 1
 !s100 ILXaAQVi@8gnN@UBZ^DYf3
 Ii7;J_Ijj^ZDIVV8Ua:]o60
-R0
+R1
 !s105 LA_dig_tb_sv_unit
 S1
-R1
+dI:/College/ECE_551/Testing
 w1461880798
 8I:/College/ECE_551/Testing/LA_dig_tb.sv
 FI:/College/ECE_551/Testing/LA_dig_tb.sv
 Ftb_tasks.sv
 L0 5
-R2
+R4
 r1
 !s85 0
 31
@@ -276,524 +285,565 @@ r1
 !s107 tb_tasks.sv|I:/College/ECE_551/Testing/LA_dig_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/LA_dig_tb.sv|
 !i113 0
-R7
+R9
 n@l@a_dig_tb
 vpll8x
-R0
+R1
 r1
 !s85 0
 31
 !i10b 1
-!s100 cc2mRkn`;4N;BK4d=@8l91
-InZ?SS<zK?:aa@2JI>4>nc3
-R1
-R8
-8I:/College/ECE_551/Testing/pll8x.v
-FI:/College/ECE_551/Testing/pll8x.v
-L0 2
+!s100 5mTRZ^fOO^7d7iE2mnI@e2
+IOa@SPz9Y:d07z;RL]Q?>B0
 R2
-!s108 1462228624.014000
-!s107 I:/College/ECE_551/Testing/pll8x.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_551/Testing/pll8x.v|
-!i113 0
-R3
-vProtocol_Trigger_Unit
+w1462223180
+Z13 8I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v
+Z14 FI:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v
+L0 2
 R4
-R0
+!s108 1462234137.840000
+Z15 !s107 I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v|
+Z16 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v|
+!i113 0
+R5
+vpll8x_updated
+!s110 1462235287
+!i10b 1
+!s100 K?6O<`STm[Dze`n3nVcWH3
+I5E@nVdB5egjDhcG?PJ86n1
+R1
+R2
+w1462234642
+R13
+R14
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1462235287.402000
+R15
+R16
+!i113 0
+R5
+vProtocol_Trigger_Unit
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 Ni=hHK9>Ilm6U5`_nR8Cg0
-IICgP3HPV[>__:6]b40L:42
+IROP`k9go2JU^mX@H>QE:N2
 !s105 Protocol_Trigger_Unit_sv_unit
 S1
-R1
-w1461888217
-8I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv
-FI:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv
-R6
 R2
-!s108 1462228624.397000
-!s107 I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/Protocol_Trigger_Unit.sv|
+R10
+8I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv
+R8
+R4
+!s108 1462234138.183000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv|
 !i113 0
-R7
+R9
 n@protocol_@trigger_@unit
 vPWM8
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 <6l6DV7G<<P`R1B4D1XfN3
-IPCla6i]Vi>Ci25e11U:9T1
+I@K4Ce9HCQfiLz:X9il;CU2
 !s105 PWM8_sv_unit
 S1
-R1
-R8
-8I:/College/ECE_551/Testing/PWM8.sv
-FI:/College/ECE_551/Testing/PWM8.sv
-L0 1
 R2
-!s108 1462228624.855000
-!s107 I:/College/ECE_551/Testing/PWM8.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/PWM8.sv|
+w1462151751
+8I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv
+L0 1
+R4
+!s108 1462234138.589000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv|
 !i113 0
-R7
+R9
 n@p@w@m8
 vRAMqueue
-R0
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 <@7da:98>S9IgJY>V7J<N2
-IaR]?KZQd5PjfVZiT<HHD93
-R1
-w1458616762
-8I:/College/ECE_551/Testing/RAMqueue.v
-FI:/College/ECE_551/Testing/RAMqueue.v
-L0 1
+Ia1hMDeBX;;YlmBO2B:P5H0
 R2
-!s108 1462228625.322000
-!s107 I:/College/ECE_551/Testing/RAMqueue.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_551/Testing/RAMqueue.v|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue.v
+FI:/ece551/modelsim/project/ECE_551/Testing/RAMqueue.v
+L0 1
+R4
+!s108 1462234138.901000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue.v|
 !i113 0
-R3
+R5
 n@r@a@mqueue
+vRAMqueue_ENTRIES384_LOG29
+!s110 1462234139
+!i10b 1
+!s100 c9_1KML[V4[^m5V^YkQVE0
+IV@4VW<jTmgG?aFIJ346T_1
+R1
+R2
+w1462228244
+8I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v
+FI:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1462234139.244000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v|
+!i113 0
+R5
+n@r@a@mqueue_@e@n@t@r@i@e@s384_@l@o@g29
 vSPI_mstr
-R0
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 QXNR0jmTV[Jhjo1TL_2hB0
-I>?SC7@WT=UU^^61GD>XLZ0
-R1
-w1459812447
-8I:/College/ECE_551/Testing/SPI_mstr.v
-FI:/College/ECE_551/Testing/SPI_mstr.v
-L0 9
+IP:7eAhYbOm`LF`88H8MBf2
 R2
-!s108 1462228625.770000
-!s107 I:/College/ECE_551/Testing/SPI_mstr.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/College/ECE_551/Testing/SPI_mstr.v|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/SPI_mstr.v
+FI:/ece551/modelsim/project/ECE_551/Testing/SPI_mstr.v
+L0 9
+R4
+!s108 1462234139.525000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/SPI_mstr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/SPI_mstr.v|
 !i113 0
-R3
+R5
 n@s@p@i_mstr
 vSPI_RX
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 <O>];`58m@hg<_LIJM:4V0
-I4R4K[H6F0Q1lhGm@W:ebC1
+IK1=Q3?_<chmhRXl85mh9Y3
 !s105 SPI_RX_sv_unit
 S1
-R1
-w1460860847
-8I:/College/ECE_551/Testing/SPI_RX.sv
-FI:/College/ECE_551/Testing/SPI_RX.sv
-L0 41
 R2
-!s108 1462228626.163000
-!s107 I:/College/ECE_551/Testing/SPI_RX.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/SPI_RX.sv|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv
+L0 41
+R4
+!s108 1462234139.868000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv|
 !i113 0
-R7
+R9
 n@s@p@i_@r@x
 vSPI_RX_Edge
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 e`Y23z7NK^mN7BjWc^>Ll2
-ICz<E1e0L0PZ1MNnG04:;V1
+Ial[nWAdNfWmbb:MXW;9I=2
 !s105 SPI_RX_Edge_sv_unit
 S1
-R1
-w1460860846
-8I:/College/ECE_551/Testing/SPI_RX_Edge.sv
-FI:/College/ECE_551/Testing/SPI_RX_Edge.sv
-L0 20
 R2
-!s108 1462228626.531000
-!s107 I:/College/ECE_551/Testing/SPI_RX_Edge.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/SPI_RX_Edge.sv|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv
+L0 20
+R4
+!s108 1462234140.180000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv|
 !i113 0
-R7
+R9
 n@s@p@i_@r@x_@edge
 vTB
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
-!s100 I??1A36916oO4<AkD1?E]1
-I<Nl=4C0f@Y95D<PMVgMR00
+!s100 eVR4_g7cfDeM_Sbg3TWmC3
+IomOkLoMA39G63G5ToXNUi0
 !s105 TB_sv_unit
 S1
-R1
-w1462229792
-8I:/College/ECE_551/Testing/TB.sv
-FI:/College/ECE_551/Testing/TB.sv
+R2
+w1462236871
+8I:/ece551/modelsim/project/ECE_551/Testing/TB.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/TB.sv
 FTB_Tasks.sv
 L0 3
-R2
-!s108 1462229796.193000
-!s107 TB_Tasks.sv|I:/College/ECE_551/Testing/TB.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/TB.sv|
+R4
+!s108 1462236876.881000
+!s107 TB_Tasks.sv|I:/ece551/modelsim/project/ECE_551/Testing/TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/TB.sv|
 !i113 0
-R7
+R9
 n@t@b
 vtrigger_logic
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 :CJFcA;VfHHiigmg08dg70
-IfCK4EDVHCV1OCQ`Gj9HIK0
+I1XXK=gia7N;h;h6JV5R]J3
 !s105 trigger_logic_sv_unit
 S1
-R1
-w1460916301
-8I:/College/ECE_551/Testing/trigger_logic.sv
-FI:/College/ECE_551/Testing/trigger_logic.sv
-L0 25
 R2
-!s108 1462228627.572000
-!s107 I:/College/ECE_551/Testing/trigger_logic.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/trigger_logic.sv|
-!i113 0
-R7
-vTrigger_Unit
+R11
+8I:/ece551/modelsim/project/ECE_551/Testing/trigger_logic.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/trigger_logic.sv
+L0 25
 R4
-R0
+!s108 1462234142.738000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/trigger_logic.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/trigger_logic.sv|
+!i113 0
+R9
+vTrigger_Unit
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 RF417he0Ua1FQVWjmTV5C3
-IKmk@FOHV1jNR;nGkPC6db2
+I:i5X2J]4g8;cjijj?RiY33
 !s105 Trigger_Unit_sv_unit
 S1
-R1
-w1461888469
-8I:/College/ECE_551/Testing/Trigger_Unit.sv
-FI:/College/ECE_551/Testing/Trigger_Unit.sv
-L0 46
 R2
-!s108 1462228627.975000
-!s107 I:/College/ECE_551/Testing/Trigger_Unit.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/Trigger_Unit.sv|
+R10
+8I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv
+L0 46
+R4
+!s108 1462234143.050000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv|
 !i113 0
-R7
+R9
 n@trigger_@unit
 vUART
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 U]G2O10lV5OFjaXTKZh]G1
-Ic<?3I;]3P>aEEUeRW@N_62
+I[Wg3Qc770=UbGA=0AEGdJ0
 !s105 UART_sv_unit
 S1
-R1
-w1460043324
-8I:/College/ECE_551/Testing/UART.sv
-FI:/College/ECE_551/Testing/UART.sv
-L0 11
 R2
-!s108 1462228628.398000
-!s107 I:/College/ECE_551/Testing/UART.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART.sv|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/UART.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART.sv
+L0 11
+R4
+!s108 1462234143.471000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t
 vUART_rx
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 8i12HE>E]i:h?KHKNU9f41
-I1H<;2?h700e<l_J9mOoaj2
+Ik=KSR4UjF;HP`MNkH?`BT0
 !s105 UART_rx_sv_unit
 S1
-R1
-w1459873918
-8I:/College/ECE_551/Testing/UART_rx.sv
-FI:/College/ECE_551/Testing/UART_rx.sv
-L0 1
 R2
-!s108 1462228628.738000
-!s107 I:/College/ECE_551/Testing/UART_rx.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx.sv|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv
+L0 1
+R4
+!s108 1462234143.846000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_rx
 vUART_rx_baud
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 aB:`Ob@<0AdEMUORBn:fV0
-IN_6E1^k`W4h78_Y@=c2UP0
+ITNlmmHRGDa`WK]QObNjQh1
 !s105 UART_rx_baud_sv_unit
 S1
-R1
-w1456961187
-8I:/College/ECE_551/Testing/UART_rx_baud.sv
-FI:/College/ECE_551/Testing/UART_rx_baud.sv
-L0 1
 R2
-!s108 1462228629.096000
-!s107 I:/College/ECE_551/Testing/UART_rx_baud.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx_baud.sv|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_baud.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx_baud.sv
+L0 1
+R4
+!s108 1462234144.158000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_baud.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_baud.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_rx_baud
 vUART_rx_control
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 >W=H:^b;_h8IV@9Cm]fX=3
-IlT1<S2VMOGdBk=H:I1clC2
+IH]_5f8gVQ=_leE?`<So^f1
 !s105 UART_rx_control_sv_unit
 S1
-R1
-w1459874343
-8I:/College/ECE_551/Testing/UART_rx_control.sv
-FI:/College/ECE_551/Testing/UART_rx_control.sv
-L0 1
 R2
-!s108 1462228629.447000
-!s107 I:/College/ECE_551/Testing/UART_rx_control.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx_control.sv|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv
+L0 1
+R4
+!s108 1462234144.454000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_rx_control
 vUART_rx_count
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 d=QTWe`FBCC:NV?EB^CR`3
-IWYomE:GT@mR=Ae_5[=0c=3
+IfcPbPf>U2ZCU:i21QcmLa2
 !s105 UART_rx_count_sv_unit
 S1
-R1
-w1456706633
-8I:/College/ECE_551/Testing/UART_rx_count.sv
-FI:/College/ECE_551/Testing/UART_rx_count.sv
-L0 1
 R2
-!s108 1462228629.820000
-!s107 I:/College/ECE_551/Testing/UART_rx_count.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx_count.sv|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv
+L0 1
+R4
+!s108 1462234144.813000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_rx_count
 vUART_RX_Prot
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 cni4Z2<I5YUi0=:JKK50Z1
-I^;8ZlNNc0I3ERzZ^IV;i90
+I6aIhE2n]h`6WOIG;e_ZiR2
 !s105 UART_RX_Prot_sv_unit
 S1
-R1
-R8
-8I:/College/ECE_551/Testing/UART_RX_Prot.sv
-FI:/College/ECE_551/Testing/UART_RX_Prot.sv
-L0 21
 R2
-!s108 1462228630.240000
-!s107 I:/College/ECE_551/Testing/UART_RX_Prot.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_RX_Prot.sv|
+w1462155122
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_RX_Prot.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_RX_Prot.sv
+L0 21
+R4
+!s108 1462234145.141000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_RX_Prot.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_RX_Prot.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_@r@x_@prot
 vUART_rx_stor
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 8M?HQ8XBZVKQZ9>^56c5:1
-I@fFK^UB<N0IGPcjY=?2T:2
+Ij7Wbd@3=0>5<Kh50M`b9M0
 !s105 UART_rx_stor_sv_unit
 S1
-R1
-w1456855611
-8I:/College/ECE_551/Testing/UART_rx_stor.sv
-FI:/College/ECE_551/Testing/UART_rx_stor.sv
-L0 1
 R2
-!s108 1462228630.647000
-!s107 I:/College/ECE_551/Testing/UART_rx_stor.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_rx_stor.sv|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv
+L0 1
+R4
+!s108 1462234145.562000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_rx_stor
 vUART_tx
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 lm`NT:W>iK<3mUK`QBm802
-IOKz;_>`EAg5V^PdQQ^Tg_1
+I8?iESkN=E=Q4ifVLOa[Xc0
 !s105 UART_tx_sv_unit
 S1
-R1
-w1456961188
-8I:/College/ECE_551/Testing/UART_tx.sv
-FI:/College/ECE_551/Testing/UART_tx.sv
-L0 1
 R2
-!s108 1462228630.983000
-!s107 I:/College/ECE_551/Testing/UART_tx.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx.sv|
+R12
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_tx.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx.sv
+L0 1
+R4
+!s108 1462234145.952000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_tx
 vUART_tx_baud
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 GH4T?;a1M4RW<R@okH[jE1
-I_<WXeA]_KT1ZNZdJ_:7Pn1
+I9PTiOY]h@SO7GVgf`_iac0
 !s105 UART_tx_baud_sv_unit
 S1
-R1
-w1456961189
-8I:/College/ECE_551/Testing/UART_tx_baud.sv
-FI:/College/ECE_551/Testing/UART_tx_baud.sv
-L0 1
 R2
-!s108 1462228631.328000
-!s107 I:/College/ECE_551/Testing/UART_tx_baud.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx_baud.sv|
+R11
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_baud.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx_baud.sv
+L0 1
+R4
+!s108 1462234146.264000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_baud.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_baud.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_tx_baud
 vUART_tx_control
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 cSAcMWCCnYO56cVP5<NUU1
-IR0XzMUz?a?T8P?G;PiPD_3
+I>iboCJDN^QPA^E@4zL_lf1
 !s105 UART_tx_control_sv_unit
 S1
-R1
-w1459871369
-8I:/College/ECE_551/Testing/UART_tx_control.sv
-FI:/College/ECE_551/Testing/UART_tx_control.sv
-L0 1
 R2
-!s108 1462228631.928000
-!s107 I:/College/ECE_551/Testing/UART_tx_control.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx_control.sv|
+R11
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_control.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx_control.sv
+L0 1
+R4
+!s108 1462234146.669000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_control.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_control.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_tx_control
 vUART_tx_count
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 mfm[UL_?`:]jmF=?KAH5X0
-I2HU:[6KFjS`zhofi;FmOf0
+I^U>ka?Ad^AY39<@Thh@>C0
 !s105 UART_tx_count_sv_unit
 S1
-R1
-w1456638703
-8I:/College/ECE_551/Testing/UART_tx_count.sv
-FI:/College/ECE_551/Testing/UART_tx_count.sv
-L0 1
 R2
-!s108 1462228632.363000
-!s107 I:/College/ECE_551/Testing/UART_tx_count.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx_count.sv|
+R11
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_count.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx_count.sv
+L0 1
+R4
+!s108 1462234146.981000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_count.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_count.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_tx_count
 vUART_tx_stor
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 g;?GLM7[02Z>^L8zfN>PV2
-I?7?i:l1f=RHU;2n=;Zi<12
+Ihb:o@9ZEK_1YFg=]E]XAg3
 !s105 UART_tx_stor_sv_unit
 S1
-R1
-w1456851850
-8I:/College/ECE_551/Testing/UART_tx_stor.sv
-FI:/College/ECE_551/Testing/UART_tx_stor.sv
-L0 1
 R2
-!s108 1462228632.744000
-!s107 I:/College/ECE_551/Testing/UART_tx_stor.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_tx_stor.sv|
+R11
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv
+L0 1
+R4
+!s108 1462234147.309000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_tx_stor
 vUART_wrapper
-R4
-R0
+R6
+R1
 r1
 !s85 0
 31
 !i10b 1
 !s100 WIhJ[oScoh6NIzDme[5V>0
-IZfZU6LgnoBBN>_gI^lh:J0
+IY59_^d5@AF_ofBfSYSld80
 !s105 UART_wrapper_sv_unit
 S1
-R1
-w1461271744
-8I:/College/ECE_551/Testing/UART_wrapper.sv
-FI:/College/ECE_551/Testing/UART_wrapper.sv
-L0 1
 R2
-!s108 1462228617.267000
-!s107 I:/College/ECE_551/Testing/UART_wrapper.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/College/ECE_551/Testing/UART_wrapper.sv|
+R11
+8I:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv
+FI:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv
+L0 1
+R4
+!s108 1462234130.146000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv|
 !i113 0
-R7
+R9
 n@u@a@r@t_wrapper
