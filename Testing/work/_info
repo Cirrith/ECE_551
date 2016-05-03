@@ -31,7 +31,7 @@ Z3 w1461887003
 FI:/ece551/modelsim/project/ECE_551/Testing/AFE.v
 L0 1
 Z4 OE;L;10.3c;59
-!s108 1462234132.486000
+!s108 1462247621.508000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/AFE.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/AFE.v|
 !i113 0
@@ -54,7 +54,7 @@ Z7 w1462222278
 FI:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv
 Z8 L0 26
 R4
-!s108 1462234133.285000
+!s108 1462247621.945000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv|
 !i113 0
@@ -77,7 +77,7 @@ Z10 w1462150050
 FI:/ece551/modelsim/project/ECE_551/Testing/channel_sample.sv
 L0 28
 R4
-!s108 1462234133.628000
+!s108 1462247623.630000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/channel_sample.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/channel_sample.sv|
 !i113 0
@@ -99,7 +99,7 @@ w1462154067
 FI:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv
 R8
 R4
-!s108 1462234134.018000
+!s108 1462247624.051000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv|
 !i113 0
@@ -122,7 +122,7 @@ Z11 w1461887005
 FI:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv
 L0 1
 R4
-!s108 1462234134.455000
+!s108 1462247624.519000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv|
 !i113 0
@@ -134,17 +134,17 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 OaBGKEg=M[^aMV]?_j4;m2
-IL0Ym:X>kIdZXLF1CEDk@63
+!s100 :?HgT5X;POX@M1iSPiaJD0
+InR[Ea8_T[8165CafGc6O;1
 !s105 cmd_cfg_sv_unit
 S1
 R2
-R7
+w1462247613
 8I:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv
 FI:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv
 L0 67
 R4
-!s108 1462234134.813000
+!s108 1462247624.971000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv|
 !i113 0
@@ -166,7 +166,7 @@ R3
 FI:/ece551/modelsim/project/ECE_551/Testing/CommMaster.sv
 L0 1
 R4
-!s108 1462234135.250000
+!s108 1462247625.377000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/CommMaster.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/CommMaster.sv|
 !i113 0
@@ -189,7 +189,7 @@ R11
 FI:/ece551/modelsim/project/ECE_551/Testing/counter.sv
 L0 1
 R4
-!s108 1462234135.593000
+!s108 1462247625.923000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/counter.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/counter.sv|
 !i113 0
@@ -211,7 +211,7 @@ R7
 FI:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv
 L0 1
 R4
-!s108 1462234135.921000
+!s108 1462247626.375000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv|
 !i113 0
@@ -233,7 +233,7 @@ R11
 FI:/ece551/modelsim/project/ECE_551/Testing/dual_PWM.sv
 L0 14
 R4
-!s108 1462234136.217000
+!s108 1462247626.750000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/dual_PWM.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/dual_PWM.sv|
 !i113 0
@@ -256,7 +256,7 @@ Z12 w1461887004
 FI:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv
 L0 1
 R4
-!s108 1462234136.654000
+!s108 1462247627.062000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv|
 !i113 0
@@ -293,37 +293,37 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 5mTRZ^fOO^7d7iE2mnI@e2
-IOa@SPz9Y:d07z;RL]Q?>B0
+!s100 cc2mRkn`;4N;BK4d=@8l91
+I;oQJe`6i>SWo8fD4ZUQId2
 R2
-w1462223180
-Z13 8I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v
-Z14 FI:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v
+w1462154965
+8I:/ece551/modelsim/project/ECE_551/Testing/pll8x.v
+FI:/ece551/modelsim/project/ECE_551/Testing/pll8x.v
 L0 2
 R4
-!s108 1462234137.840000
-Z15 !s107 I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v|
-Z16 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v|
+!s108 1462247627.405000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/pll8x.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/pll8x.v|
 !i113 0
 R5
 vpll8x_updated
-!s110 1462235287
+!s110 1462247627
 !i10b 1
 !s100 K?6O<`STm[Dze`n3nVcWH3
 I5E@nVdB5egjDhcG?PJ86n1
 R1
 R2
 w1462234642
-R13
-R14
+8I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v
+FI:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v
 L0 2
 R4
 r1
 !s85 0
 31
-!s108 1462235287.402000
-R15
-R16
+!s108 1462247627.795000
+!s107 I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v|
 !i113 0
 R5
 vProtocol_Trigger_Unit
@@ -343,7 +343,7 @@ R10
 FI:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv
 R8
 R4
-!s108 1462234138.183000
+!s108 1462247628.107000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv|
 !i113 0
@@ -366,7 +366,7 @@ w1462151751
 FI:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv
 L0 1
 R4
-!s108 1462234138.589000
+!s108 1462247628.497000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv|
 !i113 0
@@ -386,14 +386,14 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/RAMqueue.v
 L0 1
 R4
-!s108 1462234138.901000
+!s108 1462247628.825000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue.v|
 !i113 0
 R5
 n@r@a@mqueue
 vRAMqueue_ENTRIES384_LOG29
-!s110 1462234139
+!s110 1462247629
 !i10b 1
 !s100 c9_1KML[V4[^m5V^YkQVE0
 IV@4VW<jTmgG?aFIJ346T_1
@@ -407,7 +407,7 @@ R4
 r1
 !s85 0
 31
-!s108 1462234139.244000
+!s108 1462247629.183000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v|
 !i113 0
@@ -427,7 +427,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/SPI_mstr.v
 L0 9
 R4
-!s108 1462234139.525000
+!s108 1462247629.511000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/SPI_mstr.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/SPI_mstr.v|
 !i113 0
@@ -450,7 +450,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv
 L0 41
 R4
-!s108 1462234139.868000
+!s108 1462247629.839000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv|
 !i113 0
@@ -473,7 +473,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv
 L0 20
 R4
-!s108 1462234140.180000
+!s108 1462247630.213000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv|
 !i113 0
@@ -486,18 +486,18 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 eVR4_g7cfDeM_Sbg3TWmC3
-IomOkLoMA39G63G5ToXNUi0
+!s100 Z5neZknVd7eF7[Eo9WlLz2
+IHD5JOIPL3H_F2LPV^n8^z3
 !s105 TB_sv_unit
 S1
 R2
-w1462236871
+w1462247843
 8I:/ece551/modelsim/project/ECE_551/Testing/TB.sv
 FI:/ece551/modelsim/project/ECE_551/Testing/TB.sv
 FTB_Tasks.sv
 L0 3
 R4
-!s108 1462236876.881000
+!s108 1462247863.558000
 !s107 TB_Tasks.sv|I:/ece551/modelsim/project/ECE_551/Testing/TB.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/TB.sv|
 !i113 0
@@ -520,7 +520,7 @@ R11
 FI:/ece551/modelsim/project/ECE_551/Testing/trigger_logic.sv
 L0 25
 R4
-!s108 1462234142.738000
+!s108 1462247631.336000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/trigger_logic.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/trigger_logic.sv|
 !i113 0
@@ -542,7 +542,7 @@ R10
 FI:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv
 L0 46
 R4
-!s108 1462234143.050000
+!s108 1462247631.711000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv|
 !i113 0
@@ -565,7 +565,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/UART.sv
 L0 11
 R4
-!s108 1462234143.471000
+!s108 1462247632.147000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART.sv|
 !i113 0
@@ -588,7 +588,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv
 L0 1
 R4
-!s108 1462234143.846000
+!s108 1462247632.506000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv|
 !i113 0
@@ -611,7 +611,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx_baud.sv
 L0 1
 R4
-!s108 1462234144.158000
+!s108 1462247632.881000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_baud.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_baud.sv|
 !i113 0
@@ -634,7 +634,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv
 L0 1
 R4
-!s108 1462234144.454000
+!s108 1462247633.239000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv|
 !i113 0
@@ -657,7 +657,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv
 L0 1
 R4
-!s108 1462234144.813000
+!s108 1462247633.739000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv|
 !i113 0
@@ -680,7 +680,7 @@ w1462155122
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_RX_Prot.sv
 L0 21
 R4
-!s108 1462234145.141000
+!s108 1462247634.846000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_RX_Prot.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_RX_Prot.sv|
 !i113 0
@@ -703,7 +703,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv
 L0 1
 R4
-!s108 1462234145.562000
+!s108 1462247635.189000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv|
 !i113 0
@@ -726,7 +726,7 @@ R12
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx.sv
 L0 1
 R4
-!s108 1462234145.952000
+!s108 1462247635.517000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx.sv|
 !i113 0
@@ -749,7 +749,7 @@ R11
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx_baud.sv
 L0 1
 R4
-!s108 1462234146.264000
+!s108 1462247635.829000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_baud.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_baud.sv|
 !i113 0
@@ -772,7 +772,7 @@ R11
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx_control.sv
 L0 1
 R4
-!s108 1462234146.669000
+!s108 1462247636.157000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_control.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_control.sv|
 !i113 0
@@ -795,7 +795,7 @@ R11
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx_count.sv
 L0 1
 R4
-!s108 1462234146.981000
+!s108 1462247636.515000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_count.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_count.sv|
 !i113 0
@@ -818,7 +818,7 @@ R11
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv
 L0 1
 R4
-!s108 1462234147.309000
+!s108 1462247636.843000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv|
 !i113 0
@@ -841,7 +841,7 @@ R11
 FI:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv
 L0 1
 R4
-!s108 1462234130.146000
+!s108 1462247620.791000
 !s107 I:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv|
 !i113 0

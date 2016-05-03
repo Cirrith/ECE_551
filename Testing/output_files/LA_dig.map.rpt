@@ -1,0 +1,732 @@
+Analysis & Synthesis report for LA_dig
+Mon May 02 23:04:22 2016
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |LA_dig|dig_core:iDIG|Capture_Unit:capture|state
+  9. State Machine - |LA_dig|dig_core:iDIG|cmd_cfg:cmd_unit|state
+ 10. State Machine - |LA_dig|UART_wrapper:iCOMM|state
+ 11. State Machine - |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_control:control_dv|q
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |LA_dig
+ 17. Parameter Settings for User Entity Instance: RAMqueue:iRAMCH1
+ 18. Parameter Settings for User Entity Instance: RAMqueue:iRAMCH2
+ 19. Parameter Settings for User Entity Instance: RAMqueue:iRAMCH3
+ 20. Parameter Settings for User Entity Instance: RAMqueue:iRAMCH4
+ 21. Parameter Settings for User Entity Instance: RAMqueue:iRAMCH5
+ 22. Parameter Settings for User Entity Instance: dig_core:iDIG
+ 23. Parameter Settings for User Entity Instance: dig_core:iDIG|cmd_cfg:cmd_unit
+ 24. Parameter Settings for User Entity Instance: dig_core:iDIG|Capture_Unit:capture
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 02 23:04:22 2016      ;
+; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
+; Revision Name                      ; LA_dig                                     ;
+; Top-level Entity Name              ; LA_dig                                     ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 725                                        ;
+;     Total combinational functions  ; 496                                        ;
+;     Dedicated logic registers      ; 403                                        ;
+; Total registers                    ; 403                                        ;
+; Total pins                         ; 18                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; LA_dig             ; LA_dig             ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; UART_wrapper.sv                  ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv          ;         ;
+; UART_tx_stor.sv                  ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv          ;         ;
+; UART_tx_count.sv                 ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_count.sv         ;         ;
+; UART_tx_control.sv               ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_control.sv       ;         ;
+; UART_tx_baud.sv                  ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_baud.sv          ;         ;
+; UART_tx.sv                       ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_tx.sv               ;         ;
+; UART_rx_stor.sv                  ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv          ;         ;
+; UART_RX_Prot.sv                  ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_RX_Prot.sv          ;         ;
+; UART_rx_count.sv                 ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv         ;         ;
+; UART_rx_control.sv               ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv       ;         ;
+; UART_rx_baud.sv                  ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_baud.sv          ;         ;
+; UART_rx.sv                       ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv               ;         ;
+; UART.sv                          ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/UART.sv                  ;         ;
+; Trigger_Unit.sv                  ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv          ;         ;
+; trigger_logic.sv                 ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/trigger_logic.sv         ;         ;
+; SPI_RX_Edge.sv                   ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv           ;         ;
+; SPI_RX.sv                        ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv                ;         ;
+; RAMqueue.v                       ; yes             ; User Verilog HDL File        ; I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue.v               ;         ;
+; PWM8.sv                          ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv                  ;         ;
+; Protocol_Trigger_Unit.sv         ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv ;         ;
+; LA_dig.sv                        ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv                ;         ;
+; dual_PWM.sv                      ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/dual_PWM.sv              ;         ;
+; dig_core.sv                      ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv              ;         ;
+; counter.sv                       ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/counter.sv               ;         ;
+; cmd_cfg.sv                       ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv               ;         ;
+; clk_rst_smpl.sv                  ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv          ;         ;
+; Channel_Trigger_Unit.sv          ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv  ;         ;
+; channel_sample.sv                ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/channel_sample.sv        ;         ;
+; Capture_Unit.sv                  ; yes             ; User SystemVerilog HDL File  ; I:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv          ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++--------------------------+----------------------------+
+; Resource                 ; Usage                      ;
++--------------------------+----------------------------+
+; I/O pins                 ; 18                         ;
+;                          ;                            ;
+; DSP block 9-bit elements ; 0                          ;
+;                          ;                            ;
+; Maximum fan-out node     ; clk_rst_smpl:iCLKRST|rst_n ;
+; Maximum fan-out          ; 371                        ;
+; Total fan-out            ; 3105                       ;
+; Average fan-out          ; 3.32                       ;
++--------------------------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Library Name ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
+; |LA_dig                                    ; 496 (0)           ; 403 (0)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 18   ; 0            ; |LA_dig                                                                                                    ; work         ;
+;    |UART_wrapper:iCOMM|                    ; 130 (3)           ; 58 (9)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM                                                                                 ; work         ;
+;       |UART:uart|                          ; 127 (0)           ; 49 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart                                                                       ; work         ;
+;          |UART_rx:rx|                      ; 27 (1)            ; 23 (1)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_rx:rx                                                            ; work         ;
+;             |UART_rx_baud:baud_dv|         ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_baud:baud_dv                                       ; work         ;
+;             |UART_rx_control:control_dv|   ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_control:control_dv                                 ; work         ;
+;             |UART_rx_count:count_dv|       ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_count:count_dv                                     ; work         ;
+;             |UART_rx_stor:stor_dv|         ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_stor:stor_dv                                       ; work         ;
+;          |UART_tx:tx|                      ; 100 (1)           ; 26 (1)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx                                                            ; work         ;
+;             |UART_tx_baud:baud_dv|         ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_baud:baud_dv                                       ; work         ;
+;             |UART_tx_control:control_dv|   ; 10 (10)           ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_control:control_dv                                 ; work         ;
+;             |UART_tx_count:count_dv|       ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_count:count_dv                                     ; work         ;
+;             |UART_tx_stor:stor_dv|         ; 74 (74)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv                                       ; work         ;
+;    |clk_rst_smpl:iCLKRST|                  ; 26 (26)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|clk_rst_smpl:iCLKRST                                                                               ; work         ;
+;    |dig_core:iDIG|                         ; 318 (0)           ; 313 (0)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG                                                                                      ; work         ;
+;       |Capture_Unit:capture|               ; 95 (95)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Capture_Unit:capture                                                                 ; work         ;
+;       |Trigger_Unit:Trigger|               ; 106 (0)           ; 89 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger                                                                 ; work         ;
+;          |Channel_Trigger_Unit:CH1|        ; 3 (3)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Channel_Trigger_Unit:CH1                                        ; work         ;
+;          |Channel_Trigger_Unit:CH2|        ; 2 (2)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Channel_Trigger_Unit:CH2                                        ; work         ;
+;          |Channel_Trigger_Unit:CH3|        ; 3 (3)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Channel_Trigger_Unit:CH3                                        ; work         ;
+;          |Channel_Trigger_Unit:CH4|        ; 2 (2)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Channel_Trigger_Unit:CH4                                        ; work         ;
+;          |Channel_Trigger_Unit:CH5|        ; 4 (4)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Channel_Trigger_Unit:CH5                                        ; work         ;
+;          |Protocol_Trigger_Unit:Prot_Trig| ; 86 (2)            ; 58 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig                                 ; work         ;
+;             |SPI_RX:spi|                   ; 23 (23)           ; 26 (23)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|SPI_RX:spi                      ; work         ;
+;                |SPI_RX_Edge:spi_edge|      ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|SPI_RX:spi|SPI_RX_Edge:spi_edge ; work         ;
+;             |UART_RX_Prot:uart|            ; 61 (61)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|UART_RX_Prot:uart               ; work         ;
+;          |trigger_logic:Trig|              ; 6 (6)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|trigger_logic:Trig                                              ; work         ;
+;       |channel_sample:ch1_samp|            ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|channel_sample:ch1_samp                                                              ; work         ;
+;       |channel_sample:ch2_samp|            ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|channel_sample:ch2_samp                                                              ; work         ;
+;       |channel_sample:ch3_samp|            ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|channel_sample:ch3_samp                                                              ; work         ;
+;       |channel_sample:ch4_samp|            ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|channel_sample:ch4_samp                                                              ; work         ;
+;       |channel_sample:ch5_samp|            ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|channel_sample:ch5_samp                                                              ; work         ;
+;       |cmd_cfg:cmd_unit|                   ; 117 (117)         ; 129 (129)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dig_core:iDIG|cmd_cfg:cmd_unit                                                                     ; work         ;
+;    |dual_PWM:iPWM|                         ; 22 (0)            ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dual_PWM:iPWM                                                                                      ; work         ;
+;       |PWM8:High|                          ; 16 (8)            ; 9 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dual_PWM:iPWM|PWM8:High                                                                            ; work         ;
+;          |counter:coun|                    ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dual_PWM:iPWM|PWM8:High|counter:coun                                                               ; work         ;
+;       |PWM8:Low|                           ; 6 (6)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |LA_dig|dual_PWM:iPWM|PWM8:Low                                                                             ; work         ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------+
+; State Machine - |LA_dig|dig_core:iDIG|Capture_Unit:capture|state ;
++------------+------------+------------+---------------------------+
+; Name       ; state.IDLE ; state.DONE ; state.RUN                 ;
++------------+------------+------------+---------------------------+
+; state.IDLE ; 0          ; 0          ; 0                         ;
+; state.RUN  ; 1          ; 0          ; 1                         ;
+; state.DONE ; 1          ; 1          ; 0                         ;
++------------+------------+------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------+
+; State Machine - |LA_dig|dig_core:iDIG|cmd_cfg:cmd_unit|state                               ;
++-------------+-------------+------------+-----------+------------+-------------+------------+
+; Name        ; state.ERROR ; state.RESP ; state.RAM ; state.READ ; state.WRITE ; state.IDLE ;
++-------------+-------------+------------+-----------+------------+-------------+------------+
+; state.IDLE  ; 0           ; 0          ; 0         ; 0          ; 0           ; 0          ;
+; state.WRITE ; 0           ; 0          ; 0         ; 0          ; 1           ; 1          ;
+; state.READ  ; 0           ; 0          ; 0         ; 1          ; 0           ; 1          ;
+; state.RAM   ; 0           ; 0          ; 1         ; 0          ; 0           ; 1          ;
+; state.RESP  ; 0           ; 1          ; 0         ; 0          ; 0           ; 1          ;
+; state.ERROR ; 1           ; 0          ; 0         ; 0          ; 0           ; 1          ;
++-------------+-------------+------------+-----------+------------+-------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------+
+; State Machine - |LA_dig|UART_wrapper:iCOMM|state     ;
++-------------+------------+-------------+-------------+
+; Name        ; state.IDLE ; state.READY ; state.STORE ;
++-------------+------------+-------------+-------------+
+; state.IDLE  ; 0          ; 0           ; 0           ;
+; state.STORE ; 1          ; 0           ; 1           ;
+; state.READY ; 1          ; 1           ; 0           ;
++-------------+------------+-------------+-------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------+
+; State Machine - |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_control:control_dv|q ;
++---------+--------+---------+-----------------------------------------------------------------+
+; Name    ; q.IDLE ; q.SHIFT ; q.TRANS                                                         ;
++---------+--------+---------+-----------------------------------------------------------------+
+; q.IDLE  ; 0      ; 0       ; 0                                                               ;
+; q.TRANS ; 1      ; 0       ; 1                                                               ;
+; q.SHIFT ; 1      ; 1       ; 0                                                               ;
++---------+--------+---------+-----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++----------------------------------------------+-----------------------------------------------------------+
+; Register name                                ; Reason for Removal                                        ;
++----------------------------------------------+-----------------------------------------------------------+
+; dual_PWM:iPWM|PWM8:Low|counter:coun|count[7] ; Merged with dual_PWM:iPWM|PWM8:High|counter:coun|count[7] ;
+; dual_PWM:iPWM|PWM8:Low|counter:coun|count[6] ; Merged with dual_PWM:iPWM|PWM8:High|counter:coun|count[6] ;
+; dual_PWM:iPWM|PWM8:Low|counter:coun|count[5] ; Merged with dual_PWM:iPWM|PWM8:High|counter:coun|count[5] ;
+; dual_PWM:iPWM|PWM8:Low|counter:coun|count[4] ; Merged with dual_PWM:iPWM|PWM8:High|counter:coun|count[4] ;
+; dual_PWM:iPWM|PWM8:Low|counter:coun|count[3] ; Merged with dual_PWM:iPWM|PWM8:High|counter:coun|count[3] ;
+; dual_PWM:iPWM|PWM8:Low|counter:coun|count[2] ; Merged with dual_PWM:iPWM|PWM8:High|counter:coun|count[2] ;
+; dual_PWM:iPWM|PWM8:Low|counter:coun|count[1] ; Merged with dual_PWM:iPWM|PWM8:High|counter:coun|count[1] ;
+; dual_PWM:iPWM|PWM8:Low|counter:coun|count[0] ; Merged with dual_PWM:iPWM|PWM8:High|counter:coun|count[0] ;
+; clk_rst_smpl:iCLKRST|synch_smpl_cnt          ; Merged with clk_rst_smpl:iCLKRST|cnt_full                 ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|state.ERROR   ; Lost fanout                                               ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|state~4       ; Lost fanout                                               ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|state~5       ; Lost fanout                                               ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|state~6       ; Lost fanout                                               ;
+; UART_wrapper:iCOMM|state.IDLE                ; Lost fanout                                               ;
+; Total Number of Removed Registers = 14       ;                                                           ;
++----------------------------------------------+-----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 403   ;
+; Number of registers using Synchronous Clear  ; 74    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 382   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 242   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                        ;
++-------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                         ; Fan out ;
++-------------------------------------------------------------------------------------------+---------+
+; dual_PWM:iPWM|PWM8:High|PWM_sig                                                           ; 2       ;
+; dual_PWM:iPWM|PWM8:Low|PWM_sig                                                            ; 2       ;
+; UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv|q[0]                         ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|VIH[1]                                                     ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|VIH[3]                                                     ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|VIH[5]                                                     ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|VIH[7]                                                     ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|VIL[0]                                                     ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|VIL[2]                                                     ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|VIL[4]                                                     ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|VIL[6]                                                     ; 2       ;
+; UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv|q[1]                         ; 1       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|CH5TrigCfg[0]                                              ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|CH4TrigCfg[0]                                              ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|CH3TrigCfg[0]                                              ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|CH2TrigCfg[0]                                              ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|CH1TrigCfg[0]                                              ; 2       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|TrigCfg[0]                                                 ; 2       ;
+; UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv|q[2]                         ; 1       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|trig_posL[0]                                               ; 3       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|baud_cntH[1]                                               ; 3       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|TrigCfg[1]                                                 ; 2       ;
+; UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv|q[3]                         ; 1       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|baud_cntL[3]                                               ; 3       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|baud_cntL[6]                                               ; 3       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|baud_cntL[7]                                               ; 3       ;
+; dig_core:iDIG|cmd_cfg:cmd_unit|baud_cntH[2]                                               ; 3       ;
+; UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv|q[4]                         ; 1       ;
+; dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|SPI_RX:spi|met_SS_n[1] ; 3       ;
+; dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|SPI_RX:spi|met_SS_n[2] ; 2       ;
+; UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv|q[5]                         ; 1       ;
+; dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|SPI_RX:spi|met_SS_n[0] ; 1       ;
+; UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv|q[6]                         ; 1       ;
+; Total number of inverted registers = 33                                                   ;         ;
++-------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_count:count_dv|q[2]                           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv|q[8]                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |LA_dig|dig_core:iDIG|Capture_Unit:capture|trig_cnt[7]                                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |LA_dig|clk_rst_smpl:iCLKRST|smpl_cnt[1]                                                              ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |LA_dig|dig_core:iDIG|Capture_Unit:capture|waddr[8]                                                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_baud:baud_dv|q[1]                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_count:count_dv|q[2]                           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|UART_RX_Prot:uart|count[0] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |LA_dig|dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|UART_RX_Prot:uart|baud[5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_baud:baud_dv|q[7]                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |LA_dig|dig_core:iDIG|Capture_Unit:capture|smpl_cnt[15]                                               ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |LA_dig|dig_core:iDIG|cmd_cfg:cmd_unit|raddr_curr[3]                                                  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |LA_dig|UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv|q[4]                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |LA_dig|dig_core:iDIG|Capture_Unit:capture|inc_trig_cnt                                               ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |LA_dig|dig_core:iDIG|cmd_cfg:cmd_unit|Selector1                                                      ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |LA_dig|dig_core:iDIG|cmd_cfg:cmd_unit|Selector6                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |LA_dig ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; ENTRIES        ; 384   ; Signed Integer                                ;
+; LOG2           ; 9     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAMqueue:iRAMCH1 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; ENTRIES        ; 384   ; Signed Integer                       ;
+; LOG2           ; 9     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAMqueue:iRAMCH2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; ENTRIES        ; 384   ; Signed Integer                       ;
+; LOG2           ; 9     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAMqueue:iRAMCH3 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; ENTRIES        ; 384   ; Signed Integer                       ;
+; LOG2           ; 9     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAMqueue:iRAMCH4 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; ENTRIES        ; 384   ; Signed Integer                       ;
+; LOG2           ; 9     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAMqueue:iRAMCH5 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; ENTRIES        ; 384   ; Signed Integer                       ;
+; LOG2           ; 9     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dig_core:iDIG ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; ENTRIES        ; 384   ; Signed Integer                    ;
+; LOG2           ; 9     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dig_core:iDIG|cmd_cfg:cmd_unit ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; LOG2           ; 9     ; Signed Integer                                     ;
+; ENTRIES        ; 384   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dig_core:iDIG|Capture_Unit:capture ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; ENTRIES        ; 384   ; Signed Integer                                         ;
+; LOG2           ; 9     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 18                          ;
+; cycloneiii_ff         ; 403                         ;
+;     CLR               ; 148                         ;
+;     ENA               ; 8                           ;
+;     ENA CLR           ; 170                         ;
+;     ENA CLR SCLR      ; 64                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 500                         ;
+;     arith             ; 106                         ;
+;         2 data inputs ; 89                          ;
+;         3 data inputs ; 17                          ;
+;     normal            ; 394                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 35                          ;
+;         2 data inputs ; 18                          ;
+;         3 data inputs ; 62                          ;
+;         4 data inputs ; 277                         ;
+;                       ;                             ;
+; Max LUT depth         ; 6.30                        ;
+; Average LUT depth     ; 3.48                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+    Info: Processing started: Mon May 02 23:02:58 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LA_dig -c LA_dig
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file uart_wrapper.sv
+    Info (12023): Found entity 1: UART_wrapper
+Warning (10229): Verilog HDL Expression warning at UART_tx_stor.sv(19): truncated literal to match 7 bits
+Info (12021): Found 1 design units, including 1 entities, in source file uart_tx_stor.sv
+    Info (12023): Found entity 1: UART_tx_stor
+Info (12021): Found 1 design units, including 1 entities, in source file uart_tx_count.sv
+    Info (12023): Found entity 1: UART_tx_count
+Info (12021): Found 1 design units, including 1 entities, in source file uart_tx_control.sv
+    Info (12023): Found entity 1: UART_tx_control
+Info (12021): Found 1 design units, including 1 entities, in source file uart_tx_baud.sv
+    Info (12023): Found entity 1: UART_tx_baud
+Info (12021): Found 1 design units, including 1 entities, in source file uart_tx.sv
+    Info (12023): Found entity 1: UART_tx
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rx_stor.sv
+    Info (12023): Found entity 1: UART_rx_stor
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rx_prot.sv
+    Info (12023): Found entity 1: UART_RX_Prot
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rx_count.sv
+    Info (12023): Found entity 1: UART_rx_count
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rx_control.sv
+    Info (12023): Found entity 1: UART_rx_control
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rx_baud.sv
+    Info (12023): Found entity 1: UART_rx_baud
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rx.sv
+    Info (12023): Found entity 1: UART_rx
+Info (12021): Found 1 design units, including 1 entities, in source file uart.sv
+    Info (12023): Found entity 1: UART
+Info (12021): Found 1 design units, including 1 entities, in source file trigger_unit.sv
+    Info (12023): Found entity 1: Trigger_Unit
+Info (12021): Found 1 design units, including 1 entities, in source file trigger_logic.sv
+    Info (12023): Found entity 1: trigger_logic
+Info (12021): Found 1 design units, including 1 entities, in source file spi_rx_edge.sv
+    Info (12023): Found entity 1: SPI_RX_Edge
+Info (12021): Found 1 design units, including 1 entities, in source file spi_rx.sv
+    Info (12023): Found entity 1: SPI_RX
+Info (12021): Found 1 design units, including 1 entities, in source file spi_mstr.v
+    Info (12023): Found entity 1: SPI_mstr
+Info (12021): Found 1 design units, including 1 entities, in source file ramqueue_post_synth.v
+    Info (12023): Found entity 1: RAMqueue_ENTRIES384_LOG29
+Info (12021): Found 1 design units, including 1 entities, in source file ramqueue.v
+    Info (12023): Found entity 1: RAMqueue
+Info (12021): Found 1 design units, including 1 entities, in source file pwm8.sv
+    Info (12023): Found entity 1: PWM8
+Info (12021): Found 1 design units, including 1 entities, in source file protocol_trigger_unit.sv
+    Info (12023): Found entity 1: Protocol_Trigger_Unit
+Info (12021): Found 1 design units, including 1 entities, in source file pll8x_updated.v
+    Info (12023): Found entity 1: pll8x_updated
+Info (12021): Found 1 design units, including 1 entities, in source file la_dig.sv
+    Info (12023): Found entity 1: LA_dig
+Info (12021): Found 1 design units, including 1 entities, in source file dual_pwm.sv
+    Info (12023): Found entity 1: dual_PWM
+Info (12021): Found 1 design units, including 1 entities, in source file dig_core.sv
+    Info (12023): Found entity 1: dig_core
+Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
+    Info (12023): Found entity 1: counter
+Info (12021): Found 1 design units, including 1 entities, in source file commmaster.sv
+    Info (12023): Found entity 1: CommMaster
+Info (12021): Found 1 design units, including 1 entities, in source file cmd_cfg.sv
+    Info (12023): Found entity 1: cmd_cfg
+Info (12021): Found 1 design units, including 1 entities, in source file clk_rst_smpl.sv
+    Info (12023): Found entity 1: clk_rst_smpl
+Info (12021): Found 1 design units, including 1 entities, in source file channel_trigger_unit.sv
+    Info (12023): Found entity 1: Channel_Trigger_Unit
+Info (12021): Found 1 design units, including 1 entities, in source file channel_sample.sv
+    Info (12023): Found entity 1: channel_sample
+Info (12021): Found 1 design units, including 1 entities, in source file capture_unit.sv
+    Info (12023): Found entity 1: Capture_Unit
+Info (12021): Found 1 design units, including 1 entities, in source file afe.v
+    Info (12023): Found entity 1: AFE
+Warning (10236): Verilog HDL Implicit Net warning at UART_tx.sv(23): created implicit net for "done"
+Warning (10236): Verilog HDL Implicit Net warning at trigger_logic.sv(40): created implicit net for "trig_set"
+Warning (10236): Verilog HDL Implicit Net warning at SPI_RX.sv(78): created implicit net for "posedge_SS_n"
+Warning (10236): Verilog HDL Implicit Net warning at CommMaster.sv(28): created implicit net for "tx_done"
+Info (12127): Elaborating entity "LA_dig" for the top level hierarchy
+Info (12128): Elaborating entity "clk_rst_smpl" for hierarchy "clk_rst_smpl:iCLKRST"
+Warning (10230): Verilog HDL assignment warning at clk_rst_smpl.sv(44): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at clk_rst_smpl.sv(80): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at clk_rst_smpl.sv(115): truncated value with size 32 to match size of target (2)
+Info (12128): Elaborating entity "dual_PWM" for hierarchy "dual_PWM:iPWM"
+Info (12128): Elaborating entity "PWM8" for hierarchy "dual_PWM:iPWM|PWM8:High"
+Info (12128): Elaborating entity "counter" for hierarchy "dual_PWM:iPWM|PWM8:High|counter:coun"
+Warning (10230): Verilog HDL assignment warning at counter.sv(12): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "UART_wrapper" for hierarchy "UART_wrapper:iCOMM"
+Info (12128): Elaborating entity "UART" for hierarchy "UART_wrapper:iCOMM|UART:uart"
+Info (12128): Elaborating entity "UART_rx" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_rx:rx"
+Info (12128): Elaborating entity "UART_rx_control" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_control:control_dv"
+Info (12128): Elaborating entity "UART_rx_count" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_count:count_dv"
+Warning (10230): Verilog HDL assignment warning at UART_rx_count.sv(26): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "UART_rx_baud" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_baud:baud_dv"
+Warning (10230): Verilog HDL assignment warning at UART_rx_baud.sv(26): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "UART_rx_stor" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_rx:rx|UART_rx_stor:stor_dv"
+Info (12128): Elaborating entity "UART_tx" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_tx:tx"
+Info (12128): Elaborating entity "UART_tx_control" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_control:control_dv"
+Info (12128): Elaborating entity "UART_tx_stor" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_stor:stor_dv"
+Info (12128): Elaborating entity "UART_tx_count" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_count:count_dv"
+Warning (10230): Verilog HDL assignment warning at UART_tx_count.sv(26): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "UART_tx_baud" for hierarchy "UART_wrapper:iCOMM|UART:uart|UART_tx:tx|UART_tx_baud:baud_dv"
+Warning (10230): Verilog HDL assignment warning at UART_tx_baud.sv(26): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "RAMqueue" for hierarchy "RAMqueue:iRAMCH1"
+Warning (10034): Output port "rdata" at RAMqueue.v(11) has no driver
+Info (12128): Elaborating entity "dig_core" for hierarchy "dig_core:iDIG"
+Warning (10034): Output port "LED" at dig_core.sv(31) has no driver
+Info (12128): Elaborating entity "Trigger_Unit" for hierarchy "dig_core:iDIG|Trigger_Unit:Trigger"
+Info (12128): Elaborating entity "trigger_logic" for hierarchy "dig_core:iDIG|Trigger_Unit:Trigger|trigger_logic:Trig"
+Info (12128): Elaborating entity "Protocol_Trigger_Unit" for hierarchy "dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig"
+Info (12128): Elaborating entity "SPI_RX" for hierarchy "dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|SPI_RX:spi"
+Info (12128): Elaborating entity "SPI_RX_Edge" for hierarchy "dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|SPI_RX:spi|SPI_RX_Edge:spi_edge"
+Info (12128): Elaborating entity "UART_RX_Prot" for hierarchy "dig_core:iDIG|Trigger_Unit:Trigger|Protocol_Trigger_Unit:Prot_Trig|UART_RX_Prot:uart"
+Warning (10230): Verilog HDL assignment warning at UART_RX_Prot.sv(138): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at UART_RX_Prot.sv(151): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "Channel_Trigger_Unit" for hierarchy "dig_core:iDIG|Trigger_Unit:Trigger|Channel_Trigger_Unit:CH1"
+Info (12128): Elaborating entity "cmd_cfg" for hierarchy "dig_core:iDIG|cmd_cfg:cmd_unit"
+Warning (10230): Verilog HDL assignment warning at cmd_cfg.sv(375): truncated value with size 32 to match size of target (9)
+Info (12128): Elaborating entity "Capture_Unit" for hierarchy "dig_core:iDIG|Capture_Unit:capture"
+Warning (10230): Verilog HDL assignment warning at Capture_Unit.sv(81): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at Capture_Unit.sv(92): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at Capture_Unit.sv(103): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "channel_sample" for hierarchy "dig_core:iDIG|channel_sample:ch1_samp"
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer clk_rst_smpl:iCLKRST|smpl_clk
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file I:/ece551/modelsim/project/ECE_551/Testing/output_files/LA_dig.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 744 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 726 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 851 megabytes
+    Info: Processing ended: Mon May 02 23:04:22 2016
+    Info: Elapsed time: 00:01:24
+    Info: Total CPU time (on all processors): 00:00:41
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in I:/ece551/modelsim/project/ECE_551/Testing/output_files/LA_dig.map.smsg.
+
+

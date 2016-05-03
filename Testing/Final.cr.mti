@@ -75,20 +75,6 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	channel_sample
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v {1 {vlog -work work -vopt -stats=none I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module pll8x_updated
-
-Top level modules:
-	pll8x_updated
-
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module Trigger_Unit
-
-Top level modules:
-	Trigger_Unit
-
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/TB_Tasks.sv {0 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/TB_Tasks.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 ** Error: I:/ece551/modelsim/project/ECE_551/Testing/TB_Tasks.sv(2): (vlog-2730) Undefined variable: 'ENTRIES'.
@@ -151,19 +137,19 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 ** Error: I:/ece551/modelsim/project/ECE_551/Testing/TB_Tasks.sv(277): (vlog-2730) Undefined variable: 'UART_Data'.
 
 
-} {3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0 58.0 59.0 60.0 61.0} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv
+} {3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0 58.0 59.0 60.0 61.0} {}} I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/Trigger_Unit.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART_rx_stor
+-- Compiling module Trigger_Unit
 
 Top level modules:
-	UART_rx_stor
+	Trigger_Unit
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v {1 {vlog -work work -vopt -stats=none I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v {1 {vlog -work work -vopt -stats=none I:/ece551/modelsim/project/ECE_551/Testing/pll8x_updated.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module RAMqueue_ENTRIES384_LOG29
+-- Compiling module pll8x_updated
 
 Top level modules:
-	RAMqueue_ENTRIES384_LOG29
+	pll8x_updated
 
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/dig_core.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -172,19 +158,26 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	dig_core
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v {1 {vlog -work work -vopt -stats=none I:/ece551/modelsim/project/ECE_551/Testing/RAMqueue_post_synth.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART_rx
+-- Compiling module RAMqueue_ENTRIES384_LOG29
 
 Top level modules:
-	UART_rx
+	RAMqueue_ENTRIES384_LOG29
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_stor.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module SPI_RX
+-- Compiling module UART_rx_stor
 
 Top level modules:
-	SPI_RX
+	UART_rx_stor
+
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module clk_rst_smpl
+
+Top level modules:
+	clk_rst_smpl
 
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/pll8x.v {1 {vlog -work work -vopt -stats=none I:/ece551/modelsim/project/ECE_551/Testing/pll8x.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -193,12 +186,19 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	pll8x
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/clk_rst_smpl.sv
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module clk_rst_smpl
+-- Compiling module SPI_RX
 
 Top level modules:
-	clk_rst_smpl
+	SPI_RX
+
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART_rx.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module UART_rx
+
+Top level modules:
+	UART_rx
 
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART_tx_stor.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -214,13 +214,6 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	UART_tx
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module LA_dig
-
-Top level modules:
-	LA_dig
-
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/CommMaster.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/CommMaster.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module CommMaster
@@ -228,12 +221,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	CommMaster
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/LA_dig.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module SPI_RX_Edge
+-- Compiling module LA_dig
 
 Top level modules:
-	SPI_RX_Edge
+	LA_dig
 
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/AFE.v {1 {vlog -work work -vopt -stats=none I:/ece551/modelsim/project/ECE_551/Testing/AFE.v
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -242,19 +235,19 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	AFE
 
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/SPI_RX_Edge.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module SPI_RX_Edge
+
+Top level modules:
+	SPI_RX_Edge
+
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/cmd_cfg.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module cmd_cfg
 
 Top level modules:
 	cmd_cfg
-
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module Channel_Trigger_Unit
-
-Top level modules:
-	Channel_Trigger_Unit
 
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/Capture_Unit.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -263,26 +256,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	Capture_Unit
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART.sv
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/Channel_Trigger_Unit.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART
+-- Compiling module Channel_Trigger_Unit
 
 Top level modules:
-	UART
-
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module PWM8
-
-Top level modules:
-	PWM8
-
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv
-Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module Protocol_Trigger_Unit
-
-Top level modules:
-	Protocol_Trigger_Unit
+	Channel_Trigger_Unit
 
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART_wrapper.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -291,12 +270,26 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 Top level modules:
 	UART_wrapper
 
-} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/Protocol_Trigger_Unit.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module UART_rx_count
+-- Compiling module Protocol_Trigger_Unit
 
 Top level modules:
-	UART_rx_count
+	Protocol_Trigger_Unit
+
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/PWM8.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module PWM8
+
+Top level modules:
+	PWM8
+
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module UART
+
+Top level modules:
+	UART
 
 } {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_control.sv
 Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
@@ -304,5 +297,12 @@ Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 
 Top level modules:
 	UART_rx_control
+
+} {} {}} I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv {1 {vlog -work work -vopt -sv -stats=none I:/ece551/modelsim/project/ECE_551/Testing/UART_rx_count.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module UART_rx_count
+
+Top level modules:
+	UART_rx_count
 
 } {} {}}

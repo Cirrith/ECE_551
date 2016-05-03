@@ -38,7 +38,7 @@ set_drive 0.1 $rst_input
 
 
 set_output_delay -clock clk 0.5 [all_outputs]
-set_load 0.00005 [all_outputs]
+set_load 0.05 [all_outputs]
 
 ungroup -all -flatten
 

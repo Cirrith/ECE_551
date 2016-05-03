@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : LA_dig
 Version: J-2014.09-SP5
-Date   : Mon May  2 18:00:59 2016
+Date   : Mon May  2 23:49:27 2016
 ****************************************
 
 Operating Conditions: NCCOM   Library: tcbn40lpbwptc
@@ -64,12 +64,12 @@ Wire Load Model Mode: segmented
   clock network delay (ideal)                             0.00       0.00
   iDIG/cmd_unit/decimator_reg[2]/CP (EDFCNQD2BWP)         0.00       0.00 r
   iDIG/cmd_unit/decimator_reg[2]/Q (EDFCNQD2BWP)          0.13       0.13 f
-  U708/ZN (INVD4BWP)                                      0.02       0.16 r
-  U710/ZN (ND2D2BWP)                                      0.03       0.19 f
-  U707/Z (OR3D0BWP)                                       0.14       0.32 f
-  U706/ZN (INVD1BWP)                                      0.04       0.36 r
-  U704/ZN (ND2D1BWP)                                      0.03       0.39 f
-  U705/ZN (CKND2D1BWP)                                    0.03       0.41 r
+  U719/ZN (INVD4BWP)                                      0.02       0.16 r
+  U721/ZN (ND2D2BWP)                                      0.03       0.19 f
+  U718/Z (OR3D0BWP)                                       0.14       0.32 f
+  U717/ZN (INVD1BWP)                                      0.04       0.36 r
+  U715/ZN (ND2D1BWP)                                      0.03       0.39 f
+  U716/ZN (CKND2D1BWP)                                    0.03       0.41 r
   iCLKRST/smpl_clk_div_reg/D (DFND1BWP)                   0.00       0.41 r
   data arrival time                                                  0.41
 

@@ -170,7 +170,7 @@ module TB();
 	initial begin : file_block 
 		REF_CLK = 0;
 		START = 0;
-		file = $fopen("Low_Level_2.txt", "r");
+		file = $fopen("High_Level_4.txt", "r");
 		if (file == 0) begin
 			$display("File Not Found");
 			$stop;

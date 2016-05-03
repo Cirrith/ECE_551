@@ -282,7 +282,7 @@ module cmd_cfg (clk, rst_n, cmd, cmd_rdy, resp_sent, capture_done, waddr, rdataC
 		clr_cmd_rdy = 1'h0;
 		resp = 8'h00;
 		init_write = 1'h0;
-		//raddr = 9'h000;
+		raddr = raddr_curr;//9'h000;
 		nxtstate = IDLE;
 	
 		case(state)

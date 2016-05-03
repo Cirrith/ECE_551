@@ -1,0 +1,485 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -3.602
+TNS   : -736.265
+
+Type  : Slow 1200mV 85C Model Setup 'clk400MHz'
+Slack : -1.409
+TNS   : -10.895
+
+Type  : Slow 1200mV 85C Model Hold 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -0.043
+TNS   : -0.043
+
+Type  : Slow 1200mV 85C Model Hold 'clk400MHz'
+Slack : 0.124
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -4.275
+TNS   : -871.137
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch3_samp|CHxLff5'
+Slack : -3.554
+TNS   : -3.554
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch1_samp|CHxLff5'
+Slack : -3.454
+TNS   : -3.454
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch4_samp|CHxLff5'
+Slack : -3.308
+TNS   : -3.308
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch1_samp|CHxHff5'
+Slack : -3.278
+TNS   : -3.278
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch3_samp|CHxHff5'
+Slack : -3.186
+TNS   : -3.186
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch2_samp|CHxLff5'
+Slack : -3.111
+TNS   : -3.111
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch5_samp|CHxHff5'
+Slack : -3.091
+TNS   : -3.091
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch2_samp|CHxHff5'
+Slack : -2.968
+TNS   : -2.968
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch4_samp|CHxHff5'
+Slack : -2.960
+TNS   : -2.960
+
+Type  : Slow 1200mV 85C Model Recovery 'dig_core:iDIG|channel_sample:ch5_samp|CHxLff5'
+Slack : -2.753
+TNS   : -2.753
+
+Type  : Slow 1200mV 85C Model Recovery 'clk400MHz'
+Slack : -0.492
+TNS   : -25.490
+
+Type  : Slow 1200mV 85C Model Removal 'clk400MHz'
+Slack : 0.671
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch5_samp|CHxLff5'
+Slack : 2.324
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch2_samp|CHxLff5'
+Slack : 2.686
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch4_samp|CHxLff5'
+Slack : 2.878
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : 2.951
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch1_samp|CHxLff5'
+Slack : 3.019
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch3_samp|CHxLff5'
+Slack : 3.112
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch4_samp|CHxHff5'
+Slack : 3.481
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch2_samp|CHxHff5'
+Slack : 3.507
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch5_samp|CHxHff5'
+Slack : 3.608
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch3_samp|CHxHff5'
+Slack : 3.694
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dig_core:iDIG|channel_sample:ch1_samp|CHxHff5'
+Slack : 3.806
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk400MHz'
+Slack : -3.000
+TNS   : -70.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -1.000
+TNS   : -326.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch1_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch1_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch2_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch2_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch3_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch3_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch4_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch4_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch5_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch5_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -3.156
+TNS   : -631.987
+
+Type  : Slow 1200mV 0C Model Setup 'clk400MHz'
+Slack : -1.125
+TNS   : -8.062
+
+Type  : Slow 1200mV 0C Model Hold 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : 0.022
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk400MHz'
+Slack : 0.139
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -3.755
+TNS   : -761.558
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch3_samp|CHxLff5'
+Slack : -3.158
+TNS   : -3.158
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch1_samp|CHxLff5'
+Slack : -3.067
+TNS   : -3.067
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch4_samp|CHxLff5'
+Slack : -2.930
+TNS   : -2.930
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch1_samp|CHxHff5'
+Slack : -2.874
+TNS   : -2.874
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch3_samp|CHxHff5'
+Slack : -2.792
+TNS   : -2.792
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch2_samp|CHxLff5'
+Slack : -2.759
+TNS   : -2.759
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch5_samp|CHxHff5'
+Slack : -2.698
+TNS   : -2.698
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch2_samp|CHxHff5'
+Slack : -2.595
+TNS   : -2.595
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch4_samp|CHxHff5'
+Slack : -2.581
+TNS   : -2.581
+
+Type  : Slow 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch5_samp|CHxLff5'
+Slack : -2.438
+TNS   : -2.438
+
+Type  : Slow 1200mV 0C Model Recovery 'clk400MHz'
+Slack : -0.305
+TNS   : -15.776
+
+Type  : Slow 1200mV 0C Model Removal 'clk400MHz'
+Slack : 0.585
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch5_samp|CHxLff5'
+Slack : 2.075
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch2_samp|CHxLff5'
+Slack : 2.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch4_samp|CHxLff5'
+Slack : 2.573
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : 2.649
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch1_samp|CHxLff5'
+Slack : 2.700
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch3_samp|CHxLff5'
+Slack : 2.781
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch4_samp|CHxHff5'
+Slack : 3.118
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch2_samp|CHxHff5'
+Slack : 3.141
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch5_samp|CHxHff5'
+Slack : 3.228
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch3_samp|CHxHff5'
+Slack : 3.308
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch1_samp|CHxHff5'
+Slack : 3.408
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk400MHz'
+Slack : -3.000
+TNS   : -70.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -1.000
+TNS   : -326.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch1_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch1_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch2_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch2_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch3_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch3_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch4_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch4_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch5_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch5_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -1.602
+TNS   : -296.594
+
+Type  : Fast 1200mV 0C Model Setup 'clk400MHz'
+Slack : -0.391
+TNS   : -0.708
+
+Type  : Fast 1200mV 0C Model Hold 'clk400MHz'
+Slack : -0.073
+TNS   : -0.130
+
+Type  : Fast 1200mV 0C Model Hold 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -0.039
+TNS   : -0.138
+
+Type  : Fast 1200mV 0C Model Recovery 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -2.389
+TNS   : -468.427
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch3_samp|CHxLff5'
+Slack : -1.808
+TNS   : -1.808
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch1_samp|CHxLff5'
+Slack : -1.747
+TNS   : -1.747
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch1_samp|CHxHff5'
+Slack : -1.738
+TNS   : -1.738
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch3_samp|CHxHff5'
+Slack : -1.671
+TNS   : -1.671
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch4_samp|CHxLff5'
+Slack : -1.667
+TNS   : -1.667
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch5_samp|CHxHff5'
+Slack : -1.642
+TNS   : -1.642
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch2_samp|CHxHff5'
+Slack : -1.555
+TNS   : -1.555
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch2_samp|CHxLff5'
+Slack : -1.549
+TNS   : -1.549
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch4_samp|CHxHff5'
+Slack : -1.541
+TNS   : -1.541
+
+Type  : Fast 1200mV 0C Model Recovery 'dig_core:iDIG|channel_sample:ch5_samp|CHxLff5'
+Slack : -1.332
+TNS   : -1.332
+
+Type  : Fast 1200mV 0C Model Recovery 'clk400MHz'
+Slack : 0.276
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk400MHz'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch5_samp|CHxLff5'
+Slack : 1.351
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch2_samp|CHxLff5'
+Slack : 1.578
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch4_samp|CHxLff5'
+Slack : 1.694
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch1_samp|CHxLff5'
+Slack : 1.777
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch3_samp|CHxLff5'
+Slack : 1.842
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : 1.951
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch4_samp|CHxHff5'
+Slack : 1.979
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch2_samp|CHxHff5'
+Slack : 2.001
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch5_samp|CHxHff5'
+Slack : 2.071
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch3_samp|CHxHff5'
+Slack : 2.116
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dig_core:iDIG|channel_sample:ch1_samp|CHxHff5'
+Slack : 2.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk400MHz'
+Slack : -3.000
+TNS   : -75.611
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_rst_smpl:iCLKRST|clk_cnt[1]'
+Slack : -1.000
+TNS   : -326.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch1_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch1_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch2_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch2_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch3_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch3_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch4_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch4_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch5_samp|CHxHff5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_core:iDIG|channel_sample:ch5_samp|CHxLff5'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------
